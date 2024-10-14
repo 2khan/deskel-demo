@@ -16,8 +16,9 @@ export default function Info() {
           {t('media-insight.columns.organization-name')}:
         </span>
         <m.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          key={info.organization_name}
+          initial={{ opacity: 0, scale: 2 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
           className={dx('label-01', 'text-end text-foreground')}
         >
@@ -29,8 +30,9 @@ export default function Info() {
           {t('media-insight.info.date-range')}:
         </span>
         <m.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          key={info.range}
+          initial={{ opacity: 0, scale: 2 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
           className={dx('label-01', 'text-end text-foreground')}
         >
@@ -50,8 +52,8 @@ export default function Info() {
           {info.homepage_domains.length > 0
             ? info.homepage_domains.map((domain) => (
                 <m.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, scale: 2 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
                   className="group relative rounded-full bg-muted px-2 py-0.5"
                   key={domain}
