@@ -92,8 +92,19 @@ export default function Chat() {
             size="icon"
             variant="outline"
             className="size-12 shrink-0 rounded-full"
+            asChild
           >
-            <Paperclip size={15} />
+            <label htmlFor="file-upload">
+              <Paperclip size={15} />
+              <input
+                id="file-upload"
+                name="file-upload"
+                type="file"
+                accept="application/pdf"
+                multiple
+                className="hidden"
+              />
+            </label>
           </Button>
           <Textarea
             value={input}
