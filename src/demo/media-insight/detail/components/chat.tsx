@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { useStage } from '../useStage'
 import { StageDataMap } from '../data'
 import { m } from 'framer-motion'
+import { format } from 'date-fns'
 
 export default function Chat() {
   const { stage, next } = useStage()
@@ -50,7 +51,7 @@ export default function Chat() {
         <div className="flex w-full flex-col gap-4 pr-2">
           <div className="flex w-full flex-col items-center gap-2">
             <span className={dx('label-01', 'text-muted-foreground')}>
-              2024/09/06 16:45
+              {format(new Date(), 'yyyy/MM/dd HH:mm')}
             </span>
             {chatHistory.map((chat) => (
               <Fragment key={chat.message}>

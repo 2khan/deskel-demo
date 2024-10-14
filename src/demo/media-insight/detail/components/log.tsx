@@ -41,7 +41,7 @@ export default function Log() {
                 </div>
                 <div className="flex gap-2">
                   <Dialog>
-                    <DialogTrigger>
+                    <DialogTrigger asChild>
                       <TooltipButton
                         helper={t('action.view-file')}
                         size="icon"

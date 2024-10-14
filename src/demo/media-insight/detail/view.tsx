@@ -24,9 +24,7 @@ export default function MediaInsightDetail() {
   useEffect(() => {
     let timerID: NodeJS.Timeout
     if (includes(autoNextStages, stage)) {
-      console.log('I was run')
       timerID = setTimeout(() => {
-        console.log('')
         next()
       }, 1000)
     }
