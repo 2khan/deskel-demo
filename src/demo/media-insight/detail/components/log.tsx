@@ -46,9 +46,10 @@ export default function Log() {
                         helper={t('action.view-file')}
                         size="icon"
                         variant="outline"
-                        className="text-primary"
+                        className="relative text-primary"
                       >
                         <FullscreenIcon size={15} />
+                        <div className="absolute right-0 top-0 size-2 animate-ping rounded-full bg-primary" />
                       </TooltipButton>
                     </DialogTrigger>
                     <PPT />

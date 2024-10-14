@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import { TStage } from './data'
 import { includes } from 'lodash'
 import { useTranslation } from 'react-i18next'
+import { cn } from '@/lib/utils'
 
 const autoNextStages = [
   'crawling-domains',
@@ -44,7 +45,10 @@ export default function MediaInsightDetail() {
         <Button
           disabled={!(stage === 'start-analysis')}
           size="lg"
-          className="w-full gap-2"
+          className={cn(
+            'w-full gap-2',
+            stage === 'start-analysis' && 'animate-bounce'
+          )}
           onClick={next}
         >
           <span>{t('media-insight.stage.start-analysis')}</span>{' '}
