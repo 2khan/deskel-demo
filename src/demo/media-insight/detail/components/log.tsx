@@ -6,6 +6,8 @@ import { dx } from '@/shared/design-system/typography'
 import { format } from 'date-fns'
 import { DownloadIcon, FullscreenIcon } from 'lucide-react'
 import TooltipButton from '@/components/custom/TooltipButton'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import PPT from './ppt'
 
 export default function Log() {
   const { t } = useTranslation('common')
@@ -37,14 +39,19 @@ export default function Log() {
                   </span>
                 </div>
                 <div className="flex gap-2">
-                  <TooltipButton
-                    helper={t('action.view-file')}
-                    size="icon"
-                    variant="outline"
-                    className="text-primary"
-                  >
-                    <FullscreenIcon size={15} />
-                  </TooltipButton>
+                  <Dialog>
+                    <DialogTrigger>
+                      <TooltipButton
+                        helper={t('action.view-file')}
+                        size="icon"
+                        variant="outline"
+                        className="text-primary"
+                      >
+                        <FullscreenIcon size={15} />
+                      </TooltipButton>
+                    </DialogTrigger>
+                    <PPT />
+                  </Dialog>
 
                   <TooltipButton
                     helper={t('action.download-file')}
