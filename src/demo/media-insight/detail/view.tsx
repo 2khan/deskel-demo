@@ -8,6 +8,7 @@ import { RocketIcon } from 'lucide-react'
 import { useEffect } from 'react'
 import { TStage } from './data'
 import { includes } from 'lodash'
+import { useTranslation } from 'react-i18next'
 
 const autoNextStages = [
   'crawling-domains',
@@ -16,6 +17,7 @@ const autoNextStages = [
 ] satisfies TStage[]
 
 export default function MediaInsightDetail() {
+  const { t } = useTranslation('demo')
   const { stage, next } = useStage()
 
   useEffect(() => {
@@ -45,7 +47,8 @@ export default function MediaInsightDetail() {
           className="w-full gap-2"
           onClick={next}
         >
-          <span>Start Analysis</span> <RocketIcon size={15} />
+          <span>{t('media-insight.stage.start-analysis')}</span>{' '}
+          <RocketIcon size={15} />
         </Button>
         <Info />
         <Agenda />

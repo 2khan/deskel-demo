@@ -11,16 +11,17 @@ import PPT from './ppt'
 
 export default function Log() {
   const { t } = useTranslation('common')
+  const { t: demoTranslations } = useTranslation('demo')
   const { stage } = useStage()
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border">
       <Tabs defaultValue="reports">
         <TabsList className="h-12 w-full items-stretch rounded-b-none border-b p-2">
           <TabsTrigger className="grow rounded-xl" value="reports">
-            Reports
+            {demoTranslations('media-insight.tabs.reports')}
           </TabsTrigger>
           <TabsTrigger className="grow rounded-xl" value="logs">
-            Logs
+            {demoTranslations('media-insight.tabs.logs')}
           </TabsTrigger>
         </TabsList>
 

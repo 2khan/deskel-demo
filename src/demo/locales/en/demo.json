@@ -34,6 +34,13 @@
     },
     "action": {
       "ask-anything": "Ask me anything…"
+    },
+    "tabs": {
+      "reports": "Reports",
+      "logs": "Logs"
+    },
+    "info": {
+      "date-range": "Date Range"
     }
   }
 }

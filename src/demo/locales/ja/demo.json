@@ -34,6 +34,13 @@
     },
     "action": {
       "ask-anything": "何でも聞いてください…"
+    },
+    "tabs": {
+      "reports": "レポート",
+      "logs": "ログ"
+    },
+    "info": {
+      "date-range": "日付範囲"
     }
   }
 }

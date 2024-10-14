@@ -2,29 +2,33 @@ import { dx } from '@/shared/design-system/typography'
 import { useStage } from '../useStage'
 import { StageDataMap } from '../data'
 import { XIcon } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export default function Info() {
+  const { t } = useTranslation('demo')
   const { stage } = useStage()
   const info = StageDataMap[stage]['info']
   return (
     <div className="flex flex-col gap-3 rounded-xl border px-3 py-2">
       <div className="flex items-center justify-between gap-1">
         <span className={dx('label-01', 'text-muted-foreground')}>
-          Organization Name:
+          {t('media-insight.columns.organization-name')}:
         </span>
         <span className={dx('label-01', 'text-end text-foreground')}>
           {info.organization_name}
         </span>
       </div>
       <div className="flex items-center justify-between gap-1">
-        <span className={dx('label-01', 'text-muted-foreground')}>Range:</span>
+        <span className={dx('label-01', 'text-muted-foreground')}>
+          {t('media-insight.info.date-range')}:
+        </span>
         <span className={dx('label-01', 'text-end text-foreground')}>
           {info.range}
         </span>
       </div>
       <div className="flex items-start justify-between gap-1">
         <span className={dx('label-01', 'text-muted-foreground')}>
-          Homepage domains:
+          {t('media-insight.columns.homepages')}:
         </span>
         <div
           className={dx(
