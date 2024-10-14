@@ -39,7 +39,9 @@
     "submit": "送信する",
     "show": "表示",
     "hide": "非表示",
-    "toggle-sidebar": "サイドバーを切り替える"
+    "toggle-sidebar": "サイドバーを切り替える",
+    "view-file": "ファイルを表示する",
+    "download-file": "ファイルをダウンロードする"
   },
   "status": {
     "loading": "ロード",

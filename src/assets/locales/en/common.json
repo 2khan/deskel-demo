@@ -39,7 +39,9 @@
     "submit": "Submit",
     "show": "Show",
     "hide": "Hide",
-    "toggle-sidebar": "Toggle Sidebar"
+    "toggle-sidebar": "Toggle Sidebar",
+    "view-file": "View File",
+    "download-file": "Download File"
   },
   "status": {
     "loading": "Loading",

@@ -5,9 +5,36 @@ import Info from './components/info'
 import Log from './components/log'
 import { useStage } from './useStage'
 import { RocketIcon } from 'lucide-react'
+import { useEffect } from 'react'
+import { TStage } from './data'
+import { includes } from 'lodash'
+
+const autoNextStages = [
+  'crawling-domains',
+  'categorizing-data',
+  'preparing-analysis'
+] satisfies TStage[]
 
 export default function MediaInsightDetail() {
   const { stage, next } = useStage()
+
+  useEffect(() => {
+    let timerID: NodeJS.Timeout
+    if (includes(autoNextStages, stage)) {
+      console.log('I was run')
+      timerID = setTimeout(() => {
+        console.log('')
+        next()
+      }, 1000)
+    }
+
+    return () => {
+      if (timerID) {
+        clearTimeout(timerID)
+      }
+    }
+  }, [stage, next])
+
   return (
     <div className="flex h-full w-full grow gap-3">
       <Chat />
