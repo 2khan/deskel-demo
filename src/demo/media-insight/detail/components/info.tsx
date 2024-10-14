@@ -3,6 +3,7 @@ import { useStage } from '../useStage'
 import { StageDataMap } from '../data'
 import { XIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { m } from 'framer-motion'
 
 export default function Info() {
   const { t } = useTranslation('demo')
@@ -14,17 +15,27 @@ export default function Info() {
         <span className={dx('label-01', 'text-muted-foreground')}>
           {t('media-insight.columns.organization-name')}:
         </span>
-        <span className={dx('label-01', 'text-end text-foreground')}>
+        <m.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className={dx('label-01', 'text-end text-foreground')}
+        >
           {info.organization_name}
-        </span>
+        </m.span>
       </div>
       <div className="flex items-center justify-between gap-1">
         <span className={dx('label-01', 'text-muted-foreground')}>
           {t('media-insight.info.date-range')}:
         </span>
-        <span className={dx('label-01', 'text-end text-foreground')}>
+        <m.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className={dx('label-01', 'text-end text-foreground')}
+        >
           {info.range}
-        </span>
+        </m.span>
       </div>
       <div className="flex items-start justify-between gap-1">
         <span className={dx('label-01', 'text-muted-foreground')}>
@@ -38,7 +49,10 @@ export default function Info() {
         >
           {info.homepage_domains.length > 0
             ? info.homepage_domains.map((domain) => (
-                <div
+                <m.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
                   className="group relative rounded-full bg-muted px-2 py-0.5"
                   key={domain}
                 >
@@ -46,7 +60,7 @@ export default function Info() {
                     <XIcon size={12} />
                   </div>
                   {domain}
-                </div>
+                </m.div>
               ))
             : '-'}
         </div>

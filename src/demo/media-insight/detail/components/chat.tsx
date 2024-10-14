@@ -7,6 +7,7 @@ import { InfoIcon, SendIcon, Paperclip, TerminalIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useStage } from '../useStage'
 import { StageDataMap } from '../data'
+import { m } from 'framer-motion'
 
 export default function Chat() {
   const { stage, next } = useStage()
@@ -54,15 +55,25 @@ export default function Chat() {
             {chatHistory.map((chat) => (
               <Fragment key={chat.message}>
                 {chat.isMe ? (
-                  <div className="flex w-full justify-end gap-2">
+                  <m.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                    className="flex w-full justify-end gap-2"
+                  >
                     <div className="w-full max-w-80 grow rounded-[2rem] bg-muted px-6 py-4">
                       <span className={dx('body-02', 'whitespace-pre-line')}>
                         {chat.message}
                       </span>
                     </div>
-                  </div>
+                  </m.div>
                 ) : (
-                  <div className="flex w-full gap-2">
+                  <m.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                    className="flex w-full gap-2"
+                  >
                     <div className="flex size-8 shrink-0 items-center justify-center rounded-full border text-primary">
                       <TerminalIcon size={15} />
                     </div>
@@ -71,7 +82,7 @@ export default function Chat() {
                         {chat.message}
                       </span>
                     </div>
-                  </div>
+                  </m.div>
                 )}
               </Fragment>
             ))}
@@ -119,11 +130,14 @@ export default function Chat() {
           <Button
             size="icon"
             variant="outline"
-            className="size-12 shrink-0 rounded-full"
+            className="relative size-12 shrink-0 rounded-full"
             onClick={next}
             disabled={!input}
           >
             <SendIcon size={15} />
+            {input && (
+              <div className="absolute right-1 top-1 size-3 animate-ping rounded-full bg-primary" />
+            )}
           </Button>
         </div>
       </div>
