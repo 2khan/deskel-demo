@@ -1,0 +1,48 @@
+{
+  "language": {
+    "en": "English",
+    "ja": "日本語"
+  },
+  "system": {
+    "theme": "テーマ",
+    "theme-dark": "ダーク",
+    "theme-light": "ライト",
+    "theme-system": "システム",
+    "choose-language": "言語選択",
+    "change-theme": "テーマを変更する"
+  },
+  "glossary": {
+    "dashboard": "ダッシュボード",
+    "media-insight": "メディアインサイト",
+    "SNS": "SNS",
+    "IR": "投資家向け広報",
+    "multi-step": "マルチステップ",
+    "analyses": "分析結果",
+    "analysis": "分析",
+    "report-history": "レポート履歴"
+  },
+  "token": {
+    "column": "カラム",
+    "count": "件数",
+    "page": "ページ",
+    "action": "アクション",
+    "filter": "フィルター"
+  },
+  "action": {
+    "reset": "リセット",
+    "show-column": "列を表示",
+    "search": "サーチ",
+    "next": "次へ",
+    "prev": "前へ",
+    "cancel": "キャンセル",
+    "select": "選択",
+    "submit": "送信する",
+    "show": "表示",
+    "hide": "非表示",
+    "toggle-sidebar": "サイドバーを切り替える"
+  },
+  "status": {
+    "loading": "ロード",
+    "empty": "空"
+  }
+}

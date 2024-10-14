@@ -1,0 +1,39 @@
+{
+  "media-insight": {
+    "status": {
+      "draft": "Draft",
+      "in-progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "error": "Error"
+    },
+    "stage": {
+      "create-draft": "Create Draft",
+      "analysis-ready": "Analysis Ready",
+      "start-analysis": "Start Analysis",
+      "crawling-domains": "Crawling Domains",
+      "categorizing-data": "Categorizing Data",
+      "preparing-analysis": "Preparing Analysis",
+      "download-report": "Download Report"
+    },
+    "columns": {
+      "organization-name": "Organization Name",
+      "homepages": "Homepages",
+      "start-date": "Start Date",
+      "end-date": "End Date",
+      "status": "Status",
+      "action": "Action"
+    },
+    "filters": {
+      "select-date-range": "Select Date Range",
+      "search": "Search",
+      "all": "All"
+    },
+    "notice": {
+      "demo-only": "For Demo purposes only"
+    },
+    "action": {
+      "ask-anything": "Ask me anything…"
+    }
+  }
+}

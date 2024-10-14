@@ -1,0 +1,39 @@
+{
+  "media-insight": {
+    "status": {
+      "draft": "下書き",
+      "in-progress": "進行中",
+      "completed": "完了",
+      "cancelled": "キャンセル",
+      "error": "エラー"
+    },
+    "stage": {
+      "create-draft": "下書きを作成",
+      "analysis-ready": "分析準備完了",
+      "start-analysis": "分析を開始",
+      "crawling-domains": "ドメインをクロール中",
+      "categorizing-data": "データを分類中",
+      "preparing-analysis": "分析を準備中",
+      "download-report": "レポートをダウンロード"
+    },
+    "columns": {
+      "organization-name": "組織名",
+      "homepages": "ホームページ",
+      "start-date": "開始日",
+      "end-date": "終了日",
+      "status": "ステータス",
+      "action": "アクション"
+    },
+    "filters": {
+      "select-date-range": "日付範囲を選択",
+      "search": "サーチ",
+      "all": "全て"
+    },
+    "notice": {
+      "demo-only": "デモ用のみ"
+    },
+    "action": {
+      "ask-anything": "何でも聞いてください…"
+    }
+  }
+}

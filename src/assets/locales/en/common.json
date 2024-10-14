@@ -1,0 +1,48 @@
+{
+  "language": {
+    "en": "English",
+    "ja": "日本語"
+  },
+  "system": {
+    "theme": "Theme",
+    "theme-dark": "Dark",
+    "theme-light": "Light",
+    "theme-system": "System",
+    "choose-language": "Choose Language",
+    "change-theme": "Change Theme"
+  },
+  "glossary": {
+    "dashboard": "Dashboard",
+    "media-insight": "Media Insight",
+    "SNS": "SNS",
+    "IR": "Investor Relations",
+    "multi-step": "Multi-step",
+    "analyses": "Analyses",
+    "analysis": "Analysis",
+    "report-history": "Report History"
+  },
+  "token": {
+    "column": "Column",
+    "count": "Count",
+    "page": "Page",
+    "action": "Action",
+    "filter": "Filter"
+  },
+  "action": {
+    "reset": "Reset",
+    "show-column": "Show Column",
+    "search": "Search",
+    "next": "Next",
+    "prev": "Previous",
+    "cancel": "Cancel",
+    "select": "Select",
+    "submit": "Submit",
+    "show": "Show",
+    "hide": "Hide",
+    "toggle-sidebar": "Toggle Sidebar"
+  },
+  "status": {
+    "loading": "Loading",
+    "empty": "Empty"
+  }
+}
