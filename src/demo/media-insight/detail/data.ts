@@ -53,41 +53,7 @@ export type TStageData = {
 export const StageDataMap = {
   'create-draft-organization-name': {
     'current-input': '「Company Inc」のSWOT分析を生成する。',
-    'chat-history': [
-      {
-        isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
-      },
-      {
-        isMe: false,
-        message: '組織名が正常に設定されました。'
-      },
-      {
-        isMe: true,
-        message: '2024年6月2日から2024年9月2日まで。'
-      },
-      {
-        isMe: false,
-        message: '日付範囲が正常に設定されました。'
-      },
-      {
-        isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
-      },
-      {
-        isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
-      },
-      {
-        isMe: true,
-        message: 'company-international.comも追加してください。'
-      },
-      {
-        isMe: false,
-        message: 'ホームページのドメインが正常に更新されました。'
-      }
-    ],
+    'chat-history': [],
     info: {
       organization_name: '-',
       homepage_domains: [],
