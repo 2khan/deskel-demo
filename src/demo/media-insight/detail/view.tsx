@@ -46,8 +46,9 @@ export default function MediaInsightDetail() {
   useEffect(() => {
     if (stage === 'download-report') {
       mutate({
-        message: 'Your report is now ready',
-        label: 'Done',
+        message:
+          'Your report on Company Inc (2024/06/02 - 2024/09/02) is now ready',
+        label: 'Media Insight',
         created_at: format(new Date(), 'yyyy/MM/dd HH:mm')
       })
     }

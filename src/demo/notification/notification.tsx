@@ -32,22 +32,33 @@ export default function Notification() {
           {data.length > 0 ? (
             <div className="flex w-full flex-col gap-4">
               {data.map((n) => (
-                <div key={n.message} className="flex items-center gap-2">
+                <div key={n.message} className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <span
+                      className={dx(
+                        'label-01',
+                        'block w-max shrink-0 rounded-full border bg-background px-2 py-1 text-center uppercase text-primary'
+                      )}
+                    >
+                      {n.label}
+                    </span>
+
+                    <span
+                      className={dx(
+                        'label-01',
+                        'shrink-0 text-muted-foreground'
+                      )}
+                    >
+                      {n.created_at}
+                    </span>
+                  </div>
                   <span
                     className={dx(
-                      'label-01',
-                      'block rounded-full bg-primary px-2 py-1 uppercase text-primary-foreground'
+                      'body-compact-01',
+                      'block grow text-foreground'
                     )}
                   >
-                    {n.label}
-                  </span>
-                  <span
-                    className={dx('body-compact-01', 'block grow text-primary')}
-                  >
                     {n.message}
-                  </span>
-                  <span className={dx('label-01', 'text-muted-foreground')}>
-                    {n.created_at}
                   </span>
                 </div>
               ))}
