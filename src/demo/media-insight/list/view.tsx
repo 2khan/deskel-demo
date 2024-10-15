@@ -19,7 +19,6 @@ import {
   DownloadIcon,
   EllipsisVerticalIcon,
   FullscreenIcon,
-  TrashIcon,
   XIcon
 } from 'lucide-react'
 import {
@@ -30,7 +29,16 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import TooltipButton from '@/components/custom/TooltipButton'
-import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from '@/components/ui/dialog'
 import PPT from '../detail/components/ppt'
 
 export type TRow = {
@@ -176,24 +184,54 @@ export default function MediaTable() {
             >
               <DownloadIcon size={15} />
             </TooltipButton>
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button variant="outline" size="icon">
-                  <EllipsisVerticalIcon size={15} />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem className="flex w-full justify-between text-destructive">
-                  Cancel
-                  <XIcon size={15} />
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="flex w-full justify-between bg-destructive text-destructive-foreground">
-                  Delete
-                  <TrashIcon size={15} />
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Dialog>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <EllipsisVerticalIcon size={15} />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem className="flex w-full justify-between">
+                    {commonTranslation('token.action')} 1
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="flex w-full justify-between">
+                    {commonTranslation('token.action')} 2
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DialogTrigger asChild>
+                    <DropdownMenuItem className="flex w-full justify-between bg-destructive text-destructive-foreground">
+                      {commonTranslation('action.cancel')}
+                      <XIcon size={15} />
+                    </DropdownMenuItem>
+                  </DialogTrigger>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>
+                    {commonTranslation('confirm.sure', {
+                      action: commonTranslation('action.cancel')
+                    })}
+                  </DialogTitle>
+                  <DialogDescription>
+                    {commonTranslation('warn.irreversible')}
+                  </DialogDescription>
+                </DialogHeader>
+                <DialogFooter>
+                  <DialogClose>
+                    <Button variant="ghost">
+                      {commonTranslation('action.hide')}
+                    </Button>
+                  </DialogClose>
+                  <DialogClose>
+                    <Button variant="destructive">
+                      {commonTranslation('action.cancel')}
+                    </Button>
+                  </DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </div>
         )
       }

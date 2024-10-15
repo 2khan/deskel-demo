@@ -47,5 +47,11 @@
   "status": {
     "loading": "Loading",
     "empty": "Empty"
+  },
+  "confirm": {
+    "sure": "Are you sure to {{action}}?"
+  },
+  "warn": {
+    "irreversible": "Your actions cannot be undone."
   }
 }

@@ -47,5 +47,11 @@
   "status": {
     "loading": "ロード",
     "empty": "空"
+  },
+  "confirm": {
+    "sure": "{{action}}してもよろしいですか?"
+  },
+  "warn": {
+    "irreversible": "あなたのアクションは元に戻すことができません。"
   }
 }
