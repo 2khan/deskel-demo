@@ -14,6 +14,21 @@ import StartDateFilter from './filters/start-date'
 import { dateRangeFilterFn } from './filters/date-range-filterFn'
 import EndDateFilter from './filters/end-date'
 import StatusFilter from './filters/status'
+import { Button } from '@/components/ui/button'
+import {
+  DownloadIcon,
+  EllipsisVerticalIcon,
+  FullscreenIcon,
+  TrashIcon,
+  XIcon
+} from 'lucide-react'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
 
 export type TRow = {
   id: string
@@ -33,6 +48,7 @@ export type TRow = {
 
 export default function MediaTable() {
   const { t } = useTranslation('demo')
+  const { t: commonTranslation } = useTranslation('common')
   const columns: ColumnDef<TRow>[] = [
     {
       accessorKey: 'organization_name',
@@ -115,6 +131,43 @@ export default function MediaTable() {
             ) : (
               <StatusChip status={status} />
             )}
+          </div>
+        )
+      }
+    },
+    {
+      header: commonTranslation('token.action'),
+      minSize: 100,
+      meta: {
+        label: commonTranslation('token.action')
+      },
+      cell: () => {
+        return (
+          <div className="flex gap-2">
+            <Button variant="outline" size="icon">
+              <FullscreenIcon size={15} />
+            </Button>
+            <Button variant="outline" size="icon">
+              <DownloadIcon size={15} />
+            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Button variant="outline" size="icon">
+                  <EllipsisVerticalIcon size={15} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem className="flex w-full justify-between text-destructive">
+                  Cancel
+                  <XIcon size={15} />
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="flex w-full justify-between bg-destructive text-destructive-foreground">
+                  Delete
+                  <TrashIcon size={15} />
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         )
       }
