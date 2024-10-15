@@ -49,7 +49,11 @@ export default function Info() {
             align="start"
             side="right"
           >
-            <Input placeholder={t('media-insight.columns.organization-name')} />
+            <Input
+              defaultValue={info.organization_name}
+              placeholder={t('media-insight.columns.organization-name')}
+              className="w-60"
+            />
           </PopoverContent>
         </Popover>
       </div>
@@ -113,7 +117,11 @@ export default function Info() {
             align="start"
             side="right"
           >
-            <Input placeholder={t('media-insight.columns.homepages')} />
+            <Input
+              defaultValue={info.homepage_domain}
+              placeholder={t('media-insight.columns.homepages')}
+              className="w-60"
+            />
           </PopoverContent>
         </Popover>
       </div>
