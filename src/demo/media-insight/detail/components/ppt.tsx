@@ -20,7 +20,7 @@ const slides = [Slide1, Slide2, Slide3, Slide4]
 
 export default function PPT() {
   return (
-    <DialogContent className="max-w-screen-2xl p-2">
+    <DialogContent className="h-full w-full max-w-screen-2xl p-2">
       <DialogHeader>
         <DialogTitle>(.PPT) Viewer</DialogTitle>
       </DialogHeader>
