@@ -41,7 +41,8 @@
     "hide": "非表示",
     "toggle-sidebar": "サイドバーを切り替える",
     "view-file": "ファイルを表示する",
-    "download-file": "ファイルをダウンロードする"
+    "download-file": "ファイルをダウンロードする",
+    "chat": "チャット"
   },
   "status": {
     "loading": "ロード",

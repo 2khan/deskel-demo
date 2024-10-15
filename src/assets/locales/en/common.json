@@ -41,7 +41,8 @@
     "hide": "Hide",
     "toggle-sidebar": "Toggle Sidebar",
     "view-file": "View File",
-    "download-file": "Download File"
+    "download-file": "Download File",
+    "chat": "Chat"
   },
   "status": {
     "loading": "Loading",

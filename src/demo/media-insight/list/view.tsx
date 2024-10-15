@@ -2,7 +2,7 @@ import { DataTable } from '@/components/custom/DataTable'
 
 import type { ColumnDef } from '@tanstack/react-table'
 import data from './output.json'
-import { ExternalLinkIcon } from '@radix-ui/react-icons'
+import { ChatBubbleIcon, ExternalLinkIcon } from '@radix-ui/react-icons'
 import { Progress } from '@/components/ui/progress'
 import StatusChip from './components/statusChip'
 import { useTranslation } from 'react-i18next'
@@ -147,6 +147,14 @@ export default function MediaTable() {
       cell: () => {
         return (
           <div className="flex gap-2">
+            <TooltipButton
+              helper={commonTranslation('action.chat')}
+              size="icon"
+              variant="outline"
+              className="text-primary"
+            >
+              <ChatBubbleIcon />
+            </TooltipButton>
             <Dialog>
               <DialogTrigger asChild>
                 <TooltipButton
