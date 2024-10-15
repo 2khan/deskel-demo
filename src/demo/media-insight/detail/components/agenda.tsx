@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useStage } from '../useStage'
 import { useMemo } from 'react'
 import { cn } from '@/lib/utils'
+import { m } from 'framer-motion'
 
 const groupedStages = [
   ['create-draft'],
@@ -62,9 +63,14 @@ export default function Agenda() {
                     <LoaderIcon size={15} className="animate-spin" />
                   )}
                   {!completed && !isLoading && <CircleIcon size={15} />}
-                  <span className={dx('body-01')}>
+                  <m.span
+                    key={`${active}`}
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: [1, 0, 1] }}
+                    className={dx('body-01')}
+                  >
                     {t(`media-insight.stage.${stage}`)}
-                  </span>
+                  </m.span>
                 </div>
               )
             })}
