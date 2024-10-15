@@ -7,13 +7,13 @@ export type TReport = {
 
 export type TCompetitor = {
   organization_name: string | null
-  homepage_domains: string[]
+  homepage_domain: string
 }
 
 export type TInfo = {
   organization_name: string | null
   range: string | null
-  homepage_domains: string[]
+  homepage_domain: string
 }
 
 export type TChat = {
@@ -56,7 +56,7 @@ export const StageDataMap = {
     'chat-history': [],
     info: {
       organization_name: '-',
-      homepage_domains: [],
+      homepage_domain: '-',
       range: '-'
     },
     nextStage: 'create-draft-range',
@@ -77,7 +77,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [],
+      homepage_domain: '-',
       range: ''
     },
     nextStage: 'create-draft-homepage-domains',
@@ -86,7 +86,7 @@ export const StageDataMap = {
   },
   'create-draft-homepage-domains': {
     'current-input':
-      '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。',
+      '「Company Inc」のホームページドメインは company.com です。',
     'chat-history': [
       {
         isMe: true,
@@ -107,7 +107,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [],
+      homepage_domain: '-',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'analysis-ready',
@@ -135,8 +135,7 @@ export const StageDataMap = {
       },
       {
         isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
+        message: '「Company Inc」のホームページドメインは company.com です。'
       },
       {
         isMe: false,
@@ -145,7 +144,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: ['company.com', 'company.co.jp', 'company-global.com'],
+      homepage_domain: 'company.com',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'start-analysis',
@@ -173,8 +172,7 @@ export const StageDataMap = {
       },
       {
         isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
+        message: '「Company Inc」のホームページドメインは company.com です。'
       },
       {
         isMe: false,
@@ -191,12 +189,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [
-        'company.com',
-        'company.co.jp',
-        'company-global.com',
-        'company-international.com'
-      ],
+      homepage_domain: 'company-international.com',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'crawling-domains',
@@ -224,8 +217,7 @@ export const StageDataMap = {
       },
       {
         isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
+        message: '「Company Inc」のホームページドメインは company.com です。'
       },
       {
         isMe: false,
@@ -242,12 +234,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [
-        'company.com',
-        'company.co.jp',
-        'company-global.com',
-        'company-international.com'
-      ],
+      homepage_domain: 'company-international.com',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'categorizing-data',
@@ -275,8 +262,7 @@ export const StageDataMap = {
       },
       {
         isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
+        message: '「Company Inc」のホームページドメインは company.com です。'
       },
       {
         isMe: false,
@@ -293,12 +279,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [
-        'company.com',
-        'company.co.jp',
-        'company-global.com',
-        'company-international.com'
-      ],
+      homepage_domain: 'company-international.com',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'preparing-analysis',
@@ -326,8 +307,7 @@ export const StageDataMap = {
       },
       {
         isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
+        message: '「Company Inc」のホームページドメインは company.com です。'
       },
       {
         isMe: false,
@@ -344,12 +324,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [
-        'company.com',
-        'company.co.jp',
-        'company-global.com',
-        'company-international.com'
-      ],
+      homepage_domain: 'company-international.com',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'download-report',
@@ -377,8 +352,7 @@ export const StageDataMap = {
       },
       {
         isMe: true,
-        message:
-          '「Company Inc」のホームページドメインは\n- company.com\n- company.co.jp\n - company-global.com です。'
+        message: '「Company Inc」のホームページドメインは company.com です。'
       },
       {
         isMe: false,
@@ -395,12 +369,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domains: [
-        'company.com',
-        'company.co.jp',
-        'company-global.com',
-        'company-international.com'
-      ],
+      homepage_domain: 'company-international.com',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'download-report',
