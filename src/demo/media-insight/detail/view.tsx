@@ -42,6 +42,7 @@ export default function MediaInsightDetail() {
       <Chat />
       <ScrollArea className="h-full w-full max-w-80">
         <div className="flex w-full flex-col gap-3">
+          <Info />
           <Button
             disabled={!(stage === 'start-analysis')}
             size="lg"
@@ -54,7 +55,6 @@ export default function MediaInsightDetail() {
             <span>{t('media-insight.stage.start-analysis')}</span>{' '}
             <RocketIcon size={15} />
           </Button>
-          <Info />
           <Agenda />
           <Log />
         </div>

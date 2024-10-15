@@ -55,9 +55,9 @@ export const StageDataMap = {
     'current-input': '「Company Inc」のSWOT分析を生成する。',
     'chat-history': [],
     info: {
-      organization_name: '-',
-      homepage_domain: '-',
-      range: '-'
+      organization_name: '',
+      homepage_domain: '',
+      range: ''
     },
     nextStage: 'create-draft-range',
     status: 'draft',
@@ -77,7 +77,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domain: '-',
+      homepage_domain: '',
       range: ''
     },
     nextStage: 'create-draft-homepage-domains',
@@ -107,7 +107,7 @@ export const StageDataMap = {
     ],
     info: {
       organization_name: 'Company Inc',
-      homepage_domain: '-',
+      homepage_domain: '',
       range: '2024/06/02 - 2024/09/02'
     },
     nextStage: 'analysis-ready',
