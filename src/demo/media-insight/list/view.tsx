@@ -29,6 +29,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
+import TooltipButton from '@/components/custom/TooltipButton'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import PPT from '../detail/components/ppt'
 
 export type TRow = {
   id: string
@@ -144,12 +147,27 @@ export default function MediaTable() {
       cell: () => {
         return (
           <div className="flex gap-2">
-            <Button variant="outline" size="icon">
-              <FullscreenIcon size={15} />
-            </Button>
-            <Button variant="outline" size="icon">
+            <Dialog>
+              <DialogTrigger asChild>
+                <TooltipButton
+                  helper={commonTranslation('action.view-file')}
+                  size="icon"
+                  variant="outline"
+                  className="text-primary"
+                >
+                  <FullscreenIcon size={15} />
+                </TooltipButton>
+              </DialogTrigger>
+              <PPT />
+            </Dialog>
+            <TooltipButton
+              helper={commonTranslation('action.download-file')}
+              size="icon"
+              variant="outline"
+              className="text-primary"
+            >
               <DownloadIcon size={15} />
-            </Button>
+            </TooltipButton>
             <DropdownMenu>
               <DropdownMenuTrigger>
                 <Button variant="outline" size="icon">
