@@ -4,7 +4,7 @@ import Chat from './components/chat'
 import Info from './components/info'
 import Log from './components/log'
 import { useStage } from './useStage'
-import { RocketIcon } from 'lucide-react'
+import { RocketIcon, XIcon } from 'lucide-react'
 import { useEffect } from 'react'
 import { TStage } from './data'
 import { includes } from 'lodash'
@@ -20,11 +20,14 @@ const autoNextStages = [
 
 export default function MediaInsightDetail() {
   const { t } = useTranslation('demo')
+  const { t: commonTranslation } = useTranslation('common')
   const { stage, next } = useStage()
+
+  const isAuto = includes(autoNextStages, stage)
 
   useEffect(() => {
     let timerID: NodeJS.Timeout
-    if (includes(autoNextStages, stage)) {
+    if (isAuto) {
       timerID = setTimeout(() => {
         next()
       }, 1000)
@@ -35,7 +38,13 @@ export default function MediaInsightDetail() {
         clearTimeout(timerID)
       }
     }
-  }, [stage, next])
+  }, [stage, isAuto, next])
+
+  const handleClick = () => {
+    if (!(stage === 'start-analysis')) return
+    if (isAuto) return
+    next()
+  }
 
   return (
     <div className="flex h-full w-full grow gap-3">
@@ -44,16 +53,21 @@ export default function MediaInsightDetail() {
         <div className="flex w-full flex-col gap-3">
           <Info />
           <Button
-            disabled={!(stage === 'start-analysis')}
+            disabled={!(stage === 'start-analysis') && !isAuto}
             size="lg"
             className={cn(
               'w-full gap-2',
               stage === 'start-analysis' && 'animate-bounce'
             )}
-            onClick={next}
+            onClick={handleClick}
+            variant={isAuto ? 'destructive' : 'default'}
           >
-            <span>{t('media-insight.stage.start-analysis')}</span>{' '}
-            <RocketIcon size={15} />
+            <span>
+              {isAuto
+                ? commonTranslation('action.cancel')
+                : t('media-insight.stage.start-analysis')}
+            </span>
+            {isAuto ? <XIcon size={15} /> : <RocketIcon size={15} />}
           </Button>
           <Agenda />
           <Log />
