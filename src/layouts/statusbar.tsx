@@ -1,3 +1,4 @@
+import Notification from '@/demo/notification/notification'
 import { CONTENT_PADDING, HEADER_HEIGHT } from '@/shared/constants/layout'
 import { dx } from '@/shared/design-system/typography'
 
@@ -13,6 +14,8 @@ export default function StatusBar(props: TProps) {
       style={{ height: HEADER_HEIGHT - CONTENT_PADDING }}
     >
       <h1 className={dx('heading-02')}>{title}</h1>
+
+      <Notification />
     </header>
   )
 }

@@ -11,6 +11,8 @@ import { includes } from 'lodash'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { useAddNotification } from '@/demo/notification/useNotification'
+import { format } from 'date-fns'
 
 const autoNextStages = [
   'crawling-domains',
@@ -19,6 +21,7 @@ const autoNextStages = [
 ] satisfies TStage[]
 
 export default function MediaInsightDetail() {
+  const { mutate } = useAddNotification()
   const { t } = useTranslation('demo')
   const { t: commonTranslation } = useTranslation('common')
   const { stage, next } = useStage()
@@ -39,6 +42,16 @@ export default function MediaInsightDetail() {
       }
     }
   }, [stage, isAuto, next])
+
+  useEffect(() => {
+    if (stage === 'download-report') {
+      mutate({
+        message: 'Your report is now ready',
+        label: 'Done',
+        created_at: format(new Date(), 'yyyy/MM/dd HH:mm')
+      })
+    }
+  }, [stage, mutate])
 
   const handleClick = () => {
     if (!(stage === 'start-analysis')) return
