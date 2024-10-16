@@ -52,8 +52,15 @@ export type TStageData = {
 
 export const StageDataMap = {
   'create-draft-organization-name': {
-    'current-input': '「Company Inc」のSWOT分析を生成する。',
-    'chat-history': [],
+    'current-input':
+      '「Company Inc」のニュースメディア分析レポートを作成したいです。',
+    'chat-history': [
+      {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      }
+    ],
     info: {
       organization_name: '',
       homepage_domain: '',
@@ -67,12 +74,19 @@ export const StageDataMap = {
     'current-input': '2024年6月2日から2024年9月2日まで。',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       }
     ],
     info: {
@@ -85,16 +99,22 @@ export const StageDataMap = {
     reports: []
   },
   'create-draft-homepage-domains': {
-    'current-input':
-      '「Company Inc」のホームページドメインは company.com です。',
+    'current-input': 'Company Inc」のホームページURLは company.com です。',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -102,7 +122,8 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          '対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       }
     ],
     info: {
@@ -115,15 +136,22 @@ export const StageDataMap = {
     reports: []
   },
   'analysis-ready': {
-    'current-input': 'company-international.comも追加してください。',
+    'current-input': 'はい、お願いします。',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -131,15 +159,17 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          ' 対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       },
       {
         isMe: true,
-        message: '「Company Inc」のホームページドメインは company.com です。'
+        message: 'Company Inc」のホームページURLは company.com です。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
+        message:
+          '了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com'
       }
     ],
     info: {
@@ -155,12 +185,19 @@ export const StageDataMap = {
     'current-input': '',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -168,23 +205,25 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          ' 対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       },
       {
         isMe: true,
-        message: '「Company Inc」のホームページドメインは company.com です。'
+        message: 'Company Inc」のホームページURLは company.com です。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
+        message:
+          '了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com'
       },
       {
         isMe: true,
-        message: 'company-international.comも追加してください。'
+        message: 'はい、お願いします。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に更新されました。'
+        message: '分析を開始いたします。'
       }
     ],
     info: {
@@ -200,12 +239,19 @@ export const StageDataMap = {
     'current-input': '',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -213,23 +259,25 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          ' 対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       },
       {
         isMe: true,
-        message: '「Company Inc」のホームページドメインは company.com です。'
+        message: 'Company Inc」のホームページURLは company.com です。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
+        message:
+          '了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com'
       },
       {
         isMe: true,
-        message: 'company-international.comも追加してください。'
+        message: 'はい、お願いします。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に更新されました。'
+        message: '分析を開始いたします。'
       }
     ],
     info: {
@@ -245,12 +293,19 @@ export const StageDataMap = {
     'current-input': '',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -258,23 +313,25 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          ' 対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       },
       {
         isMe: true,
-        message: '「Company Inc」のホームページドメインは company.com です。'
+        message: 'Company Inc」のホームページURLは company.com です。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
+        message:
+          '了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com'
       },
       {
         isMe: true,
-        message: 'company-international.comも追加してください。'
+        message: 'はい、お願いします。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に更新されました。'
+        message: '分析を開始いたします。'
       }
     ],
     info: {
@@ -290,12 +347,19 @@ export const StageDataMap = {
     'current-input': '',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -303,23 +367,25 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          ' 対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       },
       {
         isMe: true,
-        message: '「Company Inc」のホームページドメインは company.com です。'
+        message: 'Company Inc」のホームページURLは company.com です。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
+        message:
+          '了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com'
       },
       {
         isMe: true,
-        message: 'company-international.comも追加してください。'
+        message: 'はい、お願いします。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に更新されました。'
+        message: '分析を開始いたします。'
       }
     ],
     info: {
@@ -335,12 +401,19 @@ export const StageDataMap = {
     'current-input': '',
     'chat-history': [
       {
+        isMe: false,
+        message:
+          'DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。'
+      },
+      {
         isMe: true,
-        message: '「Company Inc」のSWOT分析を生成する。'
+        message:
+          '「Company Inc」のニュースメディア分析レポートを作成したいです。'
       },
       {
         isMe: false,
-        message: '組織名が正常に設定されました。'
+        message:
+          '了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？'
       },
       {
         isMe: true,
@@ -348,23 +421,25 @@ export const StageDataMap = {
       },
       {
         isMe: false,
-        message: '日付範囲が正常に設定されました。'
+        message:
+          ' 対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？'
       },
       {
         isMe: true,
-        message: '「Company Inc」のホームページドメインは company.com です。'
+        message: 'Company Inc」のホームページURLは company.com です。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に追加されました。'
+        message:
+          '了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com'
       },
       {
         isMe: true,
-        message: 'company-international.comも追加してください。'
+        message: 'はい、お願いします。'
       },
       {
         isMe: false,
-        message: 'ホームページのドメインが正常に更新されました。'
+        message: '分析を開始いたします。'
       }
     ],
     info: {

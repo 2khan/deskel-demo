@@ -8,7 +8,7 @@ import {
 
 const DetailRoutes = [
   {
-    label: 'glossary.media-insight',
+    label: 'glossary.new-media-insight',
     icon: NewspaperIcon,
     path: '/media-insight/:id',
     lazy: async () => {
@@ -21,7 +21,7 @@ const DetailRoutes = [
     }
   },
   {
-    label: 'glossary.SNS',
+    label: 'glossary.new-sns',
     icon: SubtitlesIcon,
     path: '/sns/:id',
     lazy: async () => {
@@ -32,7 +32,7 @@ const DetailRoutes = [
     }
   },
   {
-    label: 'glossary.IR',
+    label: 'glossary.new-ir',
     icon: LineChartIcon,
     path: '/ir/:id',
     lazy: async () => {

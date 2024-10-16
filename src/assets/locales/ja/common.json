@@ -4,22 +4,25 @@
     "ja": "日本語"
   },
   "system": {
-    "theme": "テーマ",
+    "theme": "外観モード",
     "theme-dark": "ダーク",
     "theme-light": "ライト",
     "theme-system": "システム",
-    "choose-language": "言語選択",
-    "change-theme": "テーマを変更する"
+    "choose-language": "言語",
+    "change-theme": "外観モードを変更する"
   },
   "glossary": {
     "dashboard": "ダッシュボード",
     "media-insight": "メディアインサイト",
     "SNS": "SNS",
     "IR": "投資家向け広報",
-    "multi-step": "マルチステップ",
+    "multi-step": "二段階分析",
     "analyses": "分析結果",
     "analysis": "分析",
-    "report-history": "レポート履歴"
+    "report-history": "レポート出力履歴",
+    "new-media-insight": "新規NEWS分析",
+    "new-sns": "新規SNS分析",
+    "new-ir": "新規IR情報分析"
   },
   "token": {
     "column": "カラム",
@@ -31,7 +34,7 @@
   "action": {
     "reset": "リセット",
     "show-column": "列を表示",
-    "search": "サーチ",
+    "search": "検索",
     "next": "次へ",
     "prev": "前へ",
     "cancel": "キャンセル",
@@ -39,19 +42,19 @@
     "submit": "送信する",
     "show": "表示",
     "hide": "非表示",
-    "toggle-sidebar": "サイドバーを切り替える",
-    "view-file": "ファイルを表示する",
-    "download-file": "ファイルをダウンロードする",
+    "toggle-sidebar": "サイドバーを開閉",
+    "view-file": "ファイルを表示",
+    "download-file": "ファイルをダウンロード",
     "chat": "チャット"
   },
   "status": {
-    "loading": "ロード",
+    "loading": "読み込み中",
     "empty": "空"
   },
   "confirm": {
     "sure": "{{action}}してもよろしいですか?"
   },
   "warn": {
-    "irreversible": "あなたのアクションは元に戻すことができません。"
+    "irreversible": "アクションを実行した際に元に戻すことができませんがよろしいですか？。"
   }
 }

@@ -1,32 +1,32 @@
 {
   "media-insight": {
     "status": {
-      "draft": "下書き",
+      "draft": "ドラフト作成",
       "in-progress": "進行中",
       "completed": "完了",
-      "cancelled": "キャンセル",
+      "cancelled": "キャンセル済み",
       "error": "エラー"
     },
     "stage": {
-      "create-draft": "下書きを作成",
+      "create-draft": "ドラフトを作成",
       "analysis-ready": "分析準備完了",
       "start-analysis": "分析を開始",
-      "crawling-domains": "ドメインをクロール中",
-      "categorizing-data": "データを分類中",
+      "crawling-domains": "データを取得中",
+      "categorizing-data": "データをカテゴライズ中",
       "preparing-analysis": "分析を準備中",
       "download-report": "レポートをダウンロード"
     },
     "columns": {
       "organization-name": "組織名",
-      "homepages": "ホームページ",
+      "homepages": "ホームページURL",
       "start-date": "開始日",
       "end-date": "終了日",
       "status": "ステータス",
       "action": "アクション"
     },
     "filters": {
-      "select-date-range": "日付範囲を選択",
-      "search": "サーチ",
+      "select-date-range": "期間を選択",
+      "search": "検索",
       "all": "全て"
     },
     "notice": {
@@ -40,7 +40,7 @@
       "logs": "ログ"
     },
     "info": {
-      "date-range": "日付範囲"
+      "date-range": "期間"
     }
   }
 }

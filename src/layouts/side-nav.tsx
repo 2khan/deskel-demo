@@ -88,22 +88,25 @@ export default function SideNav() {
                       >
                         <m.div
                           animate={isOpen ? { scale: 0.75 } : { scale: 1 }}
+                          className="shrink-0"
                         >
-                          <r.icon size={20} className="shrink-0" />
+                          <r.icon size={20} />
                         </m.div>
-                        <m.span
-                          className={cn(
-                            'block w-max shrink-0',
-                            !isOpen && 'sr-only'
-                          )}
+                        <m.div
+                          className={cn('truncate', !isOpen && 'sr-only')}
                           animate={
                             isOpen
-                              ? { opacity: 1, transition: { delay: 0.1 } }
+                              ? {
+                                  opacity: 1,
+                                  transition: {
+                                    delay: 0.1
+                                  }
+                                }
                               : { opacity: 0 }
                           }
                         >
                           {t(r.label)}
-                        </m.span>
+                        </m.div>
                       </NavLink>
                     </TooltipTrigger>
                     <TooltipContent side="right">{t(r.label)}</TooltipContent>

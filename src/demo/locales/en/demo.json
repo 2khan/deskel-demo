@@ -18,7 +18,7 @@
     },
     "columns": {
       "organization-name": "Organization Name",
-      "homepages": "Homepages",
+      "homepages": "Homepage URL",
       "start-date": "Start Date",
       "end-date": "End Date",
       "status": "Status",

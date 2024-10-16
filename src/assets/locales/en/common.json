@@ -13,13 +13,16 @@
   },
   "glossary": {
     "dashboard": "Dashboard",
-    "media-insight": "Media Insight",
-    "SNS": "SNS",
-    "IR": "Investor Relations",
-    "multi-step": "Multi-step",
+    "media-insight": "Global Media Insight Report",
+    "SNS": "SNS Media Insight Report",
+    "IR": "IR Document Analyses",
+    "multi-step": "Two step Analyses",
     "analyses": "Analyses",
     "analysis": "Analysis",
-    "report-history": "Report History"
+    "report-history": "Report History",
+    "new-media-insight": "New Global Media Insight Report",
+    "new-sns": "New SNS Media Insight Report",
+    "new-ir": "New IR document analyses"
   },
   "token": {
     "column": "Column",
