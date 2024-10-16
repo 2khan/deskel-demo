@@ -13,9 +13,9 @@
   },
   "glossary": {
     "dashboard": "ダッシュボード",
-    "media-insight": "メディアインサイト",
-    "SNS": "SNS",
-    "IR": "投資家向け広報",
+    "media-insight": "NEWS分析",
+    "SNS": "SNS分析",
+    "IR": "IR情報分析",
     "multi-step": "二段階分析",
     "analyses": "分析結果",
     "analysis": "分析",
