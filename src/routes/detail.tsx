@@ -3,10 +3,22 @@ import {
   NewspaperIcon,
   SubtitlesIcon,
   LineChartIcon,
-  LayoutDashboardIcon
+  LayoutDashboardIcon,
+  MessageCirclePlusIcon
 } from 'lucide-react'
 
 const DetailRoutes = [
+  {
+    label: 'glossary.new-analysis',
+    icon: MessageCirclePlusIcon,
+    path: '/chat',
+    lazy: async () => {
+      const { default: Component } = await import('@/pages/chat')
+      return {
+        Component
+      }
+    }
+  },
   {
     label: 'glossary.new-media-insight',
     icon: NewspaperIcon,

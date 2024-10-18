@@ -22,7 +22,8 @@
     "report-history": "レポート出力履歴",
     "new-media-insight": "新規NEWS分析",
     "new-sns": "新規SNS分析",
-    "new-ir": "新規IR情報分析"
+    "new-ir": "新規IR情報分析",
+    "new-analysis": "新分析"
   },
   "token": {
     "column": "カラム",

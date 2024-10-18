@@ -22,7 +22,8 @@
     "report-history": "Report History",
     "new-media-insight": "New Global Media Insight Report",
     "new-sns": "New SNS Media Insight Report",
-    "new-ir": "New IR document analyses"
+    "new-ir": "New IR document analyses",
+    "new-analysis": "New Analysis"
   },
   "token": {
     "column": "Column",
