@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { Textarea } from '@/components/ui/textarea'
 import { dx } from '@/shared/design-system/typography'
 import { InfoIcon, SendIcon, Paperclip, TerminalIcon } from 'lucide-react'
@@ -90,7 +90,6 @@ export default function Chat() {
           </div>
         </div>
         <div ref={chatBottomRef} />
-        <ScrollBar />
       </ScrollArea>
       <div className="relative flex w-full flex-col">
         <div className="ml-8 flex w-full max-w-80 items-center gap-3 rounded-t-2xl border border-b-0 p-2 text-muted-foreground">

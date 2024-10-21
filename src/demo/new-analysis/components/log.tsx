@@ -1,4 +1,4 @@
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { TLog } from '@/demo/common/stages'
 import { dx } from '@/shared/design-system/typography'
 import { useEffect, useRef } from 'react'
@@ -11,12 +11,16 @@ type TProps = {
 export default function Log(props: TProps) {
   const { t } = useTranslation('demo')
   const { logs } = props
-  const logBottomRef = useRef<HTMLDivElement>(null)
+  const logContainerRef = useRef<HTMLDivElement>(null)
 
   // scroll to top on log
   useEffect(() => {
-    if (logBottomRef.current) {
-      logBottomRef.current.scrollIntoView({ behavior: 'smooth' })
+    const el = logContainerRef.current
+    if (el) {
+      el.scrollTo({
+        top: el.scrollHeight,
+        behavior: 'smooth'
+      })
     }
   }, [logs])
 
@@ -25,7 +29,7 @@ export default function Log(props: TProps) {
       <span className={dx('heading-compact-01')}>
         {t('media-insight.tabs.logs')}
       </span>
-      <ScrollArea className="h-40 rounded-xl">
+      <ScrollArea viewportRef={logContainerRef} className="h-40 rounded-xl">
         <div
           className={dx(
             'code-01',
@@ -44,9 +48,7 @@ export default function Log(props: TProps) {
               </div>
             ))}
           </div>
-          <div ref={logBottomRef} />
         </div>
-        <ScrollBar />
       </ScrollArea>
     </div>
   )

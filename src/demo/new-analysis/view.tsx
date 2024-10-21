@@ -1,4 +1,4 @@
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import Chat from './components/chat'
 import Info from './components/info'
 import Actions from './components/actions'
@@ -18,7 +18,7 @@ import { useEffect } from 'react'
 import { Dialog } from '@/components/ui/dialog'
 
 export default function NewAnalysis() {
-  const { index, next, goto } = useStage()
+  const { index, next } = useStage()
 
   const stageData = stages.reduce<TStageData>((merged, n, i) => {
     const next = data[n]
@@ -50,10 +50,6 @@ export default function NewAnalysis() {
     }
   }, [index, next])
 
-  useEffect(() => {
-    goto(9)
-  }, [goto])
-
   return (
     <div className="flex h-full w-full grow gap-3">
       <Chat
@@ -65,11 +61,9 @@ export default function NewAnalysis() {
           <div className="flex w-full flex-col gap-3">
             <Info info={stageData.info} />
             <Actions action={stageData.action} />
-
             <Agenda />
             <Log logs={stageData['log-history']} />
           </div>
-          <ScrollBar />
         </ScrollArea>
       </Dialog>
     </div>

@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { Textarea } from '@/components/ui/textarea'
 import { dx } from '@/shared/design-system/typography'
 import { InfoIcon, SendIcon, Paperclip, TerminalIcon } from 'lucide-react'
@@ -19,15 +19,19 @@ export default function Chat(props: TProps) {
   const { next } = useStage()
   const { input, history } = props
   const { t } = useTranslation('demo')
-  const chatBottomRef = useRef<HTMLDivElement>(null)
+  const chatContainerRef = useRef<HTMLDivElement>(null)
   const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
   // const [value, setValue] = useState(input)
 
   // scroll to bottom on chat
   useEffect(() => {
-    if (chatBottomRef.current) {
-      chatBottomRef.current.scrollIntoView({ behavior: 'smooth' })
+    const el = chatContainerRef.current
+    if (el) {
+      el.scrollTo({
+        top: el.scrollHeight,
+        behavior: 'smooth'
+      })
     }
   }, [history])
 
@@ -58,7 +62,10 @@ export default function Chat(props: TProps) {
 
   return (
     <div className="flex w-full grow flex-col gap-2">
-      <ScrollArea className="mx-auto w-full max-w-screen-xl grow">
+      <ScrollArea
+        viewportRef={chatContainerRef}
+        className="mx-auto w-full max-w-screen-xl grow"
+      >
         <div className="flex w-full flex-col gap-4 pr-2">
           <div className="flex w-full flex-col items-center gap-2">
             <span className={dx('label-01', 'text-muted-foreground')}>
@@ -100,8 +107,7 @@ export default function Chat(props: TProps) {
             ))}
           </div>
         </div>
-        <div ref={chatBottomRef} />
-        <ScrollBar />
+        {/* <div ref={chatBottomRef} /> */}
       </ScrollArea>
       <div className="relative flex w-full flex-col">
         <div className="ml-8 flex w-full max-w-80 items-center gap-3 rounded-t-2xl border border-b-0 p-2 text-muted-foreground">

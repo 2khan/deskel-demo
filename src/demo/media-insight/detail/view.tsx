@@ -10,7 +10,7 @@ import { TStage } from './data'
 import { includes } from 'lodash'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { useAddNotification } from '@/demo/notification/useNotification'
 import { format } from 'date-fns'
 import { useStatusbar } from '@/shared/stores/statusbar'
@@ -98,7 +98,6 @@ export default function MediaInsightDetail() {
           <Agenda />
           <Log />
         </div>
-        <ScrollBar />
       </ScrollArea>
     </div>
   )

@@ -8,7 +8,7 @@ import Slide2 from '@/assets/media/slide-2.webp'
 import Slide3 from '@/assets/media/slide-3.webp'
 import Slide4 from '@/assets/media/slide-4.webp'
 import { useState } from 'react'
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { dx } from '@/shared/design-system/typography'
 
 const slides = [Slide1, Slide2, Slide3, Slide4]
@@ -83,7 +83,6 @@ export default function PPT() {
               )
             })}
           </div>
-          <ScrollBar />
         </ScrollArea>
         <div className="flex grow items-center justify-center rounded-2xl bg-muted p-2 shadow-inner">
           <img

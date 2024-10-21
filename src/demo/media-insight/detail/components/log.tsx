@@ -1,4 +1,4 @@
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { dx } from '@/shared/design-system/typography'
 import { useTranslation } from 'react-i18next'
 import { TStage } from '../data'
@@ -91,7 +91,6 @@ export default function Log() {
             )}
           </div>
         </div>
-        <ScrollBar />
       </ScrollArea>
     </div>
   )
