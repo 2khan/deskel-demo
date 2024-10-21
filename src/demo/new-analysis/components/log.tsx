@@ -26,9 +26,11 @@ export default function Log(props: TProps) {
 
   return (
     <div className="flex flex-col gap-2 overflow-hidden rounded-2xl border bg-card p-2">
-      <span className={dx('heading-compact-01')}>
-        {t('media-insight.tabs.logs')}
-      </span>
+      <div className="px-2">
+        <span className={dx('heading-compact-01')}>
+          {t('media-insight.tabs.logs')}
+        </span>
+      </div>
       <ScrollArea viewportRef={logContainerRef} className="h-40 rounded-xl">
         <div
           className={dx(
