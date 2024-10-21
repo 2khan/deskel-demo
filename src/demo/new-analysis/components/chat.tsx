@@ -61,11 +61,8 @@ export default function Chat(props: TProps) {
   // }
 
   return (
-    <div className="flex w-full grow flex-col gap-2">
-      <ScrollArea
-        viewportRef={chatContainerRef}
-        className="mx-auto w-full max-w-screen-xl grow"
-      >
+    <div className="mx-auto flex w-full max-w-screen-xl grow flex-col gap-2">
+      <ScrollArea viewportRef={chatContainerRef} className="w-full grow">
         <div className="flex w-full flex-col gap-4 pr-2">
           <div className="flex w-full flex-col items-center gap-2">
             <span className={dx('label-01', 'text-muted-foreground')}>
