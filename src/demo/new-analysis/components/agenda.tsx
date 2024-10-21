@@ -7,7 +7,7 @@ import {
   LoaderIcon
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import { m } from 'framer-motion'
 import { useStage } from '@/demo/common/useStage'
@@ -35,10 +35,6 @@ export default function Agenda() {
       ),
     [currentStage]
   )
-
-  useEffect(() => {
-    console.log(currentGroupIndex, currentStage)
-  }, [currentGroupIndex, currentStage])
 
   return (
     <div className="flex w-full flex-col gap-2 rounded-xl border bg-muted p-2 text-muted-foreground">

@@ -39,7 +39,7 @@ export default function NewAnalysis() {
     if (autoNextStages.includes(currentStage)) {
       timerId = setTimeout(() => {
         next()
-      }, 4000)
+      }, 2000)
     }
 
     return () => {

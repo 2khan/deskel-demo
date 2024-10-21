@@ -11,6 +11,9 @@ import {
 import { Calendar } from '@/components/ui/calendar'
 import { Input } from '@/components/ui/input'
 import { TInfo } from '@/demo/common/stages'
+import { useEffect, useState } from 'react'
+import { DateRange } from 'react-day-picker'
+import { parse } from 'date-fns'
 
 type TProps = {
   info: TInfo
@@ -19,6 +22,22 @@ type TProps = {
 export default function Info(props: TProps) {
   const { info } = props
   const { t } = useTranslation('demo')
+
+  const [range, setRange] = useState<DateRange>()
+
+  useEffect(() => {
+    if (!info.range) return
+
+    const { 0: from, 1: to } = info.range
+      .split(' - ')
+      .map((d) => parse(d, 'yyyy/MM/dd', new Date()))
+
+    setRange({ from, to })
+  }, [info.range])
+
+  useEffect(() => {
+    console.log(range)
+  }, [range])
 
   return (
     <div className="flex flex-col gap-3 rounded-xl border px-3 py-2">
@@ -86,7 +105,14 @@ export default function Info(props: TProps) {
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0" align="start" side="right">
-            <Calendar initialFocus mode="range" numberOfMonths={2} />
+            <Calendar
+              initialFocus
+              defaultMonth={range?.from}
+              selected={range}
+              onSelect={setRange}
+              mode="range"
+              numberOfMonths={2}
+            />
           </PopoverContent>
         </Popover>
       </div>
