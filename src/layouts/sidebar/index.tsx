@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react'
 import { LayoutPanelLeftIcon } from 'lucide-react'
 
 // COMPONENTS
-import SideNav from '../side-nav'
 import {
   Tooltip,
   TooltipContent,
@@ -19,6 +18,8 @@ import {
 } from '@/shared/constants/layout'
 import { useTranslation } from 'react-i18next'
 
+const SideNav = lazy(() => import('../side-nav'))
+const UserMenu = lazy(() => import('../user-menu'))
 const ChangeLanguage = lazy(() => import('@/components/custom/ChangeLanguage'))
 const ChangeTheme = lazy(() => import('@/components/custom/ChangeTheme'))
 
@@ -70,7 +71,9 @@ export default function Sidebar() {
           </Tooltip>
         </div>
       </div>
-      <SideNav />
+      <Suspense>
+        <SideNav />
+      </Suspense>
       <div className={cn('flex items-center gap-1 p-2', !isOpen && 'flex-col')}>
         <Suspense>
           <ChangeLanguage />
@@ -79,6 +82,9 @@ export default function Sidebar() {
           <ChangeTheme />
         </Suspense>
       </div>
+      <Suspense>
+        <UserMenu />
+      </Suspense>
     </aside>
   )
 }
