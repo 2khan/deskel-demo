@@ -35,10 +35,6 @@ export default function Info(props: TProps) {
     setRange({ from, to })
   }, [info.range])
 
-  useEffect(() => {
-    console.log(range)
-  }, [range])
-
   return (
     <div className="flex flex-col gap-3 rounded-xl border px-3 py-2">
       <div className="flex items-center justify-between gap-1">
