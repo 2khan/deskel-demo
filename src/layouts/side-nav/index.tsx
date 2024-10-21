@@ -8,8 +8,7 @@ import { Separator } from '@/components/ui/separator'
 // UTILS
 import { cn } from '@/lib/utils'
 import { dx } from '@/shared/design-system/typography'
-import ListRoutes from '@/routes/list'
-import DetailRoutes from '@/routes/detail'
+import MainRoutes from '@/routes/main'
 import { useSidebar } from '@/shared/stores/sidebar'
 import type { ParseKeys } from 'i18next'
 import type { TRouteObject } from '@/shared/types/utils/route'
@@ -23,11 +22,7 @@ type TListItem = {
 const lists = [
   {
     title: 'glossary.analyses',
-    routes: DetailRoutes
-  },
-  {
-    title: 'glossary.report-history',
-    routes: ListRoutes
+    routes: MainRoutes
   }
 ] as const satisfies TListItem[]
 

@@ -3,18 +3,14 @@ import { useEffect, lazy, Suspense, useMemo } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 
 // UTILS
-import ListRoutes from '@/routes/list'
-import DetailRoutes from '@/routes/detail'
+import MainRoutes from '@/routes/main'
 import { CONTENT_PADDING } from '@/shared/constants/layout'
-import { find, flatten } from 'lodash'
-import type { TRouteObject } from '@/shared/types/utils/route'
+import { find } from 'lodash'
 import { useStatusbar } from '@/shared/stores/statusbar'
 
 // COMPONENTS
 const Sidebar = lazy(() => import('./sidebar'))
 const StatusBar = lazy(() => import('./statusbar'))
-
-const routes = flatten<TRouteObject>([ListRoutes, DetailRoutes])
 
 export default function Layout() {
   const { t } = useTranslation()
@@ -22,7 +18,7 @@ export default function Layout() {
   const { title, setTitle } = useStatusbar()
 
   const currentRoute = useMemo(
-    () => find(routes, (r) => r.path == location.pathname),
+    () => find(MainRoutes, (r) => r.path == location.pathname),
     [location.pathname]
   )
 

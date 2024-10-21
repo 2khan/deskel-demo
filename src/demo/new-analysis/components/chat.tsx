@@ -90,7 +90,7 @@ export default function Chat(props: TProps) {
                     transition={{ delay: 0.2 }}
                     className="flex w-full gap-2"
                   >
-                    <div className="flex size-8 shrink-0 items-center justify-center rounded-full border text-primary">
+                    <div className="flex size-8 shrink-0 items-center justify-center rounded-full border bg-card text-primary">
                       <TerminalIcon size={15} />
                     </div>
                     <div className="grow p-1.5">

@@ -1,8 +1,7 @@
 import type { RouteObject } from 'react-router-dom'
 import App from '@/App'
 import Layout from '@/layouts'
-import ListRoutes from './list'
-import DetailRoutes from './detail'
+import MainRoutes from './main'
 
 const Routes: RouteObject[] = [
   {
@@ -21,10 +20,7 @@ const Routes: RouteObject[] = [
             }
           },
           {
-            children: DetailRoutes
-          },
-          {
-            children: ListRoutes
+            children: MainRoutes
           }
         ]
       }
