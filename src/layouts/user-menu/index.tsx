@@ -15,14 +15,14 @@ import { CaretSortIcon, LockClosedIcon, ExitIcon } from '@radix-ui/react-icons'
 export default function UserMenu() {
   const { isOpen } = useSidebar()
   return (
-    <div
-      className={cn(
-        'sticky bottom-0 left-0 w-full overflow-hidden rounded-tr-2xl bg-background p-2 transition-all',
-        !isOpen && 'p-0'
-      )}
-    >
+    <div className="sticky bottom-0 left-0 w-full overflow-hidden rounded-tr-2xl bg-background transition-all">
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex w-full items-center gap-2 rounded-xl p-1">
+        <DropdownMenuTrigger
+          className={cn(
+            'flex w-full items-center gap-2 rounded-xl p-2',
+            !isOpen && 'p-1'
+          )}
+        >
           <Avatar className="shrink-0">
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
@@ -41,7 +41,8 @@ export default function UserMenu() {
         <DropdownMenuContent
           align="end"
           side="right"
-          sideOffset={16}
+          sideOffset={8}
+          alignOffset={8}
           className="min-w-[15rem] rounded-2xl"
         >
           <DropdownMenuGroup className="p-1">
