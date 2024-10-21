@@ -58,7 +58,7 @@ export default function Chat(props: TProps) {
 
   return (
     <div className="flex w-full grow flex-col gap-2">
-      <ScrollArea className="grow">
+      <ScrollArea className="mx-auto w-full max-w-screen-xl grow">
         <div className="flex w-full flex-col gap-4 pr-2">
           <div className="flex w-full flex-col items-center gap-2">
             <span className={dx('label-01', 'text-muted-foreground')}>

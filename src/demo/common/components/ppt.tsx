@@ -44,12 +44,12 @@ export default function PPT() {
   }
 
   return (
-    <DialogContent className="flex h-full w-full max-w-full flex-col p-2">
+    <DialogContent className="flex h-full w-full max-w-full flex-col p-2 sm:rounded-none">
       <DialogHeader>
         <DialogTitle>(.PPT) Viewer</DialogTitle>
       </DialogHeader>
-      <div className="flex w-full grow gap-2">
-        <ScrollArea className="w-80 shrink-0">
+      <div className="flex w-full grow gap-2 overflow-hidden rounded-2xl">
+        <ScrollArea className="w-80 shrink-0 pr-2">
           <div className="flex flex-col gap-2 p-px">
             {slides.map((slide, index) => {
               const isActive = index === selectedIndex
