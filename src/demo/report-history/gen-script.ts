@@ -2,7 +2,7 @@ import fs from 'fs'
 import { TLocale } from '@/shared/i18n'
 import { mock } from '@/demo/utils'
 import { type TRow } from './view'
-import { allStatus } from '../common'
+import { allStatus } from './common'
 
 export const generateRow = (locale?: TLocale): TRow => {
   const gen = mock[locale ?? 'en']

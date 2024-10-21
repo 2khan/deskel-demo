@@ -18,7 +18,7 @@ import {
 import { type Table } from '@tanstack/react-table'
 import { TRow } from '../view'
 import { ParseKeys } from 'i18next'
-import { allStatus } from '../../common'
+import { allStatus } from '../common'
 
 type TAlertFilterProps<TData> = {
   table: Table<TData>

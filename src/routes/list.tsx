@@ -1,4 +1,5 @@
 import type { TRouteObject } from '@/shared/types/utils/route'
+import { TableIcon } from '@radix-ui/react-icons'
 // import {
 //   NewspaperIcon,
 //   SubtitlesIcon,
@@ -7,17 +8,17 @@ import type { TRouteObject } from '@/shared/types/utils/route'
 // } from 'lucide-react'
 
 const ListRoutes = [
-  // {
-  //   label: 'glossary.media-insight',
-  //   icon: NewspaperIcon,
-  //   path: '/media-insight',
-  //   lazy: async () => {
-  //     const { default: Component } = await import('@/pages/media-insight/list')
-  //     return {
-  //       Component
-  //     }
-  //   }
-  // },
+  {
+    label: 'glossary.report-history',
+    icon: TableIcon,
+    path: '/report-history',
+    lazy: async () => {
+      const { default: Component } = await import('@/pages/report-history')
+      return {
+        Component
+      }
+    }
+  }
   // {
   //   label: 'glossary.SNS',
   //   icon: SubtitlesIcon,

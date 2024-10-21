@@ -1,5 +1,5 @@
 import NewAnalysis from '@/demo/new-analysis/view'
 
-export default function Chat() {
+export default function NewChatPage() {
   return <NewAnalysis />
 }

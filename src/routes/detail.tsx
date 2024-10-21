@@ -13,25 +13,12 @@ const DetailRoutes = [
     icon: MessageCirclePlusIcon,
     path: '/chat',
     lazy: async () => {
-      const { default: Component } = await import('@/pages/chat')
+      const { default: Component } = await import('@/pages/new-chat')
       return {
         Component
       }
     }
   }
-  // {
-  //   label: 'glossary.new-media-insight',
-  //   icon: NewspaperIcon,
-  //   path: '/media-insight/:id',
-  //   lazy: async () => {
-  //     const { default: Component } = await import(
-  //       '@/pages/media-insight/detail'
-  //     )
-  //     return {
-  //       Component
-  //     }
-  //   }
-  // },
   // {
   //   label: 'glossary.new-sns',
   //   icon: SubtitlesIcon,

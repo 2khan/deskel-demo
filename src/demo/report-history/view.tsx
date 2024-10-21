@@ -57,7 +57,7 @@ export type TRow = {
     }
 )
 
-export default function MediaTable() {
+export default function ReportHistory() {
   const { t } = useTranslation('demo')
   const { t: commonTranslation } = useTranslation('common')
   const columns: ColumnDef<TRow>[] = [
