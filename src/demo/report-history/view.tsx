@@ -40,6 +40,7 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import PPT from '@/demo/common/components/ppt'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export type TRow = {
   id: string
@@ -237,5 +238,19 @@ export default function ReportHistory() {
       }
     }
   ]
-  return <DataTable columns={columns} data={data as TRow[]} showFooter />
+  return (
+    <Tabs value="media-insight">
+      <TabsList>
+        <TabsTrigger value="media-insight">
+          {commonTranslation('glossary.media-insight')}
+        </TabsTrigger>
+        <TabsTrigger value="sns">
+          {commonTranslation('glossary.SNS')}
+        </TabsTrigger>
+      </TabsList>
+      <TabsContent value="media-insight">
+        <DataTable columns={columns} data={data as TRow[]} showFooter />
+      </TabsContent>
+    </Tabs>
+  )
 }
