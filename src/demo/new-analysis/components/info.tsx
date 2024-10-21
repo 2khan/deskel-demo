@@ -36,7 +36,7 @@ export default function Info(props: TProps) {
   }, [info.range])
 
   return (
-    <div className="flex flex-col gap-3 rounded-xl border px-3 py-2">
+    <div className="flex flex-col gap-3 rounded-xl border bg-card px-3 py-2">
       <div className="flex items-center justify-between gap-1">
         <span className={dx('label-01', 'text-muted-foreground')}>
           {t('media-insight.columns.organization-name')}:

@@ -25,7 +25,7 @@ export default function Log(props: TProps) {
   }, [logs])
 
   return (
-    <div className="flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
+    <div className="flex flex-col gap-2 overflow-hidden rounded-2xl border bg-card p-2">
       <span className={dx('heading-compact-01')}>
         {t('media-insight.tabs.logs')}
       </span>

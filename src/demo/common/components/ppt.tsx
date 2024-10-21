@@ -71,7 +71,7 @@ export default function PPT() {
                     draggable={false}
                   />
                   {isActive && (
-                    <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border-4 border-primary bg-white/50 p-2">
+                    <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden rounded-2xl border-4 border-primary bg-card/50 p-2">
                       <div className="flex size-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
                         <span className={dx('heading-compact-02')}>
                           {index + 1}
