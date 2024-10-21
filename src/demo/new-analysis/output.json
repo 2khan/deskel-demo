@@ -65,7 +65,11 @@
       "homepage_domain": "company.com"
     },
     "log-history": [
-      { "message": "Inputs received.", "created_at": "2024/09/02 12:32" }
+      { "message": "Inputs received.", "created_at": "2024/09/02 12:32" },
+      {
+        "message": "Awaiting start command...",
+        "created_at": "2024/09/02 12:32"
+      }
     ],
     "action": "start"
   },
@@ -85,10 +89,7 @@
       "homepage_domain": "company-international.com"
     },
     "log-history": [
-      {
-        "message": "Awaiting start command...",
-        "created_at": "2024/09/02 12:32"
-      }
+      { "message": "Inputs edited.", "created_at": "2024/09/02 12:32" }
     ],
     "action": "start"
   },
@@ -98,9 +99,10 @@
     "info": {},
     "log-history": [
       {
-        "message": "Starting Analysis...",
+        "message": "Starting Analysis.",
         "created_at": "2024/09/02 12:32"
-      }
+      },
+      { "message": "Crawling domains...", "created_at": "2024/09/02 12:32" }
     ],
     "action": "cancel"
   },
@@ -108,9 +110,7 @@
     "current-input": "",
     "chat-history": [],
     "info": {},
-    "log-history": [
-      { "message": "Crawling domains...", "created_at": "2024/09/02 12:32" }
-    ],
+    "log-history": [],
     "action": "cancel"
   },
   "categorizing-data": {
@@ -139,15 +139,6 @@
     "info": {},
     "log-history": [
       { "message": "File ready for download", "created_at": "2024/09/02 12:32" }
-    ],
-    "action": "view"
-  },
-  "done": {
-    "current-input": "",
-    "chat-history": [],
-    "info": {},
-    "log-history": [
-      { "message": "File downloaded", "created_at": "2024/09/02 12:32" }
     ],
     "action": "view"
   }

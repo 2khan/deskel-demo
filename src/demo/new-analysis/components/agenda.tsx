@@ -7,15 +7,15 @@ import {
   LoaderIcon
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import { m } from 'framer-motion'
 import { useStage } from '@/demo/common/useStage'
 import {
-  autoNextStages,
   groupedStages,
   stages,
-  TGroup
+  TGroup,
+  autoNextStages
 } from '@/demo/common/stages'
 import { findIndex } from 'lodash'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
@@ -26,7 +26,7 @@ export default function Agenda() {
   const { t } = useTranslation('demo')
   const { index } = useStage()
 
-  const currentStage = useMemo(() => stages[index], [index])
+  const currentStage = stages[index]
 
   const currentGroupIndex = useMemo(
     () =>
@@ -35,6 +35,10 @@ export default function Agenda() {
       ),
     [currentStage]
   )
+
+  useEffect(() => {
+    console.log(currentGroupIndex, currentStage)
+  }, [currentGroupIndex, currentStage])
 
   return (
     <div className="flex w-full flex-col gap-2 rounded-xl border bg-muted p-2 text-muted-foreground">
@@ -48,8 +52,8 @@ export default function Agenda() {
               key={key}
               className={cn(
                 'flex grow items-center gap-2 rounded-xl bg-background p-2',
-                isCompleted && 'text-primary',
-                isActive && 'text-foreground'
+                isActive && 'text-foreground',
+                isCompleted && 'text-primary'
               )}
             >
               {isCompleted && <CheckCircleIcon size={15} />}
@@ -64,7 +68,7 @@ export default function Agenda() {
                 {t(`media-insight.stage.${key as TGroup}`)}
               </m.span>
 
-              {(key as TGroup) === 'download-report' && isCompleted && (
+              {(key as TGroup) === 'download-report' && isActive && (
                 <div className="flex gap-1.5">
                   <Dialog>
                     <DialogTrigger asChild>

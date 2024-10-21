@@ -34,12 +34,13 @@ export default function NewAnalysis() {
 
   // AUTO-NEXT
   useEffect(() => {
+    let timerId: NodeJS.Timeout
     const currentStage = stages[index]
-    if (!autoNextStages.includes(currentStage)) return
-
-    const timerId = setTimeout(() => {
-      next()
-    }, 4000)
+    if (autoNextStages.includes(currentStage)) {
+      timerId = setTimeout(() => {
+        next()
+      }, 4000)
+    }
 
     return () => {
       if (timerId) {
@@ -49,7 +50,7 @@ export default function NewAnalysis() {
   }, [index, next])
 
   return (
-    <div className="col-span-12 flex h-full w-full gap-3">
+    <div className="flex h-full w-full grow gap-3">
       <Chat
         input={stageData['current-input']}
         history={stageData['chat-history']}

@@ -4,6 +4,7 @@ import { stages } from './stages'
 type StageStore = {
   index: number
   next: () => void
+  goto: (index: number) => void
 }
 
 export const useStage = create<StageStore>((set, get) => ({
@@ -15,5 +16,8 @@ export const useStage = create<StageStore>((set, get) => ({
     set({
       index: cur + 1
     })
+  },
+  goto: (index) => {
+    set({ index })
   }
 }))

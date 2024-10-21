@@ -12,8 +12,7 @@ export const stages = [
   'crawling-domains',
   'categorizing-data',
   'preparing-analysis',
-  'download-report',
-  'done'
+  'download-report'
 ] as const
 
 const stageSchema = z.enum(stages)
@@ -35,11 +34,11 @@ export type TGroup = z.infer<typeof groupSchema>
 export const groupedStages = {
   'create-draft': ['create-draft-1', 'create-draft-2', 'create-draft-3'],
   'analysis-ready': ['analysis-ready-1', 'analysis-ready-2'],
-  'start-analysis': ['start-analysis'],
-  'crawling-domains': ['crawling-domains'],
-  'categorizing-data': ['categorizing-data'],
-  'preparing-analysis': ['preparing-analysis'],
-  'download-report': ['download-report', 'done']
+  'start-analysis': ['start-analysis', 'crawling-domains'],
+  'crawling-domains': ['categorizing-data'],
+  'categorizing-data': ['preparing-analysis'],
+  'preparing-analysis': ['download-report'],
+  'download-report': []
 } as Record<TGroup, TStage[]>
 
 export const autoNextStages = [
