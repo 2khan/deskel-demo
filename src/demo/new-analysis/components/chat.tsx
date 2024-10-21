@@ -107,7 +107,7 @@ export default function Chat(props: TProps) {
         {/* <div ref={chatBottomRef} /> */}
       </ScrollArea>
       <div className="relative flex w-full flex-col">
-        <div className="ml-8 flex w-full max-w-80 items-center gap-3 rounded-t-2xl border border-b-0 p-2 text-muted-foreground">
+        <div className="ml-8 flex w-full max-w-80 items-center gap-3 rounded-t-2xl border border-b-0 bg-card p-2 text-muted-foreground">
           <InfoIcon size={15} />
           <span className={dx('label-02')}>
             {t('media-insight.notice.demo-only')}
