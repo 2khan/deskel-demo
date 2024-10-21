@@ -40,7 +40,7 @@ export default function Layout() {
         <Sidebar />
       </Suspense>
       <div
-        className="flex h-screen max-w-screen-3xl grow flex-col sm:pl-0"
+        className="flex h-screen grow flex-col sm:pl-0"
         style={{ paddingBlock: CONTENT_PADDING, paddingRight: CONTENT_PADDING }}
       >
         <main className="flex grow flex-col overflow-hidden rounded-2xl bg-background">

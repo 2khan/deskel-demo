@@ -15,9 +15,10 @@ import {
   autoNextStages
 } from '../common/stages'
 import { useEffect } from 'react'
+import { Dialog } from '@/components/ui/dialog'
 
 export default function NewAnalysis() {
-  const { index, next } = useStage()
+  const { index, next, goto } = useStage()
 
   const stageData = stages.reduce<TStageData>((merged, n, i) => {
     const next = data[n]
@@ -49,22 +50,28 @@ export default function NewAnalysis() {
     }
   }, [index, next])
 
+  useEffect(() => {
+    goto(9)
+  }, [goto])
+
   return (
     <div className="flex h-full w-full grow gap-3">
       <Chat
         input={stageData['current-input']}
         history={stageData['chat-history']}
       />
-      <ScrollArea className="h-full w-full max-w-80">
-        <div className="flex w-full flex-col gap-3">
-          <Info info={stageData.info} />
-          <Actions action={stageData.action} />
+      <Dialog>
+        <ScrollArea className="h-full w-full max-w-80">
+          <div className="flex w-full flex-col gap-3">
+            <Info info={stageData.info} />
+            <Actions action={stageData.action} />
 
-          <Agenda />
-          <Log logs={stageData['log-history']} />
-        </div>
-        <ScrollBar />
-      </ScrollArea>
+            <Agenda />
+            <Log logs={stageData['log-history']} />
+          </div>
+          <ScrollBar />
+        </ScrollArea>
+      </Dialog>
     </div>
   )
 }

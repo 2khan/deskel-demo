@@ -11,6 +11,7 @@ import { useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import { m } from 'framer-motion'
 import { useStage } from '@/demo/common/useStage'
+import PPT from '@/demo/common/components/ppt'
 import {
   groupedStages,
   stages,
@@ -18,9 +19,8 @@ import {
   autoNextStages
 } from '@/demo/common/stages'
 import { findIndex } from 'lodash'
-import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import { DialogTrigger } from '@/components/ui/dialog'
 import TooltipButton from '@/components/custom/TooltipButton'
-import PPT from './ppt'
 
 export default function Agenda() {
   const { t } = useTranslation('demo')
@@ -66,20 +66,18 @@ export default function Agenda() {
 
               {(key as TGroup) === 'download-report' && isActive && (
                 <div className="flex gap-1.5">
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <TooltipButton
-                        helper={t('media-insight.action.view-file')}
-                        size="icon-sm"
-                        variant="outline"
-                        className="relative text-primary"
-                      >
-                        <FullscreenIcon size={15} />
-                        <div className="absolute right-0 top-0 size-2 animate-ping rounded-full bg-primary" />
-                      </TooltipButton>
-                    </DialogTrigger>
-                    <PPT />
-                  </Dialog>
+                  <DialogTrigger asChild>
+                    <TooltipButton
+                      helper={t('media-insight.action.view-file')}
+                      size="icon-sm"
+                      variant="outline"
+                      className="relative text-primary"
+                    >
+                      <FullscreenIcon size={15} />
+                      <div className="absolute right-0 top-0 size-2 animate-ping rounded-full bg-primary" />
+                    </TooltipButton>
+                  </DialogTrigger>
+                  <PPT />
 
                   <TooltipButton
                     helper={t('media-insight.action.download-file')}

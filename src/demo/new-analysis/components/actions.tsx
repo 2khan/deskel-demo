@@ -6,6 +6,7 @@ import { TIcon } from '@/shared/types/utils/icon'
 import { ParseKeys } from 'i18next'
 import { FullscreenIcon, RocketIcon, XIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { DialogTrigger } from '@/components/ui/dialog'
 
 type TProps = {
   action: TAction
@@ -42,7 +43,14 @@ export default function Actions(props: TProps) {
     }
   }
 
-  return (
+  return action === 'view' ? (
+    <DialogTrigger asChild>
+      <Button size="lg" className={cn('w-full gap-2')} onClick={handleClick}>
+        <span>{t(label)}</span>
+        <Icon size={15} />
+      </Button>
+    </DialogTrigger>
+  ) : (
     <Button
       disabled={action === 'pre-start'}
       size="lg"
