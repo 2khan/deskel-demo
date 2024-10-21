@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { LayoutPanelLeftIcon } from 'lucide-react'
 
 // COMPONENTS
-import SideNav from './side-nav'
+import SideNav from '../side-nav'
 import {
   Tooltip,
   TooltipContent,

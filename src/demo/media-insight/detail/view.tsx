@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils'
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { useAddNotification } from '@/demo/notification/useNotification'
 import { format } from 'date-fns'
+import { useStatusbar } from '@/shared/stores/statusbar'
 
 const autoNextStages = [
   'crawling-domains',
@@ -25,6 +26,7 @@ export default function MediaInsightDetail() {
   const { t } = useTranslation('demo')
   const { t: commonTranslation } = useTranslation('common')
   const { stage, next } = useStage()
+  const { setTitle } = useStatusbar()
 
   const isAuto = includes(autoNextStages, stage)
 
@@ -44,6 +46,16 @@ export default function MediaInsightDetail() {
   }, [stage, isAuto, next])
 
   useEffect(() => {
+    if (stage === 'create-draft-range') {
+      setTitle(
+        `${commonTranslation('glossary.new-media-insight')}: Company Inc`
+      )
+    }
+    if (stage === 'create-draft-homepage-domains') {
+      setTitle(
+        `${commonTranslation('glossary.new-media-insight')}: Company Inc (2024/06/02 - 2024/09/02)`
+      )
+    }
     if (stage === 'download-report') {
       mutate({
         message:
@@ -52,7 +64,7 @@ export default function MediaInsightDetail() {
         created_at: format(new Date(), 'yyyy/MM/dd HH:mm')
       })
     }
-  }, [stage, mutate])
+  }, [commonTranslation, stage, mutate, setTitle])
 
   const handleClick = () => {
     if (!(stage === 'start-analysis')) return
