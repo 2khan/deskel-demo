@@ -1,0 +1,154 @@
+{
+  "create-draft-1": {
+    "current-input": "「Company Inc」のニュースメディア分析レポートを作成したいです。",
+    "chat-history": [
+      {
+        "isMe": false,
+        "message": "DESKELニュースメディア分析アシスタントです。ご要件をお伺いします。"
+      }
+    ],
+    "info": {},
+    "log-history": [
+      { "message": "Created draft.", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "pre-start"
+  },
+  "create-draft-2": {
+    "current-input": "2024年6月2日から2024年9月2日まで。",
+    "chat-history": [
+      {
+        "isMe": true,
+        "message": "「Company Inc」のニュースメディア分析レポートを作成したいです。"
+      },
+      {
+        "isMe": false,
+        "message": "了解致しました。「Company Inc」のレポートですね。対象期間はどのように設定しますか？"
+      }
+    ],
+    "info": {
+      "organization_name": "Company Inc"
+    },
+    "log-history": [],
+    "action": "pre-start"
+  },
+  "create-draft-3": {
+    "current-input": "Company Inc」のホームページURLは company.com です。",
+    "chat-history": [
+      {
+        "isMe": true,
+        "message": "2024年6月2日から2024年9月2日まで。"
+      },
+      {
+        "isMe": false,
+        "message": "対象期間は2024年6月2日から2024年9月2日までで設定します。対象企業のホームページURLを教えていただけますか？"
+      }
+    ],
+    "info": {
+      "range": "2024/06/02 - 2024/09/02"
+    },
+    "log-history": [],
+    "action": "pre-start"
+  },
+  "analysis-ready-1": {
+    "current-input": "はい、お願いします。",
+    "chat-history": [
+      {
+        "isMe": true,
+        "message": "Company Inc」のホームページURLは company.com です。"
+      },
+      {
+        "isMe": false,
+        "message": "了解致しました。それでは以下の内容で分析を開始いたしますが、よろしいでしょうか？。\n組織名：「Company Inc」\n対象期間：2024年6月2日から2024年9月2日\nホームページURL：company.com"
+      }
+    ],
+    "info": {
+      "homepage_domain": "company.com"
+    },
+    "log-history": [
+      { "message": "Inputs received.", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "start"
+  },
+  "analysis-ready-2": {
+    "current-input": "",
+    "chat-history": [
+      {
+        "isMe": true,
+        "message": "はい、お願いします。"
+      },
+      {
+        "isMe": false,
+        "message": "分析を開始いたします。"
+      }
+    ],
+    "info": {
+      "homepage_domain": "company-international.com"
+    },
+    "log-history": [
+      {
+        "message": "Awaiting start command...",
+        "created_at": "2024/09/02 12:32"
+      }
+    ],
+    "action": "start"
+  },
+  "start-analysis": {
+    "current-input": "",
+    "chat-history": [],
+    "info": {},
+    "log-history": [
+      {
+        "message": "Starting Analysis...",
+        "created_at": "2024/09/02 12:32"
+      }
+    ],
+    "action": "cancel"
+  },
+  "crawling-domains": {
+    "current-input": "",
+    "chat-history": [],
+    "info": {},
+    "log-history": [
+      { "message": "Crawling domains...", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "cancel"
+  },
+  "categorizing-data": {
+    "current-input": "",
+    "chat-history": [],
+    "info": {},
+    "log-history": [
+      { "message": "Domains crawled.", "created_at": "2024/09/02 12:32" },
+      { "message": "Categorizing data...", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "cancel"
+  },
+  "preparing-analysis": {
+    "current-input": "",
+    "chat-history": [],
+    "info": {},
+    "log-history": [
+      { "message": "Data categorized.", "created_at": "2024/09/02 12:32" },
+      { "message": "Preparing report file.", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "cancel"
+  },
+  "download-report": {
+    "current-input": "",
+    "chat-history": [],
+    "info": {},
+    "log-history": [
+      { "message": "File ready for download", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "view"
+  },
+  "done": {
+    "current-input": "",
+    "chat-history": [],
+    "info": {},
+    "log-history": [
+      { "message": "File downloaded", "created_at": "2024/09/02 12:32" }
+    ],
+    "action": "view"
+  }
+}

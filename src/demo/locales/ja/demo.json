@@ -33,7 +33,10 @@
       "demo-only": "デモ用のみ"
     },
     "action": {
-      "ask-anything": "何でも聞いてください…"
+      "ask-anything": "何でも聞いてください…",
+      "cancel": "キャンセル",
+      "view-file": "ファイルを表示",
+      "download-file": "ファイルをダウンロード"
     },
     "tabs": {
       "reports": "レポート",

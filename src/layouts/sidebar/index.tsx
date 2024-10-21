@@ -28,7 +28,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={cn('hidden grow flex-col duration-200 sm:flex')}
+      className={cn('hidden w-full grow flex-col duration-200 sm:flex')}
       style={{ maxWidth: isOpen ? SIDE_OPEN_W : SIDE_COLLAPSED_W }}
     >
       <div className="group relative flex">

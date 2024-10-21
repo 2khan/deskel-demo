@@ -33,7 +33,10 @@
       "demo-only": "For Demo purposes only"
     },
     "action": {
-      "ask-anything": "Ask me anything…"
+      "ask-anything": "Ask me anything…",
+      "cancel": "Cancel",
+      "view-file": "View File",
+      "download-file": "Download File"
     },
     "tabs": {
       "reports": "Reports",
