@@ -39,7 +39,7 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog'
-import PPT from '../detail/components/ppt'
+import PPT from '@/demo/common/components/ppt'
 
 export type TRow = {
   id: string
