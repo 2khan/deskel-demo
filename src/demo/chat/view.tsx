@@ -116,7 +116,7 @@ export default function ChatView(props: TProps) {
               </SheetHeader>
               <ScrollArea className="grow rounded-2xl border bg-muted p-2">
                 {threadData && threadData.threads.length > 0 ? (
-                  <div className="flex flex-col bg-background p-2">
+                  <div className="flex flex-col bg-card p-2">
                     {threadData.threads
                       .sort(
                         (a, b) =>
@@ -126,7 +126,7 @@ export default function ChatView(props: TProps) {
                       .map((thread) => (
                         <div
                           key={thread.id}
-                          className="flex grow gap-2 bg-card"
+                          className="flex grow gap-2"
                           style={{ height: 54 }}
                         >
                           <span
@@ -142,7 +142,7 @@ export default function ChatView(props: TProps) {
                           </span>
                           <div className="relative h-full w-px bg-border">
                             <div
-                              className="absolute rounded-full bg-background"
+                              className="absolute rounded-full bg-card"
                               style={{
                                 top: 0,
                                 left: 0,
@@ -163,7 +163,7 @@ export default function ChatView(props: TProps) {
                             />
                           </div>
                           <SheetClose asChild>
-                            <div className="grow rounded-lg p-2 hover:bg-accent">
+                            <div className="grow rounded-lg p-2 hover:bg-accent hover:text-accent-foreground">
                               <span
                                 className={dx(
                                   'body-compact-01',
