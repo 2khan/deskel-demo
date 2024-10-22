@@ -3,7 +3,12 @@ import data from './output.json'
 // import { useTranslation } from 'react-i18next'
 import SideNavItem from '@/layouts/side-nav/side-nav-item'
 import { isWithinInterval, parse, sub } from 'date-fns'
-import { Fragment } from 'react/jsx-runtime'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger
+} from '@/components/ui/collapsible'
+import { CaretSortIcon } from '@radix-ui/react-icons'
 
 export default function ThreadsMenu() {
   // const { t } = useTranslation()
@@ -43,86 +48,102 @@ export default function ThreadsMenu() {
   )
 
   return (
-    <Fragment>
-      <span
-        className={dx(
-          'label-01',
-          'line-clamp-1 font-bold text-muted-foreground'
-        )}
-      >
-        Yesterday
-      </span>
-      <ul className="flex w-full flex-col">
-        {yesterdayData.map((r) => (
-          <li key={r.id} className="group w-full">
-            <SideNavItem
-              label={r.label}
-              symbol={
-                <span
-                  className="font-medium uppercase"
-                  style={{ fontSize: 10 }}
-                >
-                  {r.label.substring(0, 2)}
-                </span>
-              }
-              path={`/threads/${r.id}`}
-            />
-          </li>
-        ))}
-      </ul>
-      <span
-        className={dx(
-          'label-01',
-          'line-clamp-1 font-bold text-muted-foreground'
-        )}
-      >
-        Last Week
-      </span>
-      <ul className="flex w-full flex-col">
-        {lastWeekData.map((r) => (
-          <li key={r.id} className="group w-full">
-            <SideNavItem
-              label={r.label}
-              symbol={
-                <span
-                  className="font-medium uppercase"
-                  style={{ fontSize: 10 }}
-                >
-                  {r.label.substring(0, 2)}
-                </span>
-              }
-              path={`/threads/${r.id}`}
-            />
-          </li>
-        ))}
-      </ul>
+    <div className="flex flex-col gap-4">
+      <Collapsible defaultOpen className="flex w-full flex-col gap-2">
+        <CollapsibleTrigger className="flex w-full items-center justify-between text-muted-foreground">
+          <span className={dx('label-01', 'line-clamp-1 font-bold')}>
+            Yesterday
+          </span>
+          <CaretSortIcon />
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <ul className="flex w-full flex-col">
+            {yesterdayData.map((r) => (
+              <li key={r.id} className="group w-full">
+                <SideNavItem
+                  label={r.label}
+                  symbol={
+                    <span
+                      className="font-medium uppercase"
+                      style={{ fontSize: 10 }}
+                    >
+                      {r.label.substring(0, 2)}
+                    </span>
+                  }
+                  path={`/threads/${r.id}`}
+                />
+              </li>
+            ))}
+          </ul>
+        </CollapsibleContent>
+      </Collapsible>
+      <Collapsible defaultOpen className="flex w-full flex-col gap-2">
+        <CollapsibleTrigger className="flex w-full items-center justify-between text-muted-foreground">
+          <span
+            className={dx(
+              'label-01',
+              'line-clamp-1 font-bold text-muted-foreground'
+            )}
+          >
+            Last Week
+          </span>
+          <CaretSortIcon />
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <ul className="flex w-full flex-col">
+            {lastWeekData.map((r) => (
+              <li key={r.id} className="group w-full">
+                <SideNavItem
+                  label={r.label}
+                  symbol={
+                    <span
+                      className="font-medium uppercase"
+                      style={{ fontSize: 10 }}
+                    >
+                      {r.label.substring(0, 2)}
+                    </span>
+                  }
+                  path={`/threads/${r.id}`}
+                />
+              </li>
+            ))}
+          </ul>
+        </CollapsibleContent>
+      </Collapsible>
 
-      <span
-        className={dx(
-          'label-01',
-          'line-clamp-1 font-bold text-muted-foreground'
-        )}
-      >
-        Last Month
-      </span>
-      <ul className="flex w-full flex-col">
-        {lastMonthData.map((r) => (
-          <li key={r.id} className="group w-full">
-            <SideNavItem
-              label={r.label}
-              symbol={
-                <span
-                  className="font-medium uppercase"
-                  style={{ fontSize: 10 }}
-                >
-                  {r.label.substring(0, 2)}
-                </span>
-              }
-              path={`/threads/${r.id}`}
-            />
-          </li>
-        ))}
-      </ul>
-    </Fragment>
+      <Collapsible defaultOpen className="flex w-full flex-col gap-2">
+        <CollapsibleTrigger className="flex w-full items-center justify-between text-muted-foreground">
+          <span
+            className={dx(
+              'label-01',
+              'line-clamp-1 font-bold text-muted-foreground'
+            )}
+          >
+            Last Month
+          </span>
+          <CaretSortIcon />
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <ul className="flex w-full flex-col">
+            {lastMonthData.map((r) => (
+              <li key={r.id} className="group w-full">
+                <SideNavItem
+                  label={r.label}
+                  symbol={
+                    <span
+                      className="font-medium uppercase"
+                      style={{ fontSize: 10 }}
+                    >
+                      {r.label.substring(0, 2)}
+                    </span>
+                  }
+                  path={`/threads/${r.id}`}
+                />
+              </li>
+            ))}
+          </ul>
+        </CollapsibleContent>
+      </Collapsible>
+    </div>
   )
 }
