@@ -24,7 +24,9 @@ export default function NotFoundPage() {
         <Logo />
       </Link>
       <div className="flex grow flex-col items-center justify-center gap-3">
-        <span className={dx('fluid-paragraph-01')}>Page not found</span>
+        <span className={dx('fluid-paragraph-01', 'text-muted-foreground')}>
+          Page not found
+        </span>
         <div className="via-gradient-2 bg-gradient-to-r from-gradient-1 to-gradient-3 bg-clip-text dark:brightness-150">
           <span className={dx('fluid-display-04', 'text-transparent')}>
             404

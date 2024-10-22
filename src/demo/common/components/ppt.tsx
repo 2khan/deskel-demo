@@ -24,7 +24,6 @@ export default function PPT(props: TProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
-    console.log(e.key, index)
     switch (e.key) {
       case 'ArrowUp':
         e.preventDefault()
