@@ -41,7 +41,12 @@ export default function ThreadsMenu() {
 
   return (
     <Fragment>
-      <span className={dx('label-01', 'font-bold text-muted-foreground')}>
+      <span
+        className={dx(
+          'label-01',
+          'line-clamp-1 font-bold text-muted-foreground'
+        )}
+      >
         Yesterday
       </span>
       <ul className="flex w-full flex-col">
@@ -61,7 +66,12 @@ export default function ThreadsMenu() {
           </li>
         ))}
       </ul>
-      <span className={dx('label-01', 'font-bold text-muted-foreground')}>
+      <span
+        className={dx(
+          'label-01',
+          'line-clamp-1 font-bold text-muted-foreground'
+        )}
+      >
         Last Week
       </span>
       <ul className="flex w-full flex-col">
@@ -82,7 +92,12 @@ export default function ThreadsMenu() {
         ))}
       </ul>
 
-      <span className={dx('label-01', 'font-bold text-muted-foreground')}>
+      <span
+        className={dx(
+          'label-01',
+          'line-clamp-1 font-bold text-muted-foreground'
+        )}
+      >
         Last Month
       </span>
       <ul className="flex w-full flex-col">

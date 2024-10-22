@@ -31,7 +31,12 @@ export default function SideNav() {
     <nav className="flex w-full grow flex-col gap-1.5 py-2 pl-2">
       {lists.map((list) => (
         <Fragment key={list.title}>
-          <span className={dx('label-01', 'font-bold text-muted-foreground')}>
+          <span
+            className={dx(
+              'label-01',
+              'line-clamp-1 font-bold text-muted-foreground'
+            )}
+          >
             {t(list.title)}
           </span>
           <ul className="flex w-full flex-col">
