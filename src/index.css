@@ -24,6 +24,10 @@
     --destructive-foreground: 210 40% 98%;
     --ring: 220.67 97.83% 36.08%;
 
+    --gradient-1: 222 98.26% 72.16%;
+    --gradient-2: 37 98.26% 72.16%;
+    --gradient-3: 24 98.26% 72.16%;
+
     --radius: 0.75rem;
   }
 
@@ -47,6 +51,10 @@
     --destructive: 358.16 68.78% 53.53%;
     --destructive-foreground: 0 0% 100%;
     --ring: 217.5 9.09% 17.25%;
+
+    --gradient-1: 222 58.43% 65.1%;
+    --gradient-2: 37 58.43% 65.1%;
+    --gradient-3: 24 58.43% 65.1%;
   }
 }
 

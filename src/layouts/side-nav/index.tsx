@@ -28,7 +28,7 @@ export default function SideNav() {
   const { t } = useTranslation()
 
   return (
-    <nav className="flex w-full grow flex-col gap-1.5 py-2 pl-2">
+    <nav className="flex w-full grow flex-col gap-1.5 px-px">
       {lists.map((list) => (
         <Fragment key={list.title}>
           <span

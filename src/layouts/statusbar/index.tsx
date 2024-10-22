@@ -7,7 +7,7 @@ import {
 
 // UTILS
 import { dx } from '@/shared/design-system/typography'
-import { CONTENT_PADDING, HEADER_HEIGHT } from '@/shared/constants/layout'
+import { HEADER_HEIGHT } from '@/shared/constants/layout'
 
 // DEMO
 import { lazy, Suspense } from 'react'
@@ -28,7 +28,7 @@ export default function StatusBar() {
   return (
     <header
       className="col-span-12 flex items-center justify-between gap-2 border-b px-3 py-2 xl:px-6 xl:py-4"
-      style={{ height: HEADER_HEIGHT - CONTENT_PADDING }}
+      style={{ height: HEADER_HEIGHT }}
     >
       <div className="flex items-center gap-2">
         <Tooltip>

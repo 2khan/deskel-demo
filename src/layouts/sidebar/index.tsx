@@ -19,7 +19,7 @@ export default function Sidebar() {
       {isOpen && (
         <m.aside
           className={cn(
-            'relative flex h-screen w-full shrink-0 grow flex-col overflow-hidden'
+            'relative flex h-screen w-full shrink-0 grow flex-col gap-2 py-2 pl-2'
           )}
           initial={{ maxWidth: 0 }}
           animate={{
