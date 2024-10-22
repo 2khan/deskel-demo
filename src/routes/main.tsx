@@ -1,10 +1,10 @@
 import type { TRouteObject } from '@/shared/types/utils/route'
-import { MessageCirclePlusIcon, TableIcon } from 'lucide-react'
+import { PlusIcon, TableIcon } from 'lucide-react'
 
 const DetailRoutes = [
   {
     label: 'glossary.new-analysis',
-    icon: MessageCirclePlusIcon,
+    icon: PlusIcon,
     path: '/',
     lazy: async () => {
       const { default: Component } = await import('@/pages/new-chat')
