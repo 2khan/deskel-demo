@@ -31,13 +31,13 @@ export default function Layout() {
   }, [t, title])
 
   return (
-    <div className="flex w-full grow gap-2">
+    <div className="flex w-full grow">
       <Suspense>
         <Sidebar />
       </Suspense>
       <div
         className="flex h-screen grow flex-col sm:pl-0"
-        style={{ paddingBlock: CONTENT_PADDING, paddingRight: CONTENT_PADDING }}
+        style={{ padding: CONTENT_PADDING }}
       >
         <main className="flex grow flex-col overflow-hidden rounded-2xl bg-background">
           <Suspense>
