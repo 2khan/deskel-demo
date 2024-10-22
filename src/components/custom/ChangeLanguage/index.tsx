@@ -28,7 +28,7 @@ export default function ChangeLanguage() {
           <GlobeIcon />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start">
+      <DropdownMenuContent align="center">
         <DropdownMenuLabel>{t('system.choose-language')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {locales.map((locale) => (

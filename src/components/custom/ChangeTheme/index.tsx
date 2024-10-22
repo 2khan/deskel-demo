@@ -29,7 +29,7 @@ export default function ChangeTheme() {
           <MoonIcon className="absolute rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start">
+      <DropdownMenuContent align="center">
         <DropdownMenuLabel>{t('system.change-theme')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {themes.map((theme) => (
