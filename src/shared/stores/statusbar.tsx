@@ -1,14 +1,16 @@
 import { create } from 'zustand'
 
 type StatusbarStore = {
-  title: string
-  setTitle: (title: string) => void
+  title?: string
+  description?: string
+  setTitle: (params: { title?: string; description?: string }) => void
 }
 
 export const useStatusbar = create<StatusbarStore>((set) => ({
   title: '',
-  setTitle: (title) =>
+  setTitle: ({ title, description }) =>
     set({
-      title
+      title,
+      description
     })
 }))

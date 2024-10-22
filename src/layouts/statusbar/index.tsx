@@ -22,7 +22,7 @@ const ChangeTheme = lazy(() => import('@/components/custom/ChangeTheme'))
 
 export default function StatusBar() {
   const { t } = useTranslation()
-  const { title } = useStatusbar()
+  const { title, description } = useStatusbar()
   const { toggle } = useSidebar()
 
   return (
@@ -39,7 +39,14 @@ export default function StatusBar() {
           </TooltipTrigger>
           <TooltipContent>{t('action.toggle-sidebar')}</TooltipContent>
         </Tooltip>
-        <h1 className={dx('heading-02')}>{title}</h1>
+        <div className="flex flex-col">
+          {title && <h1 className={dx('heading-compact-01')}>{title}</h1>}
+          {description && (
+            <span className={dx('label-01', 'text-muted-foreground')}>
+              {description}
+            </span>
+          )}
+        </div>
       </div>
 
       <div className="flex items-center gap-1">

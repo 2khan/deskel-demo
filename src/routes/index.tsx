@@ -12,6 +12,19 @@ const Routes: RouteObject[] = [
         children: [
           {
             children: MainRoutes
+          },
+          {
+            children: [
+              {
+                path: '/threads/:id',
+                lazy: async () => {
+                  const { default: Component } = await import('@/pages/thread')
+                  return {
+                    Component
+                  }
+                }
+              }
+            ]
           }
         ]
       }

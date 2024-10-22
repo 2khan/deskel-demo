@@ -23,7 +23,9 @@ export default function Layout() {
   )
 
   useEffect(() => {
-    setTitle(t(currentRoute?.label || 'glossary.dashboard'))
+    setTitle({
+      title: t(currentRoute?.label || 'glossary.dashboard')
+    })
   }, [t, currentRoute, setTitle])
 
   useEffect(() => {

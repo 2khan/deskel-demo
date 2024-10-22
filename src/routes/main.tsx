@@ -1,7 +1,7 @@
 import type { TRouteObject } from '@/shared/types/utils/route'
 import { PlusIcon, TableIcon } from 'lucide-react'
 
-const DetailRoutes = [
+const MainRoutes = [
   {
     label: 'glossary.new-analysis',
     icon: PlusIcon,
@@ -26,4 +26,4 @@ const DetailRoutes = [
   }
 ] as const satisfies TRouteObject[]
 
-export default DetailRoutes
+export default MainRoutes

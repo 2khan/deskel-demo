@@ -9,33 +9,36 @@ export default function ThreadsMenu() {
   // const { t } = useTranslation()
 
   const now = parse('2024/10/22', 'yyyy/MM/dd', new Date())
+  const yesterday = sub(now, {
+    days: 1
+  })
+
+  const week = sub(yesterday, {
+    days: 6
+  })
+
+  const month = sub(week, {
+    weeks: 4
+  })
 
   const yesterdayData = data.filter((item) =>
     isWithinInterval(item.updated_date, {
-      start: sub(now, {
-        days: 1
-      }),
-      end: now
+      start: now,
+      end: yesterday
     })
   )
 
   const lastWeekData = data.filter((item) =>
     isWithinInterval(item.updated_date, {
-      start: sub(now, {
-        weeks: 1
-      }),
-      end: now
+      start: yesterday,
+      end: week
     })
   )
 
   const lastMonthData = data.filter((item) =>
     isWithinInterval(item.updated_date, {
-      start: sub(now, {
-        months: 1
-      }),
-      end: sub(now, {
-        weeks: 1
-      })
+      start: week,
+      end: month
     })
   )
 
