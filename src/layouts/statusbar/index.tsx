@@ -27,7 +27,7 @@ export default function StatusBar() {
 
   return (
     <header
-      className="col-span-12 flex items-center justify-between gap-2 border-b px-6 py-4"
+      className="col-span-12 flex items-center justify-between gap-2 border-b px-3 py-2 xl:px-6 xl:py-4"
       style={{ height: HEADER_HEIGHT - CONTENT_PADDING }}
     >
       <div className="flex items-center gap-2">

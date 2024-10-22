@@ -7,44 +7,28 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { cn } from '@/lib/utils'
 import { dx } from '@/shared/design-system/typography'
-import { useSidebar } from '@/shared/stores/sidebar'
 import { CaretSortIcon, LockClosedIcon, ExitIcon } from '@radix-ui/react-icons'
-import { Fragment } from 'react/jsx-runtime'
 
 export default function SidebarFooter() {
-  const { isOpen } = useSidebar()
   return (
-    <div className="w-full shrink-0 overflow-hidden rounded-tr-2xl bg-background transition-all">
+    <div className="w-full shrink-0 overflow-hidden rounded-tr-2xl bg-background">
       <DropdownMenu>
-        <DropdownMenuTrigger
-          className={cn(
-            'flex w-full items-center gap-2 rounded-xl p-2',
-            !isOpen && 'justify-center'
-          )}
-        >
+        <DropdownMenuTrigger className="flex w-full items-center gap-2 rounded-xl p-2">
           <Avatar className="shrink-0">
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
-          {isOpen && (
-            <Fragment>
-              <div className="flex grow flex-col items-start text-start">
-                <span className={dx('heading-compact-01', 'line-clamp-1')}>
-                  John Doe
-                </span>
-                <span
-                  className={dx(
-                    'label-01',
-                    'line-clamp-1 text-muted-foreground'
-                  )}
-                >
-                  john.doe@company.com
-                </span>
-              </div>
-              <CaretSortIcon className="shrink-0" />
-            </Fragment>
-          )}
+          <div className="flex grow flex-col items-start text-start">
+            <span className={dx('heading-compact-01', 'line-clamp-1')}>
+              John Doe
+            </span>
+            <span
+              className={dx('label-01', 'line-clamp-1 text-muted-foreground')}
+            >
+              john.doe@company.com
+            </span>
+          </div>
+          <CaretSortIcon className="shrink-0" />
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="end"

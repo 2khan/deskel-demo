@@ -1,15 +1,12 @@
 import { Fragment } from 'react/jsx-runtime'
 import { useTranslation } from 'react-i18next'
-import { m } from 'framer-motion'
 
 // COMPONENTS
 import { Separator } from '@/components/ui/separator'
 
 // UTILS
-import { cn } from '@/lib/utils'
 import { dx } from '@/shared/design-system/typography'
 import MainRoutes from '@/routes/main'
-import { useSidebar } from '@/shared/stores/sidebar'
 import type { ParseKeys } from 'i18next'
 import type { TRouteObject } from '@/shared/types/utils/route'
 import SideNavItem from './side-nav-item'
@@ -28,33 +25,21 @@ const lists = [
 ] as const satisfies TListItem[]
 
 export default function SideNav() {
-  const { isOpen } = useSidebar()
   const { t } = useTranslation()
 
   return (
-    <nav
-      className={cn(
-        'flex w-full grow flex-col gap-2 py-2 pl-2',
-        isOpen && 'gap-4'
-      )}
-    >
+    <nav className="flex w-full grow flex-col gap-2 py-2 pl-2">
       {lists.map((list, i) => (
         <Fragment key={list.title}>
           <div className="flex w-full flex-col gap-1.5">
-            <m.span
+            <span
               className={dx(
                 'heading-compact-01',
-                'block w-max shrink-0 text-muted-foreground',
-                !isOpen && 'sr-only'
+                'block w-max shrink-0 text-muted-foreground'
               )}
-              animate={
-                isOpen
-                  ? { opacity: 1, transition: { delay: 0.1 } }
-                  : { opacity: 0 }
-              }
             >
               {t(list.title)}
-            </m.span>
+            </span>
             <ul className="flex w-full flex-col">
               {list.routes.map((r) => (
                 <li key={r.path} className="group w-full">

@@ -11,15 +11,6 @@ const Routes: RouteObject[] = [
         element: <Layout />,
         children: [
           {
-            path: '/',
-            lazy: async () => {
-              const { default: Component } = await import('@/pages/Home')
-              return {
-                Component
-              }
-            }
-          },
-          {
             children: MainRoutes
           }
         ]

@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
     <aside
       className={cn(
-        'relative hidden h-screen w-full grow flex-col overflow-hidden duration-200 sm:flex'
+        'relative flex h-screen w-full shrink-0 grow flex-col overflow-hidden duration-200'
       )}
       style={{
         maxWidth: isOpen ? SIDE_OPEN_W : SIDE_COLLAPSED_W

@@ -3,11 +3,9 @@ import data from './output.json'
 // import { useTranslation } from 'react-i18next'
 import SideNavItem from '@/layouts/side-nav/side-nav-item'
 import { isWithinInterval, parse, sub } from 'date-fns'
-import { useSidebar } from '@/shared/stores/sidebar'
 
 export default function ThreadsMenu() {
   // const { t } = useTranslation()
-  const { isOpen } = useSidebar()
 
   const now = parse('2024/10/22', 'yyyy/MM/dd', new Date())
 
@@ -42,13 +40,7 @@ export default function ThreadsMenu() {
 
   return (
     <div className="flex w-full flex-col gap-1.5">
-      <span
-        className={dx(
-          'heading-compact-01',
-          'text-muted-foreground',
-          !isOpen && 'text-center'
-        )}
-      >
+      <span className={dx('heading-compact-01', 'text-muted-foreground')}>
         Yesterday
       </span>
       <ul className="flex w-full flex-col">
@@ -68,13 +60,7 @@ export default function ThreadsMenu() {
           </li>
         ))}
       </ul>
-      <span
-        className={dx(
-          'heading-compact-01',
-          'text-muted-foreground',
-          !isOpen && 'text-center'
-        )}
-      >
+      <span className={dx('heading-compact-01', 'text-muted-foreground')}>
         Last Week
       </span>
       <ul className="flex w-full flex-col">

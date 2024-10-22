@@ -5,7 +5,7 @@ const DetailRoutes = [
   {
     label: 'glossary.new-analysis',
     icon: MessageCirclePlusIcon,
-    path: '/chat',
+    path: '/',
     lazy: async () => {
       const { default: Component } = await import('@/pages/new-chat')
       return {
