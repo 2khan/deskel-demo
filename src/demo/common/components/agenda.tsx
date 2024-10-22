@@ -16,13 +16,19 @@ import {
   groupedStages,
   stages,
   TGroup,
-  autoNextStages
+  autoNextStages,
+  TInfo
 } from '@/demo/common/stages'
 import { findIndex } from 'lodash'
 import { DialogTrigger } from '@/components/ui/dialog'
 import TooltipButton from '@/components/custom/TooltipButton'
 
-export default function Agenda() {
+type TProps = {
+  info: TInfo
+}
+
+export default function Agenda(props: TProps) {
+  const { info } = props
   const { t } = useTranslation('demo')
   const { index } = useStage()
 
@@ -77,7 +83,10 @@ export default function Agenda() {
                       <div className="absolute right-0 top-0 size-2 animate-ping rounded-full bg-primary" />
                     </TooltipButton>
                   </DialogTrigger>
-                  <PPT />
+                  <PPT
+                    title={info.organization_name}
+                    description={info.range}
+                  />
 
                   <TooltipButton
                     helper={t('media-insight.action.download-file')}

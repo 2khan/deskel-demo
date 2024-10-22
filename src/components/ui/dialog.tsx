@@ -3,6 +3,7 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { Cross2Icon } from '@radix-ui/react-icons'
 
 import { cn } from '@/lib/utils'
+import { dx } from '@/shared/design-system/typography'
 
 const Dialog = DialogPrimitive.Root
 
@@ -85,10 +86,7 @@ const DialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
     ref={ref}
-    className={cn(
-      'text-lg font-semibold leading-none tracking-tight',
-      className
-    )}
+    className={dx('heading-compact-01', className)}
     {...props}
   />
 ))
@@ -100,7 +98,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={dx('body-compact-01', 'text-muted-foreground', className)}
     {...props}
   />
 ))

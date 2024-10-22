@@ -1,5 +1,6 @@
 import {
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle
 } from '@/components/ui/dialog'
@@ -13,7 +14,13 @@ import { dx } from '@/shared/design-system/typography'
 
 const slides = [Slide1, Slide2, Slide3, Slide4]
 
-export default function PPT() {
+type TProps = {
+  title?: string
+  description?: string
+}
+
+export default function PPT(props: TProps) {
+  const { title, description } = props
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
@@ -46,7 +53,8 @@ export default function PPT() {
   return (
     <DialogContent className="flex h-full w-full max-w-full flex-col p-2 sm:rounded-none">
       <DialogHeader>
-        <DialogTitle>(.PPT) Viewer</DialogTitle>
+        {title && <DialogTitle>{title}</DialogTitle>}
+        {description && <DialogDescription>{description}</DialogDescription>}
       </DialogHeader>
       <div className="flex w-full grow gap-2 overflow-hidden rounded-2xl">
         <ScrollArea className="w-80 shrink-0 pr-2">

@@ -19,9 +19,14 @@ import { Dialog } from '@/components/ui/dialog'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useTranslation } from 'react-i18next'
 
-export default function NewAnalysis() {
+type TProps = {
+  state?: 'draft' | 'complete'
+}
+
+export default function ChatView(props: TProps) {
+  const { state = 'draft' } = props
   const { t } = useTranslation()
-  const { index, next } = useStage()
+  const { index, next, goto } = useStage()
 
   const stageData = stages.reduce<TStageData>((merged, n, i) => {
     const next = data[n]
@@ -53,6 +58,14 @@ export default function NewAnalysis() {
     }
   }, [index, next])
 
+  useEffect(() => {
+    if (state === 'complete') {
+      goto(stages.length - 1)
+      return
+    }
+    goto(0)
+  }, [state, goto])
+
   return (
     <Tabs
       className="relative flex h-full w-full grow flex-col items-start"
@@ -77,7 +90,7 @@ export default function NewAnalysis() {
             <div className="flex w-full flex-col gap-3">
               <Info info={stageData.info} />
               <Actions action={stageData.action} />
-              <Agenda />
+              <Agenda info={stageData.info} />
               <Log logs={stageData['log-history']} />
             </div>
           </ScrollArea>

@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import output from '../new-analysis/output.json'
+import output from '../chat/output.json'
 
 export const stages = [
   'create-draft-1',
