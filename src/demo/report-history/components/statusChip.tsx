@@ -25,7 +25,7 @@ const statusMap = {
   completed: {
     label: 'media-insight.status.completed',
     icon: CheckIcon,
-    style: 'bg-background text-primary border-border'
+    style: 'bg-card text-primary border-border'
   },
   cancelled: {
     label: 'media-insight.status.cancelled',

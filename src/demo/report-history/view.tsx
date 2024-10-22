@@ -153,7 +153,7 @@ export default function ReportHistory() {
       meta: {
         label: commonTranslation('token.action')
       },
-      cell: () => {
+      cell: ({ row }) => {
         return (
           <div className="flex gap-2">
             <TooltipButton
@@ -175,7 +175,10 @@ export default function ReportHistory() {
                   <FullscreenIcon size={15} />
                 </TooltipButton>
               </DialogTrigger>
-              <PPT />
+              <PPT
+                title={row.original.organization_name}
+                description={`${format(row.original.start_date, 'yyyy/MM/dd')} - ${format(row.original.end_date, 'yyyy/MM/dd')}`}
+              />
             </Dialog>
             <TooltipButton
               helper={commonTranslation('action.download-file')}
@@ -220,12 +223,12 @@ export default function ReportHistory() {
                   </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
-                  <DialogClose>
+                  <DialogClose asChild>
                     <Button variant="ghost">
                       {commonTranslation('action.hide')}
                     </Button>
                   </DialogClose>
-                  <DialogClose>
+                  <DialogClose asChild>
                     <Button variant="destructive">
                       {commonTranslation('action.cancel')}
                     </Button>
