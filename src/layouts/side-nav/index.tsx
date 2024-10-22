@@ -58,7 +58,11 @@ export default function SideNav() {
             <ul className="flex w-full flex-col">
               {list.routes.map((r) => (
                 <li key={r.path} className="group w-full">
-                  <SideNavItem label={t(r.label)} icon={r.icon} path={r.path} />
+                  <SideNavItem
+                    label={t(r.label)}
+                    symbol={<r.icon size={20} />}
+                    path={r.path}
+                  />
                 </li>
               ))}
             </ul>

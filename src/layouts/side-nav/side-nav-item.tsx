@@ -6,16 +6,15 @@ import { m } from 'framer-motion'
 import { SIDE_COLLAPSED_ITEM_W } from '@/shared/constants/layout'
 import { TooltipContent } from '@/components/ui/tooltip'
 import { useSidebar } from '@/shared/stores/sidebar'
-import { TIcon } from '@/shared/types/utils/icon'
 
 type TProps = {
   path: string
   label: string
-  icon?: TIcon
+  symbol?: React.ReactNode
 }
 
 export default function SideNavItem(props: TProps) {
-  const { label, path, icon: Icon } = props
+  const { label, path, symbol } = props
   const { isOpen } = useSidebar()
   return (
     <Tooltip open={isOpen ? false : undefined}>
@@ -35,12 +34,12 @@ export default function SideNavItem(props: TProps) {
             height: isOpen ? 'max-content' : SIDE_COLLAPSED_ITEM_W
           }}
         >
-          {Icon && (
+          {symbol && (
             <m.div
               animate={isOpen ? { scale: 0.75 } : { scale: 1 }}
               className="shrink-0"
             >
-              <Icon size={20} />
+              {symbol}
             </m.div>
           )}
           <m.div
