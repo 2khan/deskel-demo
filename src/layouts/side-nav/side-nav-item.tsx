@@ -23,7 +23,7 @@ export default function SideNavItem(props: TProps) {
       }
       style={{ height: NAV_ITEM_HEIGHT }}
     >
-      {symbol}
+      {symbol && <div className="w-5 shrink-0">{symbol}</div>}
       <div className="line-clamp-1">{label}</div>
     </NavLink>
   )

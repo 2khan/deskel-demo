@@ -2,18 +2,17 @@ import { dx } from '@/shared/design-system/typography'
 import data from './output.json'
 // import { useTranslation } from 'react-i18next'
 import SideNavItem from '@/layouts/side-nav/side-nav-item'
-import { isWithinInterval, parse, sub } from 'date-fns'
+import { isWithinInterval, sub } from 'date-fns'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger
 } from '@/components/ui/collapsible'
 import { CaretSortIcon } from '@radix-ui/react-icons'
+import { now } from '../constants'
 
 export default function ThreadsMenu() {
   // const { t } = useTranslation()
-
-  const now = parse('2024/10/22', 'yyyy/MM/dd', new Date())
   const yesterday = sub(now, {
     days: 1
   })

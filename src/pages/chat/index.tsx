@@ -4,7 +4,7 @@ import { Navigate, useParams } from 'react-router-dom'
 
 // DEMO
 import ChatView from '@/demo/chat/view'
-import data from '@/demo/common/threads-menu/output.json'
+import threads from '@/demo/common/threads-menu/output.json'
 import { format } from 'date-fns'
 
 export default function ChatPage() {
@@ -12,17 +12,17 @@ export default function ChatPage() {
 
   const { setTitle } = useStatusbar()
 
-  const info = data.find((item) => item.id === id)
+  const threadData = threads.find((thread) => thread.id === id)
 
   useEffect(() => {
     setTitle({
-      title: info?.label,
-      description: info?.updated_date
-        ? format(info.updated_date, 'yyyy/MM/dd HH:mm:ss')
+      title: threadData?.label,
+      description: threadData?.updated_date
+        ? format(threadData.updated_date, 'yyyy/MM/dd HH:mm:ss')
         : ''
     })
-  }, [info, setTitle])
+  }, [threadData, setTitle])
 
   if (!id) return <Navigate to="/" />
-  return <ChatView state="complete" />
+  return <ChatView state="complete" threadData={threadData} />
 }
