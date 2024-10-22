@@ -66,7 +66,7 @@ export default function NewAnalysis() {
       </TabsList>
       <TabsContent
         value="global-media-insight"
-        className="flex h-full w-full grow gap-3 pt-9"
+        className="mt-0 flex h-full w-full grow gap-3 pt-12"
       >
         <Chat
           input={stageData['current-input']}
