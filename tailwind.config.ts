@@ -141,6 +141,9 @@ const config = {
           foreground: 'hsl(var(--card-foreground))'
         }
       },
+      boxShadow: {
+        glow: '0px 0px 2px hsl(var(--gradient-1) / 10%), 0px 0px 4px hsl(var(--gradient-2) / 10%), 0px 0px 8px hsl(var(--gradient-3) / 10%)'
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',

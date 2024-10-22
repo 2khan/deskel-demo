@@ -10,7 +10,7 @@ export default function SidebarHeader() {
       <AnimatePresence initial={true}>
         <BlurBackground
           sides={['top-right', 'bottom-left']}
-          className="flex flex-col items-center rounded-2xl bg-background py-2 text-primary dark:text-foreground"
+          className="flex flex-col items-center rounded-2xl bg-background py-2 text-primary shadow-glow dark:text-foreground"
           style={{ height: HEADER_HEIGHT }}
         >
           <Logo />
