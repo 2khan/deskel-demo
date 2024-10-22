@@ -18,11 +18,14 @@ export default function SidebarFooter() {
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>
         <div className="flex grow flex-col items-start text-start">
-          <span className={dx('heading-compact-01', 'line-clamp-1')}>
+          <span className={dx('heading-compact-01', 'line-clamp-1 break-all')}>
             John Doe
           </span>
           <span
-            className={dx('label-01', 'line-clamp-1 text-muted-foreground')}
+            className={dx(
+              'label-01',
+              'line-clamp-1 break-all text-muted-foreground'
+            )}
           >
             john.doe@company.com
           </span>
@@ -42,11 +45,16 @@ export default function SidebarFooter() {
               <AvatarFallback>JD</AvatarFallback>
             </Avatar>
             <div className="flex grow flex-col items-start">
-              <span className={dx('heading-compact-01', 'line-clamp-1')}>
+              <span
+                className={dx('heading-compact-01', 'line-clamp-1 break-all')}
+              >
                 John Doe
               </span>
               <span
-                className={dx('label-01', 'line-clamp-1 text-muted-foreground')}
+                className={dx(
+                  'label-01',
+                  'line-clamp-1 break-all text-muted-foreground'
+                )}
               >
                 john.doe@company.com
               </span>
