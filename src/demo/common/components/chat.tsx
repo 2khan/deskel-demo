@@ -93,7 +93,7 @@ export default function Chat(props: TProps) {
                     <div className="flex size-8 shrink-0 items-center justify-center rounded-full border bg-card text-primary">
                       <TerminalIcon size={15} />
                     </div>
-                    <div className="grow p-1.5">
+                    <div className="grow p-2">
                       <span className={dx('body-02', 'whitespace-pre-line')}>
                         {chat.message}
                       </span>

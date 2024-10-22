@@ -63,10 +63,7 @@ export default function BlurBackground(props: TProps) {
   const filterValue = size / 2
 
   return (
-    <div
-      className={cn('relative z-10 overflow-hidden bg-background', className)}
-      {...rest}
-    >
+    <div className={cn('relative z-10 overflow-hidden', className)} {...rest}>
       {children}
       {sides.map((side) => {
         const { top, left, x, y, rotate } = SideMap[side]

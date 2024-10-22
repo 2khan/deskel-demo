@@ -71,7 +71,7 @@ export default function Agenda(props: TProps) {
               </m.span>
 
               {(key as TGroup) === 'download-report' && isActive && (
-                <div className="flex gap-1.5">
+                <div className="flex gap-2">
                   <DialogTrigger asChild>
                     <TooltipButton
                       helper={t('media-insight.action.view-file')}

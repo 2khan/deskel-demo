@@ -18,7 +18,7 @@ export default function NotFoundPage() {
     >
       <Link
         to="/"
-        className="w-max rounded-2xl border bg-card py-2 text-card-foreground"
+        className="w-max rounded-2xl bg-background py-2 text-primary shadow dark:text-foreground"
         style={{ height: HEADER_HEIGHT, width: SIDE_OPEN_W - CONTENT_PADDING }}
       >
         <Logo />

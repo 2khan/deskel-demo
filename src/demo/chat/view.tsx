@@ -18,6 +18,7 @@ import { useEffect } from 'react'
 import { Dialog } from '@/components/ui/dialog'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useTranslation } from 'react-i18next'
+import { CHAT_HEADER, CONTENT_PADDING } from '@/shared/constants/layout'
 
 type TProps = {
   state?: 'draft' | 'complete'
@@ -71,15 +72,23 @@ export default function ChatView(props: TProps) {
       className="relative flex h-full w-full grow flex-col items-start"
       value="global-media-insight"
     >
-      <TabsList className="absolute left-0 top-0 z-10 gap-2">
-        <TabsTrigger value="global-media-insight">
-          {t('glossary.new-media-insight')}
-        </TabsTrigger>
-        <TabsTrigger value="sns">{t('glossary.new-sns')}</TabsTrigger>
-      </TabsList>
+      <div
+        className="absolute left-0 top-0 z-10 flex items-center justify-between gap-2"
+        style={{ height: CHAT_HEADER }}
+      >
+        <TabsList>
+          <TabsTrigger value="global-media-insight">
+            {t('glossary.new-media-insight')}
+          </TabsTrigger>
+          <TabsTrigger value="sns">{t('glossary.new-sns')}</TabsTrigger>
+        </TabsList>
+      </div>
       <TabsContent
         value="global-media-insight"
-        className="mt-0 flex h-full w-full grow gap-3 pt-12"
+        className="mt-0 flex h-full w-full grow gap-3"
+        style={{
+          paddingTop: CHAT_HEADER + CONTENT_PADDING
+        }}
       >
         <Chat
           input={stageData['current-input']}

@@ -70,7 +70,7 @@ export default function ThreadsMenu() {
                       {r.label.substring(0, 2)}
                     </span>
                   }
-                  path={`/threads/${r.id}`}
+                  path={`/chat/${r.id}`}
                 />
               </li>
             ))}
@@ -103,7 +103,7 @@ export default function ThreadsMenu() {
                       {r.label.substring(0, 2)}
                     </span>
                   }
-                  path={`/threads/${r.id}`}
+                  path={`/chat/${r.id}`}
                 />
               </li>
             ))}
@@ -137,7 +137,7 @@ export default function ThreadsMenu() {
                       {r.label.substring(0, 2)}
                     </span>
                   }
-                  path={`/threads/${r.id}`}
+                  path={`/chat/${r.id}`}
                 />
               </li>
             ))}
