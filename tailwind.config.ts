@@ -104,6 +104,9 @@ const config = {
         '3xl': '1920px'
       },
       colors: {
+        'gradient-1': 'hsl(var(--gradient-1))',
+        'gradient-2': 'hsl(var(--gradient-2)',
+        'gradient-3': 'hsl(var(--gradient-3))',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

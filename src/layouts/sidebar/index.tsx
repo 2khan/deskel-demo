@@ -18,6 +18,7 @@ export default function Sidebar() {
     <AnimatePresence initial={false}>
       {isOpen && (
         <m.aside
+          key="sidebar"
           className={cn(
             'relative flex h-screen w-full shrink-0 grow flex-col gap-2 py-2 pl-2'
           )}

@@ -1,6 +1,14 @@
+import { cn } from '@/lib/utils'
+
 export default function Logo(props: React.SVGProps<SVGSVGElement>) {
+  const { className, ...rest } = props
   return (
-    <svg viewBox="0 0 50 17" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      viewBox="0 0 50 17"
+      xmlns="http://www.w3.org/2000/svg"
+      className={cn('h-full w-full object-contain', className)}
+      {...rest}
+    >
       <path
         d="M5.42343 5.4117H3.94086C3.89017 5.10609 3.85215 4.94056 3.7888 4.72409L3.61773 4.18292H1.81203L1.64097 4.72409C1.5586 4.97876 1.51425 5.17613 1.48257 5.4117H0C0.0950367 5.2207 0.152059 5.06789 0.304118 4.63496L1.67265 0.802205C1.78669 0.490236 1.84371 0.299235 1.87539 0.114601H3.52903C3.57338 0.299235 3.61773 0.464769 3.74445 0.802205L5.11931 4.63496C5.23969 4.97239 5.34106 5.23343 5.42343 5.4117ZM3.30728 3.11332L2.70538 1.20331L2.11615 3.11332H3.30728Z"
         fill="currentColor"
