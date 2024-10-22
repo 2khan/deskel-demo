@@ -8,9 +8,11 @@ type StatusbarStore = {
 
 export const useStatusbar = create<StatusbarStore>((set) => ({
   title: '',
-  setTitle: ({ title, description }) =>
+  setTitle: ({ title, description }) => {
+    console.log(title)
     set({
       title,
       description
     })
+  }
 }))

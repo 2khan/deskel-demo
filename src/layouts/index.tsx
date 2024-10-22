@@ -1,37 +1,14 @@
-import { useTranslation } from 'react-i18next'
-import { useEffect, lazy, Suspense, useMemo } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
 
 // UTILS
-import MainRoutes from '@/routes/main'
 import { CONTENT_PADDING } from '@/shared/constants/layout'
-import { find } from 'lodash'
-import { useStatusbar } from '@/shared/stores/statusbar'
 
 // COMPONENTS
 const Sidebar = lazy(() => import('./sidebar'))
 const StatusBar = lazy(() => import('./statusbar'))
 
 export default function Layout() {
-  const { t } = useTranslation()
-  const location = useLocation()
-  const { title, setTitle } = useStatusbar()
-
-  const currentRoute = useMemo(
-    () => find(MainRoutes, (r) => r.path == location.pathname),
-    [location.pathname]
-  )
-
-  useEffect(() => {
-    setTitle({
-      title: t(currentRoute?.label || 'glossary.dashboard')
-    })
-  }, [t, currentRoute, setTitle])
-
-  useEffect(() => {
-    document.title = `${import.meta.env.VITE_APP_TITLE} | ${title}`
-  }, [t, title])
-
   return (
     <div className="flex w-full grow">
       <Suspense>

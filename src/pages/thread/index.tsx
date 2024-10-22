@@ -7,7 +7,7 @@ import ChatView from '@/demo/chat/view'
 import data from '@/demo/common/threads-menu/output.json'
 import { format } from 'date-fns'
 
-export default function ThreadsPage() {
+export default function ThreadPage() {
   const { id } = useParams()
 
   const { setTitle } = useStatusbar()
