@@ -13,6 +13,7 @@ import { useSidebar } from '@/shared/stores/sidebar'
 import type { ParseKeys } from 'i18next'
 import type { TRouteObject } from '@/shared/types/utils/route'
 import SideNavItem from './side-nav-item'
+import ThreadsMenu from '@/demo/common/threads-menu/view'
 
 type TListItem = {
   title: ParseKeys<'common'>
@@ -57,7 +58,7 @@ export default function SideNav() {
             <ul className="flex w-full flex-col">
               {list.routes.map((r) => (
                 <li key={r.path} className="group w-full">
-                  <SideNavItem routeData={r} />
+                  <SideNavItem label={t(r.label)} icon={r.icon} path={r.path} />
                 </li>
               ))}
             </ul>
@@ -65,6 +66,10 @@ export default function SideNav() {
           {i !== lists.length - 1 && <Separator />}
         </Fragment>
       ))}
+
+      <Separator />
+
+      <ThreadsMenu />
     </nav>
   )
 }

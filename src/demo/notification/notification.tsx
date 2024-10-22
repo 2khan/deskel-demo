@@ -4,11 +4,12 @@ import {
   PopoverContent,
   PopoverTrigger
 } from '@/components/ui/popover'
-import { BellIcon } from 'lucide-react'
 import { useNotification } from './useNotification'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { useTranslation } from 'react-i18next'
 import { dx } from '@/shared/design-system/typography'
+import { BellIcon } from '@radix-ui/react-icons'
+import { Separator } from '@/components/ui/separator'
 
 export default function Notification() {
   const { t } = useTranslation()
@@ -17,7 +18,7 @@ export default function Notification() {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" size="icon" className="relative">
-          <BellIcon size={15} />
+          <BellIcon />
           {data.length > 0 && (
             <div className="absolute right-0 top-0 size-2 animate-ping rounded-full bg-primary" />
           )}
@@ -26,9 +27,13 @@ export default function Notification() {
       <PopoverContent
         side="bottom"
         align="end"
-        className="w-96 bg-background/50 shadow-primary/10 backdrop-blur-lg"
+        className="flex w-96 flex-col gap-1 bg-background/50 p-0 shadow-primary/10 backdrop-blur-lg"
       >
-        <ScrollArea className="h-60">
+        <div className="px-2 py-0.5">
+          <span className={dx('label-02', 'font-bold')}>Notification</span>
+        </div>
+        <Separator />
+        <ScrollArea className="h-60 px-2 py-0.5">
           {data.length > 0 ? (
             <div className="flex w-full flex-col gap-4">
               {data.map((n) => (

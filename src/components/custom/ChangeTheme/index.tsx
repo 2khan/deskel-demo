@@ -24,7 +24,7 @@ export default function ChangeTheme() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon" variant="outline">
+        <Button size="icon" variant="outline" className="relative">
           <SunIcon className="absolute rotate-0 scale-100 transition-transform dark:-rotate-90 dark:scale-0" />
           <MoonIcon className="absolute rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100" />
         </Button>

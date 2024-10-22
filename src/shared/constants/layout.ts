@@ -1,3 +1,4 @@
+export const SCROLLBAR_PADDING = 0
 export const SIDE_COLLAPSED_W = 48
 export const SIDE_COLLAPSED_ITEM_W = 40
 export const HEADER_HEIGHT = 56

@@ -5,7 +5,11 @@ import { dx } from '@/shared/design-system/typography'
 import { CONTENT_PADDING, HEADER_HEIGHT } from '@/shared/constants/layout'
 
 // DEMO
-import Notification from '@/demo/notification/notification'
+import { lazy, Suspense } from 'react'
+
+const Notification = lazy(() => import('@/demo/notification/notification'))
+const ChangeLanguage = lazy(() => import('@/components/custom/ChangeLanguage'))
+const ChangeTheme = lazy(() => import('@/components/custom/ChangeTheme'))
 
 export default function StatusBar() {
   const { title } = useStatusbar()
@@ -17,7 +21,17 @@ export default function StatusBar() {
     >
       <h1 className={dx('heading-02')}>{title}</h1>
 
-      <Notification />
+      <div className="flex items-center gap-1 px-2 py-1">
+        <Suspense>
+          <ChangeLanguage />
+        </Suspense>
+        <Suspense>
+          <ChangeTheme />
+        </Suspense>
+        <Suspense>
+          <Notification />
+        </Suspense>
+      </div>
     </header>
   )
 }

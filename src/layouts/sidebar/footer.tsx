@@ -12,10 +12,10 @@ import { dx } from '@/shared/design-system/typography'
 import { useSidebar } from '@/shared/stores/sidebar'
 import { CaretSortIcon, LockClosedIcon, ExitIcon } from '@radix-ui/react-icons'
 
-export default function UserMenu() {
+export default function SidebarFooter() {
   const { isOpen } = useSidebar()
   return (
-    <div className="sticky bottom-0 left-0 w-full overflow-hidden rounded-tr-2xl bg-background transition-all">
+    <div className="w-full shrink-0 overflow-hidden rounded-tr-2xl bg-background transition-all">
       <DropdownMenu>
         <DropdownMenuTrigger
           className={cn(

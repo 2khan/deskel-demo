@@ -6,23 +6,23 @@ import { m } from 'framer-motion'
 import { SIDE_COLLAPSED_ITEM_W } from '@/shared/constants/layout'
 import { TooltipContent } from '@/components/ui/tooltip'
 import { useSidebar } from '@/shared/stores/sidebar'
-import type { TRouteObject } from '@/shared/types/utils/route'
-import { useTranslation } from 'react-i18next'
+import { TIcon } from '@/shared/types/utils/icon'
 
 type TProps = {
-  routeData: TRouteObject
+  path: string
+  label: string
+  icon?: TIcon
 }
 
 export default function SideNavItem(props: TProps) {
-  const { t } = useTranslation()
-  const { routeData } = props
+  const { label, path, icon: Icon } = props
   const { isOpen } = useSidebar()
   return (
     <Tooltip open={isOpen ? false : undefined}>
       <TooltipTrigger className="w-full">
         <NavLink
           end
-          to={routeData.path}
+          to={path}
           className={({ isActive }) =>
             dx(
               'body-compact-01',
@@ -35,12 +35,12 @@ export default function SideNavItem(props: TProps) {
             height: isOpen ? 'max-content' : SIDE_COLLAPSED_ITEM_W
           }}
         >
-          {routeData.icon && (
+          {Icon && (
             <m.div
               animate={isOpen ? { scale: 0.75 } : { scale: 1 }}
               className="shrink-0"
             >
-              <routeData.icon size={20} />
+              <Icon size={20} />
             </m.div>
           )}
           <m.div
@@ -56,11 +56,11 @@ export default function SideNavItem(props: TProps) {
                 : { opacity: 0 }
             }
           >
-            {t(routeData.label)}
+            {label}
           </m.div>
         </NavLink>
       </TooltipTrigger>
-      <TooltipContent side="right">{t(routeData.label)}</TooltipContent>
+      <TooltipContent side="right">{label}</TooltipContent>
     </Tooltip>
   )
 }

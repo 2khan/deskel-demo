@@ -1,9 +1,9 @@
 import { ScrollArea } from '@/components/ui/scroll-area'
-import Chat from './components/chat'
-import Info from './components/info'
-import Actions from './components/actions'
-import Agenda from './components/agenda'
-import Log from './components/log'
+import Chat from '../common/components/chat'
+import Info from '../common/components/info'
+import Actions from '../common/components/actions'
+import Agenda from '../common/components/agenda'
+import Log from '../common/components/log'
 
 // STAGE LOGIC
 import { useStage } from '../common/useStage'
