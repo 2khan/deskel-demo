@@ -28,31 +28,23 @@ export default function SideNav() {
   const { t } = useTranslation()
 
   return (
-    <nav className="flex w-full grow flex-col gap-2 py-2 pl-2">
-      {lists.map((list, i) => (
+    <nav className="flex w-full grow flex-col gap-1.5 py-2 pl-2">
+      {lists.map((list) => (
         <Fragment key={list.title}>
-          <div className="flex w-full flex-col gap-1.5">
-            <span
-              className={dx(
-                'heading-compact-01',
-                'block w-max shrink-0 text-muted-foreground'
-              )}
-            >
-              {t(list.title)}
-            </span>
-            <ul className="flex w-full flex-col">
-              {list.routes.map((r) => (
-                <li key={r.path} className="group w-full">
-                  <SideNavItem
-                    label={t(r.label)}
-                    symbol={<r.icon size={20} />}
-                    path={r.path}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-          {i !== lists.length - 1 && <Separator />}
+          <span className={dx('label-01', 'font-bold text-muted-foreground')}>
+            {t(list.title)}
+          </span>
+          <ul className="flex w-full flex-col">
+            {list.routes.map((r) => (
+              <li key={r.path} className="group w-full">
+                <SideNavItem
+                  label={t(r.label)}
+                  symbol={<r.icon size={20} />}
+                  path={r.path}
+                />
+              </li>
+            ))}
+          </ul>
         </Fragment>
       ))}
 
