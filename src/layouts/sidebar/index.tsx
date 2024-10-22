@@ -3,7 +3,11 @@ import { lazy, Suspense } from 'react'
 // UTILS
 import { useSidebar } from '@/shared/stores/sidebar'
 import { cn } from '@/lib/utils'
-import { SIDE_OPEN_W, SIDE_COLLAPSED_W } from '@/shared/constants/layout'
+import {
+  SIDE_OPEN_W,
+  SIDE_COLLAPSED_W,
+  SCROLLBAR_PADDING
+} from '@/shared/constants/layout'
 import { ScrollArea } from '@/components/ui/scroll-area'
 
 const SidebarHeader = lazy(() => import('./header'))
@@ -25,7 +29,10 @@ export default function Sidebar() {
       <Suspense>
         <SidebarHeader />
       </Suspense>
-      <ScrollArea className="w-full grow">
+      <ScrollArea
+        className="w-full grow"
+        style={{ paddingRight: SCROLLBAR_PADDING }}
+      >
         <Suspense>
           <SideNav />
         </Suspense>

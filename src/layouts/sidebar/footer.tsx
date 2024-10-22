@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils'
 import { dx } from '@/shared/design-system/typography'
 import { useSidebar } from '@/shared/stores/sidebar'
 import { CaretSortIcon, LockClosedIcon, ExitIcon } from '@radix-ui/react-icons'
+import { Fragment } from 'react/jsx-runtime'
 
 export default function SidebarFooter() {
   const { isOpen } = useSidebar()
@@ -20,23 +21,30 @@ export default function SidebarFooter() {
         <DropdownMenuTrigger
           className={cn(
             'flex w-full items-center gap-2 rounded-xl p-2',
-            !isOpen && 'p-1'
+            !isOpen && 'justify-center'
           )}
         >
           <Avatar className="shrink-0">
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
-          <div className="flex grow flex-col items-start text-start">
-            <span className={dx('heading-compact-01', 'line-clamp-1')}>
-              John Doe
-            </span>
-            <span
-              className={dx('label-01', 'line-clamp-1 text-muted-foreground')}
-            >
-              john.doe@company.com
-            </span>
-          </div>
-          <CaretSortIcon className="shrink-0" />
+          {isOpen && (
+            <Fragment>
+              <div className="flex grow flex-col items-start text-start">
+                <span className={dx('heading-compact-01', 'line-clamp-1')}>
+                  John Doe
+                </span>
+                <span
+                  className={dx(
+                    'label-01',
+                    'line-clamp-1 text-muted-foreground'
+                  )}
+                >
+                  john.doe@company.com
+                </span>
+              </div>
+              <CaretSortIcon className="shrink-0" />
+            </Fragment>
+          )}
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="end"

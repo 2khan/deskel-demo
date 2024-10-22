@@ -21,7 +21,7 @@ export default function StatusBar() {
     >
       <h1 className={dx('heading-02')}>{title}</h1>
 
-      <div className="flex items-center gap-1 px-2 py-1">
+      <div className="flex items-center gap-1">
         <Suspense>
           <ChangeLanguage />
         </Suspense>
