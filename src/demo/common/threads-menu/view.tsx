@@ -58,11 +58,12 @@ export default function ThreadsMenu() {
             <SideNavItem
               label={r.label}
               symbol={
-                <div className="size-5">
-                  <span className={dx('label-01', 'font-medium uppercase')}>
-                    {r.label.substring(0, 2)}
-                  </span>
-                </div>
+                <span
+                  className="font-medium uppercase"
+                  style={{ fontSize: 10 }}
+                >
+                  {r.label.substring(0, 2)}
+                </span>
               }
               path={`/threads/${r.id}`}
             />
@@ -83,11 +84,12 @@ export default function ThreadsMenu() {
             <SideNavItem
               label={r.label}
               symbol={
-                <div className="size-5">
-                  <span className={dx('label-01', 'font-medium uppercase')}>
-                    {r.label.substring(0, 2)}
-                  </span>
-                </div>
+                <span
+                  className="font-medium uppercase"
+                  style={{ fontSize: 10 }}
+                >
+                  {r.label.substring(0, 2)}
+                </span>
               }
               path={`/threads/${r.id}`}
             />
@@ -109,11 +111,12 @@ export default function ThreadsMenu() {
             <SideNavItem
               label={r.label}
               symbol={
-                <div className="size-5">
-                  <span className={dx('label-01', 'font-medium uppercase')}>
-                    {r.label.substring(0, 2)}
-                  </span>
-                </div>
+                <span
+                  className="font-medium uppercase"
+                  style={{ fontSize: 10 }}
+                >
+                  {r.label.substring(0, 2)}
+                </span>
               }
               path={`/threads/${r.id}`}
             />

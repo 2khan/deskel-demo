@@ -1,3 +1,4 @@
+import { NAV_ITEM_HEIGHT } from '@/shared/constants/layout'
 import { dx } from '@/shared/design-system/typography'
 import { NavLink } from 'react-router-dom'
 
@@ -20,9 +21,10 @@ export default function SideNavItem(props: TProps) {
           isActive && 'rounded-md bg-background text-foreground shadow'
         )
       }
+      style={{ height: NAV_ITEM_HEIGHT }}
     >
-      {symbol && <div className="shrink-0">{symbol}</div>}
-      <div className="truncate">{label}</div>
+      {symbol}
+      <div className="line-clamp-1">{label}</div>
     </NavLink>
   )
 }
