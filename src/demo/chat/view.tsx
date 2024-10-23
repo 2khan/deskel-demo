@@ -34,14 +34,16 @@ import { format, sub } from 'date-fns'
 import { now } from '../common/constants'
 import { TThreadData } from '../common/threads-menu/gen-script'
 import { dx } from '@/shared/design-system/typography'
+import Multiselect from '../common/multiselect/view'
 
 type TProps = {
   state?: 'draft' | 'complete'
   threadData?: TThreadData
+  isMultistep?: boolean
 }
 
 export default function ChatView(props: TProps) {
-  const { state = 'draft', threadData } = props
+  const { state = 'draft', threadData, isMultistep } = props
   const { t } = useTranslation()
   const { index, next, goto } = useStage()
 
@@ -198,16 +200,17 @@ export default function ChatView(props: TProps) {
           input={stageData['current-input']}
           history={stageData['chat-history']}
         />
-        <Dialog>
-          <ScrollArea className="h-full w-full max-w-80">
-            <div className="flex w-full flex-col gap-3">
-              <Info info={stageData.info} />
+        <ScrollArea className="h-full w-full max-w-80">
+          <div className="flex w-full flex-col gap-3">
+            {!isMultistep && <Info info={stageData.info} />}
+            {isMultistep && <Multiselect />}
+            <Dialog>
               <Actions action={stageData.action} />
               <Agenda info={stageData.info} />
-              <Log logs={stageData['log-history']} />
-            </div>
-          </ScrollArea>
-        </Dialog>
+            </Dialog>
+            <Log logs={stageData['log-history']} />
+          </div>
+        </ScrollArea>
       </TabsContent>
     </Tabs>
   )

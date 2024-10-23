@@ -116,7 +116,7 @@ export default function BlurBackground(props: TProps) {
                 width: `${size}px`,
                 transform: 'translate(-87%, -50%)'
               }}
-              className="bg-gradient-2 aspect-square rounded-full"
+              className="aspect-square rounded-full bg-gradient-2"
             />
             <div
               style={{

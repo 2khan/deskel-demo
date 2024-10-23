@@ -1,6 +1,5 @@
-import { useTranslation } from 'react-i18next'
+import ChatView from '@/demo/chat/view'
 
-export default function MultistepDetailPage() {
-  const { t } = useTranslation()
-  return <div>DETAIL: {t('glossary.multi-step')}</div>
+export default function MultistepPage() {
+  return <ChatView isMultistep />
 }
