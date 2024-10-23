@@ -90,107 +90,107 @@ export default function ChatView(props: TProps) {
       className="relative flex h-full w-full grow flex-col items-start"
       value="global-media-insight"
     >
-      <div
-        className="absolute left-0 top-0 z-10 flex w-full items-center justify-between gap-2"
-        style={{ height: CHAT_HEADER }}
-      >
-        {!isMultistep && (
+      {!isMultistep && (
+        <div
+          className="absolute left-0 top-0 z-10 flex w-full items-center justify-between gap-2"
+          style={{ height: CHAT_HEADER }}
+        >
           <TabsList>
             <TabsTrigger value="global-media-insight">
               {t('glossary.new-media-insight')}
             </TabsTrigger>
             <TabsTrigger value="sns">{t('glossary.new-sns')}</TabsTrigger>
           </TabsList>
-        )}
 
-        <div className="flex items-center gap-2">
-          {threadData && (
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button className="gap-1" variant="outline">
-                  <CounterClockwiseClockIcon />
-                  History
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="flex flex-col">
-                <SheetHeader>
-                  <SheetTitle>Chat History</SheetTitle>
-                  <SheetDescription>
-                    {`${format(sub(now, { months: 1 }), 'yyyy/MM/dd')} - ${format(now, 'yyyy/MM/dd')}`}
-                  </SheetDescription>
-                </SheetHeader>
-                <ScrollArea className="grow rounded-2xl border bg-muted p-2">
-                  {threadData.threads.length > 0 ? (
-                    <div className="flex flex-col bg-card p-2">
-                      {threadData.threads
-                        .sort(
-                          (a, b) =>
-                            new Date(b.created_date).getTime() -
-                            new Date(a.created_date).getTime()
-                        )
-                        .map((thread) => (
-                          <div
-                            key={thread.id}
-                            className="flex grow gap-2"
-                            style={{ height: 54 }}
-                          >
-                            <span
-                              style={{
-                                transform: 'translate(0, 10px)'
-                              }}
-                              className={dx(
-                                'label-01',
-                                'block w-16 shrink-0 text-muted-foreground'
-                              )}
+          <div className="flex items-center gap-2">
+            {threadData && (
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button className="gap-1" variant="outline">
+                    <CounterClockwiseClockIcon />
+                    History
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="flex flex-col">
+                  <SheetHeader>
+                    <SheetTitle>Chat History</SheetTitle>
+                    <SheetDescription>
+                      {`${format(sub(now, { months: 1 }), 'yyyy/MM/dd')} - ${format(now, 'yyyy/MM/dd')}`}
+                    </SheetDescription>
+                  </SheetHeader>
+                  <ScrollArea className="grow rounded-2xl border bg-muted p-2">
+                    {threadData.threads.length > 0 ? (
+                      <div className="flex flex-col bg-card p-2">
+                        {threadData.threads
+                          .sort(
+                            (a, b) =>
+                              new Date(b.created_date).getTime() -
+                              new Date(a.created_date).getTime()
+                          )
+                          .map((thread) => (
+                            <div
+                              key={thread.id}
+                              className="flex grow gap-2"
+                              style={{ height: 54 }}
                             >
-                              {format(thread.created_date, 'MM/dd HH:mm')}
-                            </span>
-                            <div className="relative h-full w-px bg-border">
-                              <div
-                                className="absolute rounded-full bg-card"
+                              <span
                                 style={{
-                                  top: 0,
-                                  left: 0,
-                                  width: 7,
-                                  height: 7,
-                                  transform: 'translate(-3px, 14px)'
+                                  transform: 'translate(0, 10px)'
                                 }}
-                              />
-                              <div
-                                className="absolute rounded-full bg-primary"
-                                style={{
-                                  top: 0,
-                                  left: 0,
-                                  width: 5,
-                                  height: 5,
-                                  transform: 'translate(-2px, 15px)'
-                                }}
-                              />
-                            </div>
-                            <SheetClose asChild>
-                              <div className="grow rounded-lg p-2 hover:bg-accent hover:text-accent-foreground">
-                                <span
-                                  className={dx(
-                                    'body-compact-01',
-                                    'line-clamp-2 text-start'
-                                  )}
-                                >
-                                  {thread.title}
-                                </span>
+                                className={dx(
+                                  'label-01',
+                                  'block w-16 shrink-0 text-muted-foreground'
+                                )}
+                              >
+                                {format(thread.created_date, 'MM/dd HH:mm')}
+                              </span>
+                              <div className="relative h-full w-px bg-border">
+                                <div
+                                  className="absolute rounded-full bg-card"
+                                  style={{
+                                    top: 0,
+                                    left: 0,
+                                    width: 7,
+                                    height: 7,
+                                    transform: 'translate(-3px, 14px)'
+                                  }}
+                                />
+                                <div
+                                  className="absolute rounded-full bg-primary"
+                                  style={{
+                                    top: 0,
+                                    left: 0,
+                                    width: 5,
+                                    height: 5,
+                                    transform: 'translate(-2px, 15px)'
+                                  }}
+                                />
                               </div>
-                            </SheetClose>
-                          </div>
-                        ))}
-                    </div>
-                  ) : (
-                    t('status.empty')
-                  )}
-                </ScrollArea>
-              </SheetContent>
-            </Sheet>
-          )}
+                              <SheetClose asChild>
+                                <div className="grow rounded-lg p-2 hover:bg-accent hover:text-accent-foreground">
+                                  <span
+                                    className={dx(
+                                      'body-compact-01',
+                                      'line-clamp-2 text-start'
+                                    )}
+                                  >
+                                    {thread.title}
+                                  </span>
+                                </div>
+                              </SheetClose>
+                            </div>
+                          ))}
+                      </div>
+                    ) : (
+                      t('status.empty')
+                    )}
+                  </ScrollArea>
+                </SheetContent>
+              </Sheet>
+            )}
+          </div>
         </div>
-      </div>
+      )}
       <TabsContent
         value="global-media-insight"
         className="mt-0 flex h-full w-full grow gap-3"
