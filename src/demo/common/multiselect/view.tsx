@@ -45,14 +45,37 @@ export default function Multiselect() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          role="combobox"
-          variant="outline"
-          className="w-full justify-between"
-        >
-          {t('action.select')}
-          <CaretSortIcon />
-        </Button>
+        <div className="flex w-full flex-col gap-2">
+          <Button
+            role="combobox"
+            variant="outline"
+            className="h-max w-full justify-between"
+          >
+            {t('action.select')}
+            <CaretSortIcon className="shrink-0" />
+          </Button>
+
+          <div className="flex flex-col gap-2 rounded-lg bg-muted p-2">
+            <span className={dx('label-01', 'text-muted-foreground')}>
+              Selected
+            </span>
+            {selected && selected.length > 0 && (
+              <div className="grid grow grid-cols-12 gap-2">
+                {selected.map((item) => (
+                  <span
+                    className={dx(
+                      'label-01',
+                      'col-span-6 line-clamp-1 text-start'
+                    )}
+                    key={item.id}
+                  >
+                    {item.organization_name}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
       </DialogTrigger>
       <DialogContent className="max-w-screen-lg p-0">
         <DialogTitle className="sr-only">
