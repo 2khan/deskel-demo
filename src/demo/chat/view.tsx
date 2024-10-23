@@ -94,12 +94,14 @@ export default function ChatView(props: TProps) {
         className="absolute left-0 top-0 z-10 flex w-full items-center justify-between gap-2"
         style={{ height: CHAT_HEADER }}
       >
-        <TabsList>
-          <TabsTrigger value="global-media-insight">
-            {t('glossary.new-media-insight')}
-          </TabsTrigger>
-          <TabsTrigger value="sns">{t('glossary.new-sns')}</TabsTrigger>
-        </TabsList>
+        {!isMultistep && (
+          <TabsList>
+            <TabsTrigger value="global-media-insight">
+              {t('glossary.new-media-insight')}
+            </TabsTrigger>
+            <TabsTrigger value="sns">{t('glossary.new-sns')}</TabsTrigger>
+          </TabsList>
+        )}
 
         <div className="flex items-center gap-2">
           {threadData && (
@@ -193,7 +195,7 @@ export default function ChatView(props: TProps) {
         value="global-media-insight"
         className="mt-0 flex h-full w-full grow gap-3"
         style={{
-          paddingTop: CHAT_HEADER + CONTENT_PADDING
+          paddingTop: !isMultistep ? CHAT_HEADER + CONTENT_PADDING : 0
         }}
       >
         <Chat
