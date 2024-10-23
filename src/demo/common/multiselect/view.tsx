@@ -87,7 +87,7 @@ export default function Multiselect() {
         <Command>
           <CommandInput placeholder={t('action.search')} className="h-12" />
           <CommandList
-            className="overflow-y-hidden bg-background"
+            className="overflow-y-hidden"
             style={{ maxHeight: 'max-content' }}
           >
             <div className="flex flex-col gap-2 p-2">
@@ -158,7 +158,7 @@ export default function Multiselect() {
                         <CommandItem
                           key={item.id}
                           onSelect={handleSelect(item as TAnalysisData)}
-                          className="mb-2 flex flex-col gap-2 rounded-md p-2"
+                          className="mb-2 flex flex-col gap-2 rounded-md border p-2"
                         >
                           <div className="flex w-full items-center justify-between">
                             <span className={dx('body-compact-01')}>
@@ -201,7 +201,7 @@ export default function Multiselect() {
                     <button
                       key={item.id}
                       onClick={handleRemove(item as TAnalysisData)}
-                      className="mb-2 flex flex-col gap-2 rounded-md bg-card p-2 hover:bg-accent hover:text-accent-foreground"
+                      className="mb-2 flex flex-col gap-2 rounded-md border p-2 transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
                       <div className="flex w-full items-center justify-between">
                         <span className={dx('body-compact-01', 'text-primary')}>
