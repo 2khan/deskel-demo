@@ -44,7 +44,7 @@ export default function SideNav() {
               <li key={r.path} className="group w-full">
                 <SideNavItem
                   label={t(r.label)}
-                  symbol={<r.icon size={20} />}
+                  symbol={<r.icon size={15} />}
                   path={r.path}
                 />
               </li>
