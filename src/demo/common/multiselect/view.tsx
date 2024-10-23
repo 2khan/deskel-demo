@@ -54,12 +54,12 @@ export default function Multiselect() {
             {t('action.select')}
             <CaretSortIcon className="shrink-0" />
           </Button>
+          {selected && selected.length > 0 && (
+            <div className="flex flex-col gap-2 rounded-lg bg-muted p-2">
+              <span className={dx('label-01', 'text-muted-foreground')}>
+                Selected
+              </span>
 
-          <div className="flex flex-col gap-2 rounded-lg bg-muted p-2">
-            <span className={dx('label-01', 'text-muted-foreground')}>
-              Selected
-            </span>
-            {selected && selected.length > 0 && (
               <div className="grid grow grid-cols-12 gap-2">
                 {selected.map((item) => (
                   <span
@@ -73,8 +73,8 @@ export default function Multiselect() {
                   </span>
                 ))}
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-screen-lg p-0">
