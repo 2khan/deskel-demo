@@ -78,22 +78,14 @@ export default function Multiselect() {
           </Button>
           {selected && selected.length > 0 && (
             <div className="flex flex-col gap-2 rounded-lg bg-muted p-2">
-              <div className="flex items-center gap-1">
-                <span className={dx('label-01', 'text-muted-foreground')}>
-                  {t('action.select')}
-                </span>
-                <span className={dx('label-01', 'text-primary')}>
-                  {selected.length}
-                </span>
-              </div>
+              <span className={dx('label-01', 'text-muted-foreground')}>
+                {t('token.selected-analyses')}
+              </span>
 
-              <div className="grid grow grid-cols-12 gap-2">
+              <div className="flex grow flex-col gap-2">
                 {selected.map((item) => (
                   <span
-                    className={dx(
-                      'label-01',
-                      'col-span-6 line-clamp-1 text-start'
-                    )}
+                    className={dx('label-01', 'line-clamp-1')}
                     key={item.id}
                   >
                     {item.organization_name}
