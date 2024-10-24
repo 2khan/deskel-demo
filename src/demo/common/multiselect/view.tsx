@@ -14,7 +14,14 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import { DialogTitle } from '@radix-ui/react-dialog'
-import { CaretSortIcon } from '@radix-ui/react-icons'
+import {
+  CalendarIcon,
+  CaretSortIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  DoubleArrowLeftIcon,
+  DoubleArrowRightIcon
+} from '@radix-ui/react-icons'
 import { useTranslation } from 'react-i18next'
 
 import data from './output.json'
@@ -25,6 +32,21 @@ import { dx } from '@/shared/design-system/typography'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { Calendar } from '@/components/ui/calendar'
+import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from '@/components/ui/select'
+import { Input } from '@/components/ui/input'
 
 export default function Multiselect() {
   const { t } = useTranslation()
@@ -95,11 +117,11 @@ export default function Multiselect() {
             className="overflow-y-hidden"
             style={{ maxHeight: 'max-content' }}
           >
-            <div className="flex flex-col gap-2 p-2">
-              <span className={dx('label-01', 'text-muted-foreground')}>
-                {t('token.filter')}
-              </span>
-              <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between p-2">
+              <div className="flex flex-col gap-1">
+                <span className={dx('label-01', 'text-muted-foreground')}>
+                  {t('token.filter')}
+                </span>
                 <div className="flex items-center gap-2">
                   <Button
                     variant="outline"
@@ -134,6 +156,58 @@ export default function Multiselect() {
                   >
                     {t('glossary.SNS')}
                   </Button>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-1">
+                  <Label
+                    htmlFor="filter-start-date"
+                    className={dx('label-01', 'text-muted-foreground')}
+                  >
+                    {t('token.start-date')}
+                  </Label>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        id="filter-start-date"
+                        variant="outline"
+                        className={cn(
+                          'w-full justify-start text-left font-normal text-muted-foreground'
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        <span>{t('action.select-date-range')}</span>
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="center">
+                      <Calendar initialFocus mode="range" numberOfMonths={2} />
+                    </PopoverContent>
+                  </Popover>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <Label
+                    htmlFor="filter-start-date"
+                    className={dx('label-01', 'text-muted-foreground')}
+                  >
+                    {t('token.end-date')}
+                  </Label>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        id="filter-start-date"
+                        variant="outline"
+                        className={cn(
+                          'w-full justify-start text-left font-normal text-muted-foreground'
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        <span>{t('action.select-date-range')}</span>
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="center">
+                      <Calendar initialFocus mode="range" numberOfMonths={2} />
+                    </PopoverContent>
+                  </Popover>
                 </div>
               </div>
             </div>
@@ -199,14 +273,9 @@ export default function Multiselect() {
                 style={{ height: 480 }}
               >
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-1">
-                    <span className={dx('label-01', 'text-muted-foreground')}>
-                      {t('action.select')}
-                    </span>
-                    <span className={dx('label-01', 'text-primary')}>
-                      {selected.length}
-                    </span>
-                  </div>
+                  <span className={dx('label-01', 'text-muted-foreground')}>
+                    {t('token.selected-analyses')}
+                  </span>
                   {selected.map((item) => (
                     <button
                       key={item.id}
@@ -234,6 +303,49 @@ export default function Multiselect() {
                   ))}
                 </div>
               </ScrollArea>
+            </div>
+            <div className="flex items-center justify-end gap-2 p-2">
+              <div className="flex items-center space-x-2">
+                <p className="text-sm font-medium">{t('token.count')}</p>
+                <Select value="10">
+                  <SelectTrigger className="h-8" style={{ width: 64 }}>
+                    <SelectValue placeholder="10" />
+                  </SelectTrigger>
+                  <SelectContent side="top" align="end">
+                    {[10, 20, 30, 40, 50].map((pageSize) => (
+                      <SelectItem key={pageSize} value={`${pageSize}`}>
+                        {pageSize}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="flex w-max items-center justify-center gap-1 text-sm font-medium">
+                {t('token.page')}: 1
+              </div>
+              <Input
+                className="w-full p-2 text-center"
+                style={{ maxWidth: 72 }}
+                placeholder="#"
+              />
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="icon" disabled={true}>
+                  <span className="sr-only">Go to first page</span>
+                  <DoubleArrowLeftIcon className="h-4 w-4" />
+                </Button>
+                <Button variant="outline" size="icon" disabled={true}>
+                  <span className="sr-only">Go to previous page</span>
+                  <ChevronLeftIcon className="h-4 w-4" />
+                </Button>
+                <Button variant="outline" size="icon">
+                  <span className="sr-only">Go to next page</span>
+                  <ChevronRightIcon className="h-4 w-4" />
+                </Button>
+                <Button variant="outline" size="icon">
+                  <span className="sr-only">Go to last page</span>
+                  <DoubleArrowRightIcon className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </CommandList>
         </Command>

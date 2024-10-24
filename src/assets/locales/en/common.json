@@ -30,7 +30,10 @@
     "count": "Count",
     "page": "Page",
     "action": "Action",
-    "filter": "Filter"
+    "filter": "Filter",
+    "selected-analyses": "Selected Analyses",
+    "start-date": "開始日",
+    "end-date": "終了日"
   },
   "action": {
     "reset": "Reset",
@@ -46,7 +49,8 @@
     "toggle-sidebar": "Toggle Sidebar",
     "view-file": "View File",
     "download-file": "Download File",
-    "chat": "Chat"
+    "chat": "Chat",
+    "select-date-range": "Select Date Range"
   },
   "status": {
     "loading": "Loading",
