@@ -45,5 +45,15 @@
     "info": {
       "date-range": "期間"
     }
+  },
+  "comparison-type": {
+    "same": {
+      "title": "ニュース＋SNSトレンド分析",
+      "description": "得られたニュース情報とSNSでのトレンドを比較し、相互の関連性やギャップを明らかにします。"
+    },
+    "cross": {
+      "title": "競合分析",
+      "description": "自社と競合のSWOR（Strengths, Weaknesses, Opportunities, Risks）を比較し、相対的な位置付けや差異を明確にします。"
+    }
   }
 }

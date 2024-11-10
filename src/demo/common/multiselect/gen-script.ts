@@ -4,35 +4,45 @@ import { mock } from '@/demo/utils'
 import { sub } from 'date-fns'
 import { now } from '../constants'
 
-const types = ['media-insight', 'sns'] as const
+const types = ['media-insight', 'SNS'] as const
 
 export type TAnalysisData = {
   id: string
-  start_date: string
-  end_date: string
   organization_name: string
-  type: (typeof types)[number]
+  threads: {
+    id: string
+    start_date: string
+    end_date: string
+    type: 'media-insight' | 'SNS'
+  }[]
 }
 
 export const generateRow = (locale?: TLocale): TAnalysisData => {
   const gen = mock[locale ?? 'en']
 
-  const endDate = gen.date.between({
-    from: sub(now, {
-      months: 1
-    }),
-    to: now
-  })
   return {
     id: gen.string.uuid(),
-    start_date: sub(endDate, { months: 3 }).toISOString(),
-    end_date: endDate.toISOString(),
     organization_name: gen.company.name(),
-    type: gen.helpers.arrayElement(types)
+    threads: Array.from({ length: gen.number.int({ min: 1, max: 5 }) }).map(
+      () => {
+        const endDate = gen.date.between({
+          from: sub(now, {
+            months: 1
+          }),
+          to: now
+        })
+        return {
+          id: gen.string.uuid(),
+          start_date: sub(endDate, { months: 3 }).toISOString(),
+          end_date: endDate.toISOString(),
+          type: gen.helpers.arrayElement(types)
+        }
+      }
+    )
   }
 }
 
-export const data = Array.from({ length: 50 }).map(() => generateRow())
+export const data = Array.from({ length: 20 }).map(() => generateRow())
 
 export const path = 'output.json'
 

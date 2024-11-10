@@ -45,5 +45,15 @@
     "info": {
       "date-range": "Date Range"
     }
+  },
+  "comparison-type": {
+    "same": {
+      "title": "News + SNS trend analyses",
+      "description": "The obtained news information is compared with trends on social networking sites to identify interconnections and gaps."
+    },
+    "cross": {
+      "title": "Competitor Analyses",
+      "description": "Compare the SWOR (Strengths, Weaknesses, Opportunities, Risks) of your company and your competitors to clarify their relative positions and differences."
+    }
   }
 }

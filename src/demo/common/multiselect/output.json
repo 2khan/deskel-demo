@@ -1,352 +1,416 @@
 [
   {
-    "id": "b986a7ef-6c89-4e11-b0dc-dfc7c1a2f864",
-    "start_date": "2024-07-08T03:08:44.602Z",
-    "end_date": "2024-10-08T03:08:44.602Z",
-    "organization_name": "Mante Group",
-    "type": "sns"
+    "id": "8b986a7e-f6c8-49e1-910d-cdfc7c1a2f86",
+    "organization_name": "Klocko, Mante and Auer",
+    "threads": [
+      {
+        "id": "9fa56b0a-a325-4597-8f13-2a47321a235d",
+        "start_date": "2024-07-10T00:42:32.113Z",
+        "end_date": "2024-10-10T00:42:32.113Z",
+        "type": "SNS"
+      },
+      {
+        "id": "f7f9b041-4156-41b9-a481-9e5a2b4290d0",
+        "start_date": "2024-06-24T13:11:27.073Z",
+        "end_date": "2024-09-24T13:11:27.073Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "f39993f7-db4d-46e9-9ebb-8fa6904a4962",
+        "start_date": "2024-07-13T17:20:22.906Z",
+        "end_date": "2024-10-13T17:20:22.906Z",
+        "type": "SNS"
+      },
+      {
+        "id": "9aa6e56e-cb1e-4bf2-8d29-1dc961b7bdfd",
+        "start_date": "2024-07-09T09:25:42.197Z",
+        "end_date": "2024-10-09T09:25:42.197Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "9fa56b0a-a325-4597-8f13-2a47321a235d",
-    "start_date": "2024-07-10T00:42:32.113Z",
-    "end_date": "2024-10-10T00:42:32.113Z",
-    "organization_name": "Boyer, Wolf and Koss",
-    "type": "sns"
+    "id": "b28030c3-5eb0-4299-83e9-89b4632fb734",
+    "organization_name": "Hahn LLC",
+    "threads": [
+      {
+        "id": "01a78ef3-a40c-4569-8dad-4c2fa3fb4380",
+        "start_date": "2024-06-27T01:18:52.732Z",
+        "end_date": "2024-09-27T01:18:52.732Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "749d182b-6922-475f-acbe-189f4310eac4",
+        "start_date": "2024-07-02T21:24:08.589Z",
+        "end_date": "2024-10-02T21:24:08.589Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "b0414156-1b94-4819-8e5a-2b4290d0a4bf",
-    "start_date": "2024-07-09T19:29:19.587Z",
-    "end_date": "2024-10-09T19:29:19.587Z",
-    "organization_name": "Medhurst LLC",
-    "type": "media-insight"
+    "id": "7fe5f3ff-cad4-4d90-b52f-77a52d3831df",
+    "organization_name": "Ryan, Hartmann and Bode",
+    "threads": [
+      {
+        "id": "20b0c211-a368-4db4-9204-47ab462c0bcc",
+        "start_date": "2024-06-28T15:12:30.896Z",
+        "end_date": "2024-09-28T15:12:30.896Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "45370c18-49fa-4068-a8a4-26f2e87e7b6e",
+        "start_date": "2024-07-09T07:04:18.255Z",
+        "end_date": "2024-10-09T07:04:18.255Z",
+        "type": "SNS"
+      },
+      {
+        "id": "ca32cf79-d7f9-4ded-82a6-164d0f55026e",
+        "start_date": "2024-07-01T11:57:31.281Z",
+        "end_date": "2024-10-01T11:57:31.281Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "7db4d6e9-ebb8-4fa6-b904-a49624999aa6",
-    "start_date": "2024-07-20T05:58:45.438Z",
-    "end_date": "2024-10-20T05:58:45.438Z",
-    "organization_name": "Kertzmann and Sons",
-    "type": "sns"
+    "id": "d7539006-1434-4201-a9ff-62a7f1c43a3a",
+    "organization_name": "Luettgen Inc",
+    "threads": [
+      {
+        "id": "5de035df-fe4f-431f-a3b0-be465b3274d3",
+        "start_date": "2024-07-04T02:41:49.005Z",
+        "end_date": "2024-10-04T02:41:49.005Z",
+        "type": "SNS"
+      },
+      {
+        "id": "dfcbff71-4262-496e-bf84-9e6847638458",
+        "start_date": "2024-07-10T16:28:42.033Z",
+        "end_date": "2024-10-10T16:28:42.033Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "d04715ba-9b35-4ae8-a40b-058e16059431",
+        "start_date": "2024-07-19T09:23:39.524Z",
+        "end_date": "2024-10-19T09:23:39.524Z",
+        "type": "SNS"
+      },
+      {
+        "id": "f0a99f0b-d85c-4178-bb13-69e92fd8e8ed",
+        "start_date": "2024-07-11T19:48:32.909Z",
+        "end_date": "2024-10-11T19:48:32.909Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "1ebf2d29-1dc9-461b-97bd-fd05b28030c3",
-    "start_date": "2024-07-12T18:47:59.209Z",
-    "end_date": "2024-10-12T18:47:59.209Z",
-    "organization_name": "Purdy, Bartoletti and Cruickshank",
-    "type": "sns"
+    "id": "026f42e7-e2a7-41b3-9000-ebea84f576f2",
+    "organization_name": "Berge, Mohr and Kreiger",
+    "threads": [
+      {
+        "id": "8575f215-9a6f-45ba-adfe-cb521368cf11",
+        "start_date": "2024-06-28T19:39:27.224Z",
+        "end_date": "2024-09-28T19:39:27.224Z",
+        "type": "SNS"
+      },
+      {
+        "id": "ef662aad-1793-42d0-9717-f6d1466a5ba6",
+        "start_date": "2024-07-17T02:40:05.786Z",
+        "end_date": "2024-10-17T02:40:05.786Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "3e989b46-32fb-4734-9064-b6201a78ef3a",
-    "start_date": "2024-07-08T23:36:16.502Z",
-    "end_date": "2024-10-08T23:36:16.502Z",
-    "organization_name": "Rosenbaum - Hammes",
-    "type": "media-insight"
+    "id": "1dab8166-50b1-49ba-8f1d-08685308d531",
+    "organization_name": "Bradtke - Gleason",
+    "threads": [
+      {
+        "id": "d28c7236-85cc-4e0e-86eb-fc586547a481",
+        "start_date": "2024-06-23T15:14:07.815Z",
+        "end_date": "2024-09-23T15:14:07.815Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "dad4c2fa-3fb4-4380-9365-749d182b6922",
-    "start_date": "2024-07-09T07:35:17.958Z",
-    "end_date": "2024-10-09T07:35:17.958Z",
-    "organization_name": "Weimann and Sons",
-    "type": "sns"
+    "id": "f0291ebf-848e-484e-8503-5d775eff6fca",
+    "organization_name": "Cummerata - Walker",
+    "threads": [
+      {
+        "id": "7cd26dd1-2416-4193-991f-e63470a66cbf",
+        "start_date": "2024-07-05T06:13:40.284Z",
+        "end_date": "2024-10-05T06:13:40.284Z",
+        "type": "SNS"
+      },
+      {
+        "id": "594d1326-b870-4613-9e3d-c291bac7e04b",
+        "start_date": "2024-07-14T18:22:34.947Z",
+        "end_date": "2024-10-14T18:22:34.947Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "189f4310-eac4-4917-8fe5-f3ffcad4d905",
-    "start_date": "2024-07-18T18:40:41.566Z",
-    "end_date": "2024-10-18T18:40:41.566Z",
-    "organization_name": "Kris, Kuphal and Nikolaus",
-    "type": "media-insight"
+    "id": "1d7eb658-eb0b-4eb2-a725-ee459f24d7e2",
+    "organization_name": "Halvorson - King",
+    "threads": [
+      {
+        "id": "ebb49cc5-cb2d-4777-8997-da66c530ee15",
+        "start_date": "2024-07-02T09:17:23.112Z",
+        "end_date": "2024-10-02T09:17:23.112Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "0f1d955c-5a87-4e8d-8b0c-3e0517d425d2",
+        "start_date": "2024-07-18T15:54:14.598Z",
+        "end_date": "2024-10-18T15:54:14.598Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "64b5bd3f-2425-478d-be39-17557b1eb2f8",
+        "start_date": "2024-07-12T20:06:40.434Z",
+        "end_date": "2024-10-12T20:06:40.434Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "d3831dff-ec51-4632-80b0-c211a368db42",
-    "start_date": "2024-06-25T18:34:05.504Z",
-    "end_date": "2024-09-25T18:34:05.504Z",
-    "organization_name": "Gibson - Klocko",
-    "type": "sns"
+    "id": "8449ecb8-e7dd-43c0-a538-b18f3a907b0e",
+    "organization_name": "Fahey - Wilkinson",
+    "threads": [
+      {
+        "id": "4706739c-39af-4cd7-a2f2-71ffb5442825",
+        "start_date": "2024-06-24T21:22:48.895Z",
+        "end_date": "2024-09-24T21:22:48.895Z",
+        "type": "SNS"
+      },
+      {
+        "id": "6ad7f407-4d34-4cb8-8b60-0810fd20f42b",
+        "start_date": "2024-06-22T09:28:34.850Z",
+        "end_date": "2024-09-22T09:28:34.850Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "a86c2fd9-0be8-451c-9e1c-0f984e4dfc81",
+        "start_date": "2024-07-20T22:04:05.412Z",
+        "end_date": "2024-10-20T22:04:05.412Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "462c0bcc-4594-4537-90c1-849fa0688a42",
-    "start_date": "2024-07-12T12:51:01.155Z",
-    "end_date": "2024-10-12T12:51:01.155Z",
-    "organization_name": "Dibbert, Turner and Little",
-    "type": "media-insight"
+    "id": "36527480-ed8d-4f1a-8ff9-2903f5a4fb5c",
+    "organization_name": "Ernser LLC",
+    "threads": [
+      {
+        "id": "485b0a34-cf5d-41ac-926e-1096ce4679fb",
+        "start_date": "2024-07-03T13:51:30.957Z",
+        "end_date": "2024-10-03T13:51:30.957Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "7b6ebb5c-a32c-4f79-bd7f-9ded2a6164d0",
-    "start_date": "2024-07-18T03:04:11.336Z",
-    "end_date": "2024-10-18T03:04:11.336Z",
-    "organization_name": "Hermiston Group",
-    "type": "media-insight"
+    "id": "f2bea635-baed-4de4-8568-a4064feda58d",
+    "organization_name": "Bauch, Schumm and Schoen",
+    "threads": [
+      {
+        "id": "822c9fff-1f37-4c39-a211-506a61142f2c",
+        "start_date": "2024-07-10T11:33:20.564Z",
+        "end_date": "2024-10-10T11:33:20.564Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "e1fd7539-0061-4434-a201-9ff62a7f1c43",
-    "start_date": "2024-07-03T16:54:24.626Z",
-    "end_date": "2024-10-03T16:54:24.626Z",
-    "organization_name": "O'Reilly - Larson",
-    "type": "media-insight"
+    "id": "8f5c86f9-16cb-4e4c-979f-fd5ea60c8cbc",
+    "organization_name": "Lowe, Kozey and Padberg",
+    "threads": [
+      {
+        "id": "4f25055f-d60d-4a2f-b1d4-6caf91ecb062",
+        "start_date": "2024-06-24T17:40:05.186Z",
+        "end_date": "2024-09-24T17:40:05.186Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "4b65de03-5dff-4e4f-931f-3b0be465b327",
-    "start_date": "2024-07-08T07:22:30.800Z",
-    "end_date": "2024-10-08T07:22:30.800Z",
-    "organization_name": "Ferry, Kuvalis and Weissnat",
-    "type": "sns"
-  },
-  {
-    "id": "fcbff714-2629-46ef-9849-e6847638458c",
-    "start_date": "2024-07-17T16:26:54.139Z",
-    "end_date": "2024-10-17T16:26:54.139Z",
-    "organization_name": "Stoltenberg, Beatty and Fritsch",
-    "type": "media-insight"
-  },
-  {
-    "id": "5ba9b35a-e840-4b05-a8e1-60594319baf0",
-    "start_date": "2024-06-24T19:19:55.487Z",
-    "end_date": "2024-09-24T19:19:55.487Z",
-    "organization_name": "McKenzie and Sons",
-    "type": "media-insight"
-  },
-  {
-    "id": "d85c178b-1369-4e92-bfd8-e8edfe026f42",
-    "start_date": "2024-07-12T13:28:02.461Z",
-    "end_date": "2024-10-12T13:28:02.461Z",
-    "organization_name": "Upton Group",
-    "type": "sns"
-  },
-  {
-    "id": "1b3000eb-ea84-4f57-86f2-5a197438575f",
-    "start_date": "2024-07-04T20:59:23.647Z",
-    "end_date": "2024-10-04T20:59:23.647Z",
-    "organization_name": "Heathcote - McLaughlin",
-    "type": "sns"
-  },
-  {
-    "id": "f5badfec-b521-4368-8cf1-19bdef662aad",
-    "start_date": "2024-07-03T14:01:29.489Z",
-    "end_date": "2024-10-03T14:01:29.489Z",
-    "organization_name": "McClure Group",
-    "type": "media-insight"
-  },
-  {
-    "id": "0717f6d1-466a-45ba-a669-1dab816650b1",
-    "start_date": "2024-07-17T10:53:53.528Z",
-    "end_date": "2024-10-17T10:53:53.528Z",
-    "organization_name": "Nicolas, Williamson and Brakus",
-    "type": "sns"
-  },
-  {
-    "id": "8685308d-5311-4314-811d-28c723685cce",
-    "start_date": "2024-06-22T13:01:01.088Z",
-    "end_date": "2024-09-22T13:01:01.088Z",
-    "organization_name": "Huel, Thiel and Pollich",
-    "type": "sns"
-  },
-  {
-    "id": "586547a4-8120-4f02-991e-bf848e84e503",
-    "start_date": "2024-07-14T10:41:00.115Z",
-    "end_date": "2024-10-14T10:41:00.115Z",
-    "organization_name": "Koch, Kilback and Harvey",
-    "type": "sns"
-  },
-  {
-    "id": "f6fca332-e477-4cd2-96dd-1241619391fe",
-    "start_date": "2024-07-20T00:25:09.406Z",
-    "end_date": "2024-10-20T00:25:09.406Z",
-    "organization_name": "Friesen - Kub",
-    "type": "media-insight"
-  },
-  {
-    "id": "66cbf5ec-594d-4132-a6b8-70613e3dc291",
-    "start_date": "2024-07-10T20:35:15.635Z",
-    "end_date": "2024-10-10T20:35:15.635Z",
-    "organization_name": "Schulist Inc",
-    "type": "sns"
-  },
-  {
-    "id": "4b621d7e-b658-4eb0-bbeb-2725ee459f24",
-    "start_date": "2024-06-23T03:31:52.470Z",
-    "end_date": "2024-09-23T03:31:52.470Z",
-    "organization_name": "Tromp Group",
-    "type": "sns"
-  },
-  {
-    "id": "5765ebb4-9cc5-4cb2-bd77-7997da66c530",
-    "start_date": "2024-07-01T10:54:50.888Z",
-    "end_date": "2024-10-01T10:54:50.888Z",
-    "organization_name": "Carter, Harvey and Daniel",
-    "type": "media-insight"
-  },
-  {
-    "id": "0f1d955c-5a87-4e8d-8b0c-3e0517d425d2",
-    "start_date": "2024-07-18T15:54:14.598Z",
-    "end_date": "2024-10-18T15:54:14.598Z",
-    "organization_name": "Purdy - Huels",
-    "type": "media-insight"
-  },
-  {
-    "id": "5bd3f242-578d-4e39-9175-57b1eb2f8f38",
-    "start_date": "2024-07-13T05:24:39.604Z",
-    "end_date": "2024-10-13T05:24:39.604Z",
-    "organization_name": "McLaughlin - Waelchi",
-    "type": "sns"
-  },
-  {
-    "id": "8e7dd3c0-538b-418f-93a9-07b0e803f914",
-    "start_date": "2024-07-13T09:14:16.105Z",
-    "end_date": "2024-10-13T09:14:16.105Z",
-    "organization_name": "Jenkins - Kuhn",
-    "type": "media-insight"
-  },
-  {
-    "id": "c39afcd7-2f27-41ff-bb54-42825ab06ad7",
-    "start_date": "2024-07-09T07:49:12.289Z",
-    "end_date": "2024-10-09T07:49:12.289Z",
-    "organization_name": "Ankunding - Kub",
-    "type": "media-insight"
-  },
-  {
-    "id": "34cb8b60-0810-4fd2-a0f4-2b14fa86c2fd",
-    "start_date": "2024-07-16T09:04:36.206Z",
-    "end_date": "2024-10-16T09:04:36.206Z",
-    "organization_name": "Prohaska - Veum",
-    "type": "sns"
-  },
-  {
-    "id": "1ce1c0f9-84e4-4dfc-b817-736527480ed8",
-    "start_date": "2024-07-02T07:02:30.738Z",
-    "end_date": "2024-10-02T07:02:30.738Z",
-    "organization_name": "Brown, Murray and Zulauf",
-    "type": "sns"
-  },
-  {
-    "id": "2903f5a4-fb5c-4163-8a16-485b0a34cf5d",
-    "start_date": "2024-07-09T18:23:33.196Z",
-    "end_date": "2024-10-09T18:23:33.196Z",
-    "organization_name": "Rolfson Group",
-    "type": "media-insight"
-  },
-  {
-    "id": "1096ce46-79fb-464f-92be-a635baedde45",
-    "start_date": "2024-07-18T10:44:56.970Z",
-    "end_date": "2024-10-18T10:44:56.970Z",
-    "organization_name": "Ortiz Inc",
-    "type": "media-insight"
-  },
-  {
-    "id": "4feda58d-1c0d-4c0a-8822-c9fff1f37c39",
-    "start_date": "2024-07-03T15:26:24.418Z",
-    "end_date": "2024-10-03T15:26:24.418Z",
-    "organization_name": "Carroll - Herzog",
-    "type": "media-insight"
-  },
-  {
-    "id": "a61142f2-c998-4f5c-b86f-916cbe4c79ff",
-    "start_date": "2024-07-04T09:53:41.364Z",
-    "end_date": "2024-10-04T09:53:41.364Z",
-    "organization_name": "Torphy LLC",
-    "type": "media-insight"
-  },
-  {
-    "id": "c8cbc4c8-7a01-44f2-9505-5fd60da2f1d4",
-    "start_date": "2024-06-22T17:44:05.033Z",
-    "end_date": "2024-09-22T17:44:05.033Z",
-    "organization_name": "Pagac, Wehner and Mraz",
-    "type": "media-insight"
-  },
-  {
-    "id": "cb062dbe-fcf9-4005-9ddf-10e48f6a6c83",
-    "start_date": "2024-07-18T04:44:22.062Z",
-    "end_date": "2024-10-18T04:44:22.062Z",
-    "organization_name": "Lemke - Prosacco",
-    "type": "sns"
-  },
-  {
-    "id": "c256a445-c911-45cb-bbc4-88bf4ca9cf02",
-    "start_date": "2024-07-12T11:44:34.476Z",
-    "end_date": "2024-10-12T11:44:34.476Z",
-    "organization_name": "Larson - Erdman",
-    "type": "media-insight"
-  },
-  {
-    "id": "0d788a51-5285-4ff9-a9fe-c5537fe10e83",
-    "start_date": "2024-07-12T17:19:30.532Z",
-    "end_date": "2024-10-12T17:19:30.532Z",
-    "organization_name": "Cartwright Inc",
-    "type": "media-insight"
+    "id": "efcf9005-ddf1-40e4-88f6-a6c83448bfbc",
+    "organization_name": "Jerde LLC",
+    "threads": [
+      {
+        "id": "5c9115cb-bc48-48bf-b4ca-9cf02c1834b0",
+        "start_date": "2024-06-30T18:22:12.660Z",
+        "end_date": "2024-09-30T18:22:12.660Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "8a515285-ff99-4fec-8553-7fe10e83aa14",
+        "start_date": "2024-07-06T17:43:23.418Z",
+        "end_date": "2024-10-06T17:43:23.418Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
     "id": "23a01254-4cf8-4f61-a647-a7eeb726b41e",
-    "start_date": "2024-06-27T23:05:58.348Z",
-    "end_date": "2024-09-27T23:05:58.348Z",
     "organization_name": "Schiller and Sons",
-    "type": "media-insight"
+    "threads": [
+      {
+        "id": "e4988f4f-e7dc-4a53-bad0-a7e5782bd040",
+        "start_date": "2024-07-18T02:27:19.948Z",
+        "end_date": "2024-10-18T02:27:19.948Z",
+        "type": "SNS"
+      },
+      {
+        "id": "8c556a5e-f031-4037-ad37-eac8f90369c6",
+        "start_date": "2024-07-20T14:13:27.488Z",
+        "end_date": "2024-10-20T14:13:27.488Z",
+        "type": "SNS"
+      },
+      {
+        "id": "fae8bce2-86e1-4fe1-b7bb-ec47b2374d95",
+        "start_date": "2024-07-01T04:25:38.431Z",
+        "end_date": "2024-10-01T04:25:38.431Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "e4988f4f-e7dc-4a53-bad0-a7e5782bd040",
-    "start_date": "2024-07-18T02:27:19.948Z",
-    "end_date": "2024-10-18T02:27:19.948Z",
-    "organization_name": "Wintheiser, Lemke and Schmitt",
-    "type": "media-insight"
+    "id": "fd62d05e-fab0-4885-b135-69b55004bacc",
+    "organization_name": "Wuckert, Tromp and McGlynn",
+    "threads": [
+      {
+        "id": "f2bd531b-7be2-4e64-8ff3-a1ada6669ee0",
+        "start_date": "2024-06-22T16:40:20.168Z",
+        "end_date": "2024-09-22T16:40:20.168Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "58abefad-c4e0-4047-8a1a-c2687cfc1c13",
+        "start_date": "2024-06-27T11:12:03.389Z",
+        "end_date": "2024-09-27T11:12:03.389Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "a7f3cd87-9686-46b1-82dc-46ed9306add0",
+        "start_date": "2024-07-07T12:23:12.809Z",
+        "end_date": "2024-10-07T12:23:12.809Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "6a5ef031-037d-437e-aac8-f90369c6bc5f",
-    "start_date": "2024-07-02T06:44:58.932Z",
-    "end_date": "2024-10-02T06:44:58.932Z",
-    "organization_name": "Luettgen, Robel and Russel",
-    "type": "sns"
+    "id": "3cc8f2e1-2b19-46be-9cd0-48634f450d23",
+    "organization_name": "DuBuque, Schmeler and Schowalter",
+    "threads": [
+      {
+        "id": "3b342271-5606-417d-9d19-d3cec103496b",
+        "start_date": "2024-06-25T03:12:14.924Z",
+        "end_date": "2024-09-25T03:12:14.924Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "ef3c4e2a-1fbd-4979-987c-22651dc8f1c4",
+        "start_date": "2024-07-01T01:08:12.074Z",
+        "end_date": "2024-10-01T01:08:12.074Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "2da0caeb-8d48-44f3-b058-08db9ffd9709",
+        "start_date": "2024-07-15T08:06:26.215Z",
+        "end_date": "2024-10-15T08:06:26.215Z",
+        "type": "SNS"
+      },
+      {
+        "id": "2cbfd817-584d-4d59-96e2-bf23bc793715",
+        "start_date": "2024-07-01T21:14:07.237Z",
+        "end_date": "2024-10-01T21:14:07.237Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "269f2e17-7357-4df8-8d95-3680293d511e",
+        "start_date": "2024-07-19T13:41:27.531Z",
+        "end_date": "2024-10-19T13:41:27.531Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "86e1fe17-bbec-447b-9237-4d95dcfd62d0",
-    "start_date": "2024-06-26T04:15:06.569Z",
-    "end_date": "2024-09-26T04:15:06.569Z",
-    "organization_name": "Willms, Nikolaus and Pfeffer",
-    "type": "media-insight"
+    "id": "d4ad9fb1-8bc0-4bdb-a878-be9eb1844559",
+    "organization_name": "Christiansen - Beer",
+    "threads": [
+      {
+        "id": "0e81df70-16e2-4d07-aa09-f2b92008fab7",
+        "start_date": "2024-06-27T06:00:49.391Z",
+        "end_date": "2024-09-27T06:00:49.391Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "cf432fc2-8622-4f4f-9172-081bb2fb4bb5",
+        "start_date": "2024-07-17T23:18:39.048Z",
+        "end_date": "2024-10-17T23:18:39.048Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "e2e0a6cb-7a8c-4784-b949-2266420047b7",
+        "start_date": "2024-07-10T03:57:55.006Z",
+        "end_date": "2024-10-10T03:57:55.006Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "8513569b-5500-44ba-8ccd-bfe990f2bd53",
-    "start_date": "2024-07-07T02:25:33.044Z",
-    "end_date": "2024-10-07T02:25:33.044Z",
-    "organization_name": "Kling, Ratke and Volkman",
-    "type": "media-insight"
+    "id": "259d540d-69f0-42cc-8c8f-6916b3fa4c1f",
+    "organization_name": "Fritsch, Rosenbaum and Abbott",
+    "threads": [
+      {
+        "id": "81669ad7-62cb-468a-a205-97bd72d9bbf4",
+        "start_date": "2024-07-14T03:21:08.773Z",
+        "end_date": "2024-10-14T03:21:08.773Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "35f43947-d369-48fa-9bf6-50232c8ad35b",
+        "start_date": "2024-07-03T12:41:44.589Z",
+        "end_date": "2024-10-03T12:41:44.589Z",
+        "type": "media-insight"
+      }
+    ]
   },
   {
-    "id": "64ff3a1a-da66-469e-be02-1358abefadc4",
-    "start_date": "2024-07-19T05:48:11.234Z",
-    "end_date": "2024-10-19T05:48:11.234Z",
-    "organization_name": "Abbott - Goodwin",
-    "type": "media-insight"
+    "id": "6e65fa51-cbe3-41b3-b25d-807a893d8bf6",
+    "organization_name": "Bartoletti - McLaughlin",
+    "threads": [
+      {
+        "id": "45b9cdd6-6ea1-485f-a09b-4fde094da818",
+        "start_date": "2024-06-29T02:45:32.861Z",
+        "end_date": "2024-09-29T02:45:32.861Z",
+        "type": "SNS"
+      },
+      {
+        "id": "ffa87e01-1c5a-4968-8af9-91f8c0644c97",
+        "start_date": "2024-07-09T05:14:12.219Z",
+        "end_date": "2024-10-09T05:14:12.219Z",
+        "type": "SNS"
+      }
+    ]
   },
   {
-    "id": "1ac2687c-fc1c-4132-a38a-7f3cd8796866",
-    "start_date": "2024-07-10T19:37:16.624Z",
-    "end_date": "2024-10-10T19:37:16.624Z",
-    "organization_name": "Cummerata - Stark",
-    "type": "sns"
-  },
-  {
-    "id": "6ed9306a-dd03-453c-8c8f-2e12b196becd",
-    "start_date": "2024-06-30T02:38:48.061Z",
-    "end_date": "2024-09-30T02:38:48.061Z",
-    "organization_name": "Larkin - Johns",
-    "type": "media-insight"
-  },
-  {
-    "id": "f450d234-e3cc-4e13-8b34-2271560617dd",
-    "start_date": "2024-06-30T21:40:09.662Z",
-    "end_date": "2024-09-30T21:40:09.662Z",
-    "organization_name": "Skiles Group",
-    "type": "sns"
-  },
-  {
-    "id": "c103496b-525e-4f3c-84e2-a1fbd97987c2",
-    "start_date": "2024-07-18T09:21:01.186Z",
-    "end_date": "2024-10-18T09:21:01.186Z",
-    "organization_name": "Hammes Group",
-    "type": "sns"
-  },
-  {
-    "id": "8f1c453c-2da0-4cae-ab8d-484f305808db",
-    "start_date": "2024-07-14T19:33:14.475Z",
-    "end_date": "2024-10-14T19:33:14.475Z",
-    "organization_name": "Williamson, Senger and Mohr",
-    "type": "media-insight"
+    "id": "f308fe94-5e72-4341-97ea-1045cf6afba1",
+    "organization_name": "Douglas, Sporer and Predovic",
+    "threads": [
+      {
+        "id": "8b82c6f4-459e-4249-877d-e7ac84a9e0e8",
+        "start_date": "2024-07-07T13:00:19.707Z",
+        "end_date": "2024-10-07T13:00:19.707Z",
+        "type": "media-insight"
+      },
+      {
+        "id": "7f65d8ac-a619-4e6e-a89d-91f3b873b1fd",
+        "start_date": "2024-07-13T09:31:12.598Z",
+        "end_date": "2024-10-13T09:31:12.598Z",
+        "type": "media-insight"
+      }
+    ]
   }
 ]
