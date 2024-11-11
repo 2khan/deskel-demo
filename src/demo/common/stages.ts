@@ -48,7 +48,7 @@ export const autoNextStages = [
   'preparing-analysis'
 ] as TStage[]
 
-const actionSchema = z.enum(['pre-start', 'start', 'cancel', 'view'])
+const actionSchema = z.enum(['pre-start', 'start', 'cancel'])
 export type TAction = z.infer<typeof actionSchema>
 
 const currentInputSchema = z.string()
@@ -86,7 +86,7 @@ const stageDataSchema = z.object({
   'chat-history': z.array(chatSchema),
   info: infoSchema,
   'log-history': z.array(logSchema),
-  action: actionSchema
+  action: actionSchema.optional()
 })
 export type TStageData = z.infer<typeof stageDataSchema>
 

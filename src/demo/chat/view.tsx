@@ -3,7 +3,7 @@ import Chat from '../common/components/chat'
 import Info from '../common/components/info'
 import Actions from '../common/components/actions'
 import Agenda from '../common/components/agenda'
-import Log from '../common/components/log'
+// import Log from '../common/components/log'
 
 // STAGE LOGIC
 import { useStage } from '../common/useStage'
@@ -207,10 +207,10 @@ export default function ChatView(props: TProps) {
             {!isMultistep && <Info info={stageData.info} />}
             {isMultistep && <Multiselect />}
             <Dialog>
-              <Actions action={stageData.action} />
+              {stageData.action && <Actions action={stageData.action} />}
               <Agenda info={stageData.info} />
             </Dialog>
-            <Log logs={stageData['log-history']} />
+            {/* <Log logs={stageData['log-history']} /> */}
           </div>
         </ScrollArea>
       </TabsContent>
